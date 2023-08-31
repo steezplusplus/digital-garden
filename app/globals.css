@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  font-size: 1rem;
+}
+
+body {
+  @apply grid h-screen;
+  grid-template:
+    'navbar' 3.5rem
+    'main' 1fr
+    'footer' 3.5rem;
+}
+
+body > nav {
+  grid-area: navbar;
+  @apply border-b;
+}
+
+body > main {
+  grid-area: main;
+}
+
+body > footer {
+  grid-area: footer;
+  @apply border-t;
+}
