@@ -13,7 +13,7 @@
     @apply overscroll-y-none;
     @apply grid h-screen;
     grid-template:
-      'nav' 5rem
+      'nav' 3rem
       'main' 1fr
       'footer' 2.5rem;
   }
