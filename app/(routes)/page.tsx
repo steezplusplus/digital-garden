@@ -1,11 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import {
-  ArrowDownIcon,
-  ArrowRightIcon,
-  ArrowLeftIcon,
-  ArrowUpIcon,
-} from 'lucide-react';
+import { ArrowRightIcon, ArrowLeftIcon } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "Jesse's Homepage",
