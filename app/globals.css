@@ -11,24 +11,11 @@
 @layer components {
   body {
     @apply grid h-screen;
-    grid-template:
-      'navbar' 3.5rem
-      'main' 1fr
-      'footer' 3.5rem;
-  }
-
-  body > nav {
-    grid-area: navbar;
-    @apply border-b;
+    grid-template: 'main' 1fr;
   }
 
   body > main {
     grid-area: main;
-  }
-
-  body > footer {
-    grid-area: footer;
-    @apply border-t;
   }
 }
 
