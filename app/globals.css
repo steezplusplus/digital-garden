@@ -11,16 +11,26 @@
 @layer components {
   body {
     @apply grid h-screen;
-    grid-template: 'main' 1fr;
+    grid-template:
+      'nav' 5rem
+      'main' 1fr
+      'footer' 2.5rem;
+  }
+
+  body > nav {
+    grid-area: nav;
   }
 
   body > main {
     grid-area: main;
   }
+
+  body > footer {
+    grid-area: footer;
+  }
 }
 
 @layer utilities {
-
   .spin-clockwise {
     animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
   }
@@ -46,7 +56,7 @@
       transform: rotate(360deg);
     }
   }
-  
+
   @keyframes configure-xclockwise {
     0% {
       transform: rotate(45deg);

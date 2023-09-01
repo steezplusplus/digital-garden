@@ -1,6 +1,9 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import { Lora } from 'next/font/google';
+
+import './globals.css';
+import { Nav } from './_components/nav';
+import { Footer } from './_components/footer';
 
 const lora = Lora({ subsets: ['latin'] });
 
@@ -17,7 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lora.className}>
+        <nav>
+          <Nav />
+        </nav>
         <main>{children}</main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );
