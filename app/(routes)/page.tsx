@@ -20,9 +20,12 @@ export default function HomePage() {
         </Link>
       </div>
 
-      <div className="flex flex-col items-center justify-between ">
-        <Link href="/" className="inline-block">
-          <ArrowUpIcon />
+      <div className="flex flex-col items-center justify-between">
+        <Link href="/projects" className="inline-block">
+          <div className="flex flex-col items-center">
+            <ArrowUpIcon />
+            <span className="text-xl">Projects</span>
+          </div>
         </Link>
 
         <div className="relative flex items-center justify-center">
