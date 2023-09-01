@@ -1,10 +1,20 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowDownIcon, ArrowRightIcon, ArrowLeftIcon, ArrowUpIcon } from 'lucide-react';
+import {
+  ArrowDownIcon,
+  ArrowRightIcon,
+  ArrowLeftIcon,
+  ArrowUpIcon,
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "Jesse's Portfolio | Homepage",
+};
 
 export default function HomePage() {
   return (
-    <div className="h-full grid grid-cols-3 p-4 sm:p-2 lg:p-6">
-      <div className="flex flex-col justify-center items-start">
+    <div className="grid h-full grid-cols-3 p-4 sm:p-2 lg:p-6">
+      <div className="flex flex-col items-start justify-center">
         <Link href="/" className="inline-block">
           <ArrowLeftIcon />
         </Link>
@@ -15,18 +25,23 @@ export default function HomePage() {
           <ArrowUpIcon />
         </Link>
 
-        <div className="relative flex justify-center items-center">
-          <span className="absolute border-2 border-red-500 h-12 w-12 spin-xclockwise" />
-          <span className="absolute border-2 border-emerald-500 h-12 w-12 spin-clockwise" />
-          <Link href="/" className="absolute">JB</Link>
+        <div className="relative flex items-center justify-center">
+          <span className="spin-xclockwise absolute h-12 w-12 border-2 border-red-500" />
+          <span className="spin-clockwise absolute h-12 w-12 border-2 border-emerald-500" />
+          <Link href="/" className="absolute">
+            JB
+          </Link>
         </div>
 
-        <Link href="/" className="inline-block">
-          <ArrowDownIcon />
+        <Link href="/about" className="inline-block">
+          <div className="flex flex-col items-center">
+            <span className="text-lg">About</span>
+            <ArrowDownIcon />
+          </div>
         </Link>
       </div>
 
-      <div className="flex flex-col justify-center items-end">
+      <div className="flex flex-col items-end justify-center">
         <Link href="/" className="inline-block">
           <ArrowRightIcon />
         </Link>
