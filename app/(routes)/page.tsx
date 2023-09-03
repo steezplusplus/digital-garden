@@ -1,13 +1,14 @@
 import { Metadata } from 'next';
 
-import { getUser } from '@/octokit';
+import { getRepos, getUser } from '@/octokit';
 
 export const metadata: Metadata = {
   title: "Jesse's Homepage",
 };
 
 export default async function HomePage() {
-  const data = await getUser();
+  const user = await getUser();
+  const repos = await getRepos();
 
   return (
     <div className="h-full snap-y snap-mandatory overflow-scroll">
