@@ -4,11 +4,9 @@
 
 @layer base {
   :root {
-    font-size: 1rem;
+    @apply text-base;
   }
-}
 
-@layer components {
   body {
     @apply overscroll-y-none;
     @apply grid h-screen;
@@ -23,8 +21,8 @@
   }
 
   body > main {
-    grid-area: main;
     @apply overflow-y-auto;
+    grid-area: main;
   }
 
   body > footer {
