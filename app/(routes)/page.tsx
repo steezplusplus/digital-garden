@@ -1,16 +1,10 @@
 import { Metadata } from 'next';
 
-import { getUser } from '@/actions/get-user';
-import { getRepos } from '@/actions/get-repos';
-
 export const metadata: Metadata = {
   title: "Jesse's Homepage",
 };
 
 export default async function HomePage() {
-  const user = await getUser();
-  const repos = await getRepos();
-
   return (
     <div className="h-full snap-y snap-mandatory overflow-scroll">
       <div className="flex h-full w-full snap-start items-center justify-center bg-amber-200">
