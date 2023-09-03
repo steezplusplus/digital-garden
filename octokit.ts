@@ -30,6 +30,7 @@ export async function getUser() {
   }
 }
 
+// TODO Sorting, pagination - https://octokit.github.io/rest.js/v20#repos
 export async function getRepos() {
   try {
     const { data } = await octokit.rest.repos.listForAuthenticatedUser({
