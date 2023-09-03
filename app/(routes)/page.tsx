@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 import { getUser } from '@/actions/get-user';
+import { getRepos } from '@/actions/get-repos';
 
 export const metadata: Metadata = {
   title: "Jesse's Homepage",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const user = await getUser();
-  console.log(user);
+  const repos = await getRepos();
 
   return (
     <div className="h-full snap-y snap-mandatory overflow-scroll">
