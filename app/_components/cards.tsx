@@ -26,8 +26,8 @@ export function TwitterCard() {
       target="_blank"
       className="flex aspect-square flex-col rounded-xl border border-stone-400 p-4"
     >
-      <h2 className="mb-1 text-lg first-letter:text-2xl">{label}</h2>
-      <h3 className="text-sm">@CodingSteez</h3>
+      <h2 className="mb-1 self-end text-lg first-letter:text-2xl">{label}</h2>
+      <h3 className="self-end text-sm">@CodingSteez</h3>
       <Twitter className="mt-auto self-start" />
     </Link>
   );
@@ -61,8 +61,8 @@ export function EmailCard() {
       className="flex aspect-square flex-col rounded-xl border border-stone-400 p-4"
     >
       <Mail className="mb-auto self-start" />
-      <h2 className="mb-1 text-lg first-letter:text-2xl">{label}</h2>
-      <h3 className="font-italic text-sm">{subLael}</h3>
+      <h2 className="mb-1 self-end text-lg first-letter:text-2xl">{label}</h2>
+      <h3 className="font-italic self-end text-sm">{subLael}</h3>
     </Link>
   );
 }
@@ -87,8 +87,8 @@ export function MusicCard() {
   const label = 'Listening to...';
   return (
     <div className="flex aspect-square flex-col rounded-xl border border-stone-400 p-4">
-      <h2 className="mb-1 text-lg first-letter:text-2xl">{label}</h2>
-      <h3 className="text-sm">TODO Genre</h3>
+      <h2 className="mb-1 self-end text-lg first-letter:text-2xl">{label}</h2>
+      <h3 className="self-end text-sm">Genre</h3>
       <Music className="mt-auto self-start" />
     </div>
   );
