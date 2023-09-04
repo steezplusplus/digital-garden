@@ -2,9 +2,16 @@ import Link from 'next/link';
 
 import { octokit } from '@/octokit';
 
-const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME; // TODO Type assertion with Zod
 
-export const featProjects = [
+export type FeaturedProject = {
+  displayName: string;
+  repoName: string;
+};
+
+type FeaturedProjectWithKey = FeaturedProject & { key: string };
+
+export const featProjects: FeaturedProjectWithKey[] = [
   {
     displayName: 'E-commerce Store',
     repoName: 'ecommerce-store',
@@ -21,11 +28,6 @@ export const featProjects = [
     key: 'chirp-chirp-2',
   },
 ];
-
-export type FeaturedProject = {
-  displayName: string;
-  repoName: string;
-};
 
 export async function FeaturedProject(props: FeaturedProject) {
   const { displayName, repoName } = props;
@@ -48,7 +50,11 @@ export async function FeaturedProject(props: FeaturedProject) {
   );
 }
 
-async function getRepo(repo: string) {
+/**
+ * https://octokit.github.io/rest.js/v20#repos-get
+ * @param repo The name of the repository without the .git extension.
+ */
+async function getRepo(repoName: string) {
   if (!GITHUB_USERNAME) {
     throw new Error('[GET_REPO]: GITHUB_USERNAME is required');
   }
@@ -56,7 +62,7 @@ async function getRepo(repo: string) {
   try {
     const { data } = await octokit.rest.repos.get({
       owner: GITHUB_USERNAME,
-      repo: repo,
+      repo: repoName,
     });
 
     const filteredRepoData = {
