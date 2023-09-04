@@ -8,7 +8,8 @@
   }
 
   body {
-    @apply bg-indigo-50 text-black dark:bg-neutral-900 dark:text-indigo-50;
+    @apply bg-neutral-100 text-black;
+    @apply dark:bg-neutral-900 dark:text-indigo-50;
     @apply grid h-screen;
     grid-template:
       'nav' 3rem
@@ -17,7 +18,9 @@
   }
 
   body > nav {
-    @apply border-b bg-white/50 dark:bg-indigo-100/5;
+    @apply border-b;
+    @apply bg-white/50;
+    @apply dark:bg-indigo-100/5;
     grid-area: nav;
   }
 
@@ -26,7 +29,9 @@
   }
 
   body > footer {
-    @apply border-t bg-white/50 dark:bg-indigo-100/5;
+    @apply border-t;
+    @apply bg-white/50;
+    @apply dark:bg-indigo-100/5;
     grid-area: footer;
   }
 }
