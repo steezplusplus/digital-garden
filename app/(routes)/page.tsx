@@ -15,11 +15,14 @@ export default async function HomePage() {
     <SnapContainer>
       {repos.map((repo) => (
         <SnapSection key={repo.name}>
-          <h2 className="text-2xl">{repo.name}</h2>
-          <p>{repo.description}</p>
-          <p>Last updated {repo.updated_at}</p>
-          <a href={repo.url}>Github link</a>
-          <p>{repo.num_stars} stars</p>
+          <div className="flex flex-col">
+            <h2 className="text-2xl">{repo.name}</h2>
+            <p>{repo.description}</p>
+            <p>Last updated {repo.updated_at}</p>
+            <a href={repo.url}>Github link</a>
+            {repo.homepage && <a href={repo.homepage}>Live link</a>}
+            <p>{repo.num_stars} stars</p>
+          </div>
         </SnapSection>
       ))}
     </SnapContainer>
