@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { Linkedin, Twitter, Github } from 'lucide-react';
+import { Linkedin, Twitter, Github, Music, Mail, Gamepad2 } from 'lucide-react';
 
 export function GithubCard() {
-  const label = 'Github Link';
+  const label = 'Github';
   const href = 'https://github.com/steezplusplus';
   return (
     <Link
@@ -18,7 +18,7 @@ export function GithubCard() {
 }
 
 export function TwitterCard() {
-  const label = 'Twitter Link';
+  const label = 'Twitter';
   const href = 'https://twitter.com/CodingSteez';
   return (
     <Link
@@ -49,29 +49,47 @@ export function LinkedInCard() {
   );
 }
 
-export function SpotifyCard() {
-  const label = 'Spotify API';
+export function EmailCard() {
+  const label = 'Hire me';
+  const subLael = 'Pls no spam :(';
+  const href = 'mailto::';
+
   return (
-    <div className="aspect-square rounded-xl border border-stone-400 p-4">
-      {label}
-    </div>
+    <Link
+      href={href}
+      target="_blank"
+      className="flex aspect-square flex-col rounded-xl border border-stone-400 p-4"
+    >
+      <Mail className="mb-auto self-start" />
+      <h2 className="mb-1 text-lg first-letter:text-2xl">{label}</h2>
+      <h3 className="font-italic text-sm">{subLael}</h3>
+    </Link>
   );
 }
 
 export function SteamCard() {
-  const label = 'Hire me';
+  const label = 'Playing...';
+  const href = '';
   return (
-    <div className="aspect-square rounded-xl border border-stone-400 p-4">
-      {label}
-    </div>
+    <Link
+      href={href}
+      target="_blank"
+      className="flex aspect-square flex-col rounded-xl border border-stone-400 p-4"
+    >
+      <h2 className="mb-1 text-lg first-letter:text-2xl">{label}</h2>
+      <h3 className="text-sm">Some game</h3>
+      <Gamepad2 className="mt-auto self-end" />
+    </Link>
   );
 }
 
-export function EmailCard() {
-  const label = 'Email Link';
+export function MusicCard() {
+  const label = 'Listening to...';
   return (
-    <div className="aspect-square rounded-xl border border-stone-400 p-4">
-      {label}
+    <div className="flex aspect-square flex-col rounded-xl border border-stone-400 p-4">
+      <h2 className="mb-1 text-lg first-letter:text-2xl">{label}</h2>
+      <h3 className="text-sm">TODO Genre</h3>
+      <Music className="mt-auto self-start" />
     </div>
   );
 }

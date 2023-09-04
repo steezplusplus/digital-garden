@@ -3,7 +3,7 @@ import {
   EmailCard,
   GithubCard,
   LinkedInCard,
-  SpotifyCard,
+  MusicCard,
   SteamCard,
   RepositoryCard,
   TwitterCard,
@@ -25,9 +25,9 @@ export default async function HomePage() {
           <GithubCard />
           <TwitterCard />
           <LinkedInCard />
-          <SpotifyCard />
-          <SteamCard />
           <EmailCard />
+          <SteamCard />
+          <MusicCard />
         </div>
       </div>
       <div>
