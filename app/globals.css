@@ -5,6 +5,7 @@
 @layer base {
   :root {
     @apply text-base;
+  }
 
   body {
     @apply bg-neutral-100 text-black;
