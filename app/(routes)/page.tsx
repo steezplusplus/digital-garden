@@ -49,7 +49,7 @@ export default async function HomePage() {
           <RepositoryCard />
         </div>
         <div className="flex justify-center">
-          <button className="rounded border border-stone-400 px-2 py-1 hover:bg-stone-300/50 hover:dark:bg-black/50">
+          <button className="rounded-md border border-stone-400 px-2 py-1 hover:bg-stone-300/50 hover:dark:bg-black/50">
             Load more
           </button>
         </div>
