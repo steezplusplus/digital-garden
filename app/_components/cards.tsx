@@ -34,7 +34,7 @@ export function TwitterCard() {
 }
 
 export function LinkedInCard() {
-  const label = 'LinkedIn Link';
+  const label = 'LinkedIn';
   const href = 'https://www.linkedin.com/in/jesse-bp/';
   return (
     <Link
@@ -51,7 +51,7 @@ export function LinkedInCard() {
 
 export function EmailCard() {
   const label = 'Hire me';
-  const subLael = 'Pls no spam :(';
+  const subLael = 'Send me an e-mail';
   const href = 'mailto::';
 
   return (
