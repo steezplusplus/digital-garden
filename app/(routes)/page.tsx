@@ -9,6 +9,10 @@ import {
   TwitterCard,
 } from '../_components/cards';
 import { ProfileCard } from '../_components/profile-card';
+import {
+  FeaturedProject,
+  featuredProjects,
+} from './_components/featured-project';
 
 export const metadata: Metadata = {
   title: "Jesse's Homepage",
@@ -30,11 +34,15 @@ export default async function HomePage() {
       </div>
 
       <div>
-        <h2 className="mb-1 text-3xl">What Im building</h2>
+        <h2 className="mb-4 text-3xl">What Im building</h2>
         <div className="grid grid-cols-1 gap-8">
-          <RepositoryCard />
-          <RepositoryCard />
-          <RepositoryCard />
+          {featuredProjects.map((featuredProject) => (
+            <FeaturedProject
+              key={featuredProject.key}
+              displayName={featuredProject.displayName}
+              repoName={featuredProject.repoName}
+            />
+          ))}
         </div>
       </div>
 
