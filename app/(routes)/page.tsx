@@ -8,7 +8,7 @@ import {
   RepositoryCard,
   TwitterCard,
 } from '../_components/cards';
-import { ProfileCard } from '../_components/profile-card';
+import { ProfileCard } from './_components/profile-card';
 import {
   FeaturedProject,
   featuredProjects,
