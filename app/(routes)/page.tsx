@@ -38,8 +38,8 @@ export default async function HomePage() {
           <RepositoryCard />
         </div>
       </div>
-      <div>
-        <h2 className="mb-1 text-3xl">Older works</h2>
+      <div className="flex flex-col gap-y-2">
+        <h2 className="text-3xl">Older works</h2>
         <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <RepositoryCard />
           <RepositoryCard />
@@ -47,6 +47,11 @@ export default async function HomePage() {
           <RepositoryCard />
           <RepositoryCard />
           <RepositoryCard />
+        </div>
+        <div className="flex justify-center">
+          <button className="rounded border border-stone-400 px-2 py-1 hover:bg-stone-300/50 hover:dark:bg-black/50">
+            Load more
+          </button>
         </div>
       </div>
     </div>
