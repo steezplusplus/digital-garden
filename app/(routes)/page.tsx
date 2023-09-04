@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
-import {
-  EmailCard,
-  GithubCard,
-  LinkedInCard,
-  MusicCard,
-  SteamCard,
-  RepositoryCard,
-  TwitterCard,
-} from '../_components/cards';
+
 import { ProfileCard } from './_components/profile-card';
+import { GithubCard } from './_components/github-card';
+import { TwitterCard } from './_components/twitter-card';
+import { LinkedInCard } from './_components/linkedin-card';
+import { EmailCard } from './_components/email-card';
+import { SteamCard } from './_components/steam-card';
+import { MusicCard } from './_components/music-card';
+
 import {
   FeaturedProject,
   featuredProjects,
@@ -63,5 +62,14 @@ export default async function HomePage() {
         </div>
       </div>
     </>
+  );
+}
+
+function RepositoryCard() {
+  const label = 'Repo';
+  return (
+    <div className="aspect-auto rounded-xl border border-stone-400 p-4">
+      {label}
+    </div>
   );
 }
