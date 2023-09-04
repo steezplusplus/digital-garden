@@ -4,7 +4,7 @@ import { octokit } from '@/octokit';
 
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 
-export const featuredProjects = [
+export const featProjects = [
   {
     displayName: 'E-commerce Store',
     repoName: 'ecommerce-store',

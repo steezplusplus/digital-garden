@@ -7,11 +7,7 @@ import { LinkedInCard } from './_components/linkedin-card';
 import { EmailCard } from './_components/email-card';
 import { SteamCard } from './_components/steam-card';
 import { MusicCard } from './_components/music-card';
-
-import {
-  FeaturedProject,
-  featuredProjects,
-} from './_components/featured-project';
+import { FeaturedProject, featProjects } from './_components/featured-project';
 
 export const metadata: Metadata = {
   title: "Jesse's Homepage",
@@ -35,7 +31,7 @@ export default async function HomePage() {
       <div>
         <h2 className="mb-4 text-3xl">What Im building</h2>
         <div className="grid grid-cols-1 gap-8">
-          {featuredProjects.map((featuredProject) => (
+          {featProjects.map((featuredProject) => (
             <FeaturedProject
               key={featuredProject.key}
               displayName={featuredProject.displayName}
