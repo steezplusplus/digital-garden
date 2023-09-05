@@ -8,6 +8,7 @@ import { EmailCard } from './_components/email-card';
 import { SteamCard } from './_components/steam-card';
 import { MusicCard } from './_components/music-card';
 import { FeaturedProjectsFeed } from './_components/featured/featured-project-feed';
+import { NotFeaturedFeed } from './_components/not-featured/not-featured-feed';
 
 export const metadata: Metadata = {
   title: "Jesse's Homepage",
@@ -35,14 +36,7 @@ export default async function HomePage() {
 
       <div className="flex flex-col gap-y-2">
         <h2 className="text-3xl">Older works</h2>
-        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <RepositoryCard />
-          <RepositoryCard />
-          <RepositoryCard />
-          <RepositoryCard />
-          <RepositoryCard />
-          <RepositoryCard />
-        </div>
+        <NotFeaturedFeed />
         <div className="flex justify-center">
           <button className="rounded-md border border-stone-400 px-2 py-1 hover:bg-stone-300/50 hover:dark:bg-black/50">
             Load more
@@ -50,14 +44,5 @@ export default async function HomePage() {
         </div>
       </div>
     </>
-  );
-}
-
-function RepositoryCard() {
-  const label = 'Repo';
-  return (
-    <div className="aspect-auto rounded-xl border border-stone-400 p-4">
-      {label}
-    </div>
   );
 }
