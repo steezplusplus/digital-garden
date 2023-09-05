@@ -26,28 +26,19 @@ export async function FeaturedProject(props: FeaturedProjectProps) {
     <Link
       href={project.html_url}
       target="_blank"
-      className="flex flex-col items-center rounded-xl border border-stone-400"
+      className="flex flex-col items-center gap-y-2 rounded-xl border border-stone-400 px-2 pb-2 pt-1"
     >
-      <h5 className="mb-3 text-lg first-letter:text-2xl">{displayName}</h5>
-      <p className="mb-4">{project.description}</p>
-      <div className="flex items-center gap-x-2">
-        <p className="rounded border px-2 py-1 text-xs">
-          {project.num_stars} stars
-        </p>
-        <p className="rounded border px-2 py-1 text-xs">
-          {project.num_forks} forks
-        </p>
-        <p className="rounded border px-2 py-1 text-xs">
-          {project.num_subscribers} subscribers
-        </p>
-        <p className="rounded border px-2 py-1 text-xs">
-          Built with {project.language}
-        </p>
-        {project.license && (
+      <h2 className="text-lg first-letter:text-2xl">{displayName}</h2>
+      <p className="p-2">{project.description}</p>
+      <div className="mt-auto">
+        <div className="flex items-center gap-x-2">
           <p className="rounded border px-2 py-1 text-xs">
-            {project.license.name}
+            {project.num_stars} stars
           </p>
-        )}
+          <p className="rounded border px-2 py-1 text-xs">
+            {project.num_forks} forks
+          </p>
+        </div>
       </div>
     </Link>
   );
