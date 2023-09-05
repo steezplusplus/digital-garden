@@ -1,54 +1,9 @@
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 import { octokit } from '@/octokit';
 
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME; // TODO Type assertion with Zod
-
-export type FeaturedProject = {
-  displayName: string;
-  repoName: string;
-};
-
-type FeaturedProjectWithKey = FeaturedProject & { key: string };
-
-export const featProjects: FeaturedProjectWithKey[] = [
-  {
-    displayName: 'E-commerce Store',
-    repoName: 'ecommerce-store',
-    key: 'ecommerce-store-0',
-  },
-  {
-    displayName: 'E-commerce Admin',
-    repoName: 'ecommerce-admin',
-    key: 'ecommerce-admin-1',
-  },
-  {
-    displayName: 'Chirp Chirp',
-    repoName: 'chirp-chirp',
-    key: 'chirp-chirp-2',
-  },
-];
-
-export async function FeaturedProject(props: FeaturedProject) {
-  const { displayName, repoName } = props;
-  const project = await getRepo(repoName);
-
-  return (
-    <Link
-      href={project.html_url}
-      target="_blank"
-      className="aspect-auto rounded-xl border border-stone-400 p-4"
-    >
-      <h2>{displayName}</h2>
-      <h3>{project.description}</h3>
-      <p>{project.num_stars} stars</p>
-      <p>{project.num_forks} forks</p>
-      <p>{project.num_subscribers} subscribers</p>
-      <p>Built with {project.language}</p>
-      {project.license && <p>{project.license.name}</p>}
-    </Link>
-  );
-}
 
 /**
  * https://octokit.github.io/rest.js/v20#repos-get
@@ -77,7 +32,78 @@ async function getRepo(repoName: string) {
 
     return filteredRepoData;
   } catch (error) {
-    console.error('[GET_REPO]');
-    throw error;
+    console.error('[GET_REPO]', error);
   }
+}
+
+type FeaturedProject = {
+  displayName: string;
+  repoName: string;
+};
+
+async function FeaturedProject(props: FeaturedProject) {
+  const { displayName, repoName } = props;
+  const project = await getRepo(repoName);
+
+  if (project === undefined) {
+    return (
+      <div className="aspect-auto rounded-xl border border-stone-400 p-4">
+        <p>Uh-oh! Something went wrong.</p>
+      </div>
+    );
+  }
+
+  return (
+    <Link
+      href={project.html_url}
+      target="_blank"
+      className="aspect-auto rounded-xl border border-stone-400 p-4"
+    >
+      <h2>{displayName}</h2>
+      <h3>{project.description}</h3>
+      <p>{project.num_stars} stars</p>
+      <p>{project.num_forks} forks</p>
+      <p>{project.num_subscribers} subscribers</p>
+      <p>Built with {project.language}</p>
+      {project.license && <p>{project.license.name}</p>}
+    </Link>
+  );
+}
+
+type FeaturedProjectWithKey = FeaturedProject & { key: string };
+
+const featProjects: FeaturedProjectWithKey[] = [
+  {
+    displayName: 'E-commerce Store',
+    repoName: 'ecommerce-store',
+    key: 'ecommerce-store-0',
+  },
+  {
+    displayName: 'E-commerce Admin',
+    repoName: 'ecommerce-admin',
+    key: 'ecommerce-admin-1',
+  },
+  {
+    displayName: 'Chirp Chirp',
+    repoName: 'chirp-chirp',
+    key: 'chirp-chirp-2',
+  },
+];
+
+export async function FeaturedProjectsFeed() {
+  return (
+    <div className="grid grid-cols-1 gap-8">
+      {featProjects.map((featuredProject) => (
+        <Suspense
+          key={featuredProject.key}
+          fallback={<p>Loading project...</p>}
+        >
+          <FeaturedProject
+            displayName={featuredProject.displayName}
+            repoName={featuredProject.repoName}
+          />
+        </Suspense>
+      ))}
+    </div>
+  );
 }
