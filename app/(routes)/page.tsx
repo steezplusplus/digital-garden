@@ -8,7 +8,6 @@ import { EmailCard } from './_components/email-card';
 import { SteamCard } from './_components/steam-card';
 import { MusicCard } from './_components/music-card';
 import { FeaturedProjectsFeed } from './_components/featured/featured-project-feed';
-import { NotFeaturedFeed } from './_components/not-featured/not-featured-feed';
 
 export const metadata: Metadata = {
   title: "Jesse's Homepage",
@@ -32,11 +31,6 @@ export default async function HomePage() {
       <div>
         <h2 className="mb-4 text-3xl">Featured Projects</h2>
         <FeaturedProjectsFeed />
-      </div>
-
-      <div className="flex flex-col gap-y-2">
-        <h2 className="text-3xl">Older works</h2>
-        <NotFeaturedFeed />
       </div>
     </>
   );
