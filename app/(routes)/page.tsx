@@ -7,7 +7,7 @@ import { LinkedInCard } from './_components/linkedin-card';
 import { EmailCard } from './_components/email-card';
 import { SteamCard } from './_components/steam-card';
 import { MusicCard } from './_components/music-card';
-import { FeaturedProjectsFeed } from './_components/featured-project';
+import { FeaturedProjectsFeed } from './_components/featured/featured-project-feed';
 
 export const metadata: Metadata = {
   title: "Jesse's Homepage",
