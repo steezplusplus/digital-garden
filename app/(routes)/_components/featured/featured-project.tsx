@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getFeaturedProject } from './get-featured-project';
+import { getProject } from '@/octokit';
 
 export type FeaturedProjectProps = {
   displayName: string;
@@ -9,7 +9,7 @@ export type FeaturedProjectProps = {
 // TODO Component UI
 export async function FeaturedProject(props: FeaturedProjectProps) {
   const { displayName, repoName } = props;
-  const project = await getFeaturedProject(repoName);
+  const project = await getProject(repoName);
 
   // TODO Error fallback UI?
   if (project === undefined) {
