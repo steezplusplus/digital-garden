@@ -8,7 +8,7 @@ export function ProfileCard() {
       "
     >
       <div className="flex h-full flex-col items-center justify-center">
-        <div className="mb-4 border px-44 py-44">Asset</div>
+        <h2 className="text-xl">Asset</h2>
         <h2 className="text-xl">Welcome to my digital garden</h2>
       </div>
     </div>
