@@ -6,6 +6,7 @@ import { EmailCard } from './_components/email-card';
 import { SteamCard } from './_components/steam-card';
 import { MusicCard } from './_components/music-card';
 
+// TODO Less CLS issues
 export default function Loading() {
   return (
     <>
@@ -20,32 +21,15 @@ export default function Loading() {
           <MusicCard />
         </div>
       </div>
+
       <div>
-        <h2 className="mb-4 text-3xl">What Im building</h2>
-        <p>Loading...</p> {/* TODO Animate & less CLS */}
+        <h2 className="mb-4 text-3xl">Featured Projects</h2>
+        <p>Loading...</p>
       </div>
+
       <div className="flex flex-col gap-y-2">
         <h2 className="text-3xl">Older works</h2>
-        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <div className="aspect-auto rounded-xl border border-stone-400 p-4">
-            Repo
-          </div>
-          <div className="aspect-auto rounded-xl border border-stone-400 p-4">
-            Repo
-          </div>
-          <div className="aspect-auto rounded-xl border border-stone-400 p-4">
-            Repo
-          </div>
-          <div className="aspect-auto rounded-xl border border-stone-400 p-4">
-            Repo
-          </div>
-          <div className="aspect-auto rounded-xl border border-stone-400 p-4">
-            Repo
-          </div>
-          <div className="aspect-auto rounded-xl border border-stone-400 p-4">
-            Repo
-          </div>
-        </div>
+        <p>Loading...</p>
         <div className="flex justify-center">
           <button className="rounded-md border border-stone-400 px-2 py-1 hover:bg-stone-300/50 hover:dark:bg-black/50">
             Load more

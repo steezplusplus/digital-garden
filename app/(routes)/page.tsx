@@ -29,7 +29,7 @@ export default async function HomePage() {
       </div>
 
       <div>
-        <h2 className="mb-4 text-3xl">What Im building</h2>
+        <h2 className="mb-4 text-3xl">Featured Projects</h2>
         <FeaturedProjectsFeed />
       </div>
 
