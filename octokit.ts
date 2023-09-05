@@ -7,6 +7,9 @@ export const octokit = new Octokit({
   auth: GITHUB_TOKEN,
 });
 
+/**
+ * https://octokit.github.io/rest.js/v20#users-get-authenticated
+ */
 export async function getUser() {
   try {
     const { data } = await octokit.rest.users.getAuthenticated();
@@ -27,35 +30,6 @@ export async function getUser() {
     return filteredData;
   } catch (error) {
     console.error('[GET_USER]');
-    throw error;
-  }
-}
-
-// TODO Sorting, pagination - https://octokit.github.io/rest.js/v20#repos
-export async function getRepos() {
-  try {
-    const { data } = await octokit.rest.repos.listForAuthenticatedUser({
-      visibility: 'public',
-      affiliation: 'owner',
-    });
-
-    const filteredRepos = data.map((repo) => {
-      return {
-        name: repo.full_name,
-        description: repo.description,
-        url: repo.html_url,
-        language: repo.language,
-        homepage: repo.homepage,
-        num_stars: repo.stargazers_count,
-        topics: repo.topics,
-        created_at: repo.created_at,
-        updated_at: repo.updated_at,
-      };
-    });
-
-    return filteredRepos;
-  } catch (error) {
-    console.error('[GET_REPOS]');
     throw error;
   }
 }
