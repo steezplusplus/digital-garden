@@ -22,7 +22,7 @@ const featProjects: FeaturedProjectFeed[] = [
 ];
 
 // TODO Create better suspsene fallback that creates less CLS
-export async function FeaturedProjectsFeed() {
+export function FeaturedProjectsFeed() {
   return (
     <div className="grid grid-cols-1 gap-8">
       {featProjects.map((featuredProject) => (
