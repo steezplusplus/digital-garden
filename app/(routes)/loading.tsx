@@ -26,12 +26,6 @@ export default function Loading() {
         <h2 className="mb-4 text-3xl">Featured Projects</h2>
         <p>Loading...</p>
       </div>
-
-      <div className="flex flex-col gap-y-2">
-        <h2 className="text-3xl">Older works</h2>
-        <p>Loading...</p>
-        <div className="flex justify-center"></div>
-      </div>
     </>
   );
 }
