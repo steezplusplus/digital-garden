@@ -1,11 +1,16 @@
+import { Audio } from './audio';
 import { Music } from 'lucide-react';
+
+const songPath = '/song.mp3';
+const genre = 'LoFi';
 
 export function MusicCard() {
   const label = 'Listening to...';
   return (
     <div className="flex aspect-square flex-col rounded-xl border border-stone-400 p-4">
       <h2 className="mb-1 self-end text-lg first-letter:text-2xl">{label}</h2>
-      <h3 className="self-end text-sm">Genre</h3>
+      <h3 className="self-end text-sm">{genre}</h3>
+      <Audio songPath={songPath} />
       <Music className="mt-auto self-start" />
     </div>
   );
