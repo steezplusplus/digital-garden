@@ -6,11 +6,12 @@ import { getProject } from '@/octokit';
 export type FeaturedProjectProps = {
   displayName: string;
   repoName: string;
+  showBadge: boolean;
 };
 
 // TODO Component UI
 export async function FeaturedProject(props: FeaturedProjectProps) {
-  const { displayName, repoName } = props;
+  const { displayName, repoName, showBadge } = props;
   const project = await getProject(repoName);
 
   // TODO Error fallback UI?
@@ -25,11 +26,13 @@ export async function FeaturedProject(props: FeaturedProjectProps) {
   return (
     <article
       className="
-        flex aspect-auto flex-col overflow-hidden 
-        rounded-xl border border-stone-400 
-        px-6 py-2
+        relative flex aspect-auto flex-col 
+        rounded-xl border 
+        border-stone-400 px-6
+        py-2
       "
     >
+      {showBadge === true && <Badge />}
       <header className="mb-4">
         <h2 className="first-letter:text-2xl">{displayName}</h2>
       </header>
@@ -63,5 +66,21 @@ export async function FeaturedProject(props: FeaturedProjectProps) {
         </Link>
       </footer>
     </article>
+  );
+}
+
+function Badge() {
+  return (
+    <div
+      className="
+        absolute -right-2 -top-2
+        rounded-lg border border-stone-400
+      bg-neutral-100 px-2 py-1 text-xs
+        font-semibold text-black
+      dark:bg-neutral-900 dark:text-indigo-50
+      "
+    >
+      New!
+    </div>
   );
 }

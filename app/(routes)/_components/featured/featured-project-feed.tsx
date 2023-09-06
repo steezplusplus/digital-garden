@@ -7,30 +7,36 @@ const featProjects: FeaturedProjectFeed[] = [
   {
     displayName: 'E-commerce Store',
     repoName: 'ecommerce-store',
+    showBadge: true,
     key: 'ecommerce-store-0',
   },
   {
     displayName: 'E-commerce Admin',
+    showBadge: true,
     repoName: 'ecommerce-admin',
     key: 'ecommerce-admin-1',
   },
   {
     displayName: 'Chirp Chirp',
+    showBadge: true,
     repoName: 'chirp-chirp',
     key: 'chirp-chirp-2',
   },
   {
     displayName: 'Acessible Web Components',
+    showBadge: true,
     repoName: 'Accessible-Web-Components',
     key: 'Accessible-Web-Components-0',
   },
   {
     displayName: 'History Plotter',
+    showBadge: false,
     repoName: 'history-plotter',
     key: 'history-plotter-1',
   },
   {
     displayName: 'Istanbul Stock Exchange Analysis',
+    showBadge: false,
     repoName: 'Istanbul-Stock-Exchange-Analysis',
     key: 'Istanbul-Stock-Exchange-Analysis-2',
   },
@@ -48,6 +54,7 @@ export function FeaturedProjectsFeed() {
           <FeaturedProject
             displayName={featuredProject.displayName}
             repoName={featuredProject.repoName}
+            showBadge={featuredProject.showBadge}
           />
         </Suspense>
       ))}
