@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 
-// TODO Error page styles layout etc
 export default function Error({
   error,
   reset,
@@ -15,16 +14,11 @@ export default function Error({
   }, [error]);
 
   return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
-      >
-        Try again
-      </button>
+    <div className="mx-auto my-auto flex flex-col items-center">
+      <h2 className="mb-1 text-2xl">Something went wrong!</h2>
+      <h3 className="text-lg tracking-wide text-slate-700">
+        Try refreshing the page.
+      </h3>
     </div>
   );
 }
