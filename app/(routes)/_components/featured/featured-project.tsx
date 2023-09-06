@@ -7,11 +7,12 @@ export type FeaturedProjectProps = {
   displayName: string;
   repoName: string;
   showBadge: boolean;
+  websiteUrl: string;
 };
 
 // TODO Component UI
 export async function FeaturedProject(props: FeaturedProjectProps) {
-  const { displayName, repoName, showBadge } = props;
+  const { displayName, repoName, showBadge, websiteUrl } = props;
   const project = await getProject(repoName);
 
   // TODO Error fallback UI?
@@ -57,13 +58,15 @@ export async function FeaturedProject(props: FeaturedProjectProps) {
         >
           Source code
         </Link>
-        <Link
-          href="#TODO"
-          target="_blank"
-          className="flex items-center justify-center gap-x-2 rounded border px-2 py-1"
-        >
-          Website
-        </Link>
+        {websiteUrl && (
+          <Link
+            href={websiteUrl}
+            target="_blank"
+            className="flex items-center justify-center gap-x-2 rounded border px-2 py-1"
+          >
+            Website
+          </Link>
+        )}
       </footer>
     </article>
   );
