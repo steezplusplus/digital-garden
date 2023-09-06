@@ -38,11 +38,11 @@ export function Audio(props: AudioProps) {
       <audio ref={audioRef} src={songPath}>
         Your browser does not support the <code>audio</code> element.
       </audio>
-      <div className="my-auto flex h-1/3 items-center gap-x-4 rounded border border-slate-400">
+      <div className="flex rounded border border-slate-400 px-2 py-1">
         <button className="h-full border-r px-2" onClick={togglePlayPause}>
           {isPlaying ? <Pause size={16} /> : <Play size={16} />}
         </button>
-        <div className="flex w-full items-center gap-x-1 pr-3">
+        <div className="flex w-full items-center gap-x-1 px-3">
           <Volume1 size={22} />
           <input
             className="w-full"
