@@ -28,7 +28,7 @@
   body > main {
     @apply mx-auto flex w-full;
     @apply max-w-screen-lg flex-col gap-10;
-    @apply px-2 py-10;
+    @apply px-2 py-10 sm:px-4 lg:px-6;
     grid-area: main;
   }
 
