@@ -76,7 +76,7 @@ function Badge() {
   return (
     <div
       className="
-        absolute -right-4 -top-3
+        absolute -right-2 -top-3
         rounded-lg border border-stone-400
       bg-neutral-100 px-2 py-1 text-xs
         font-semibold text-black
