@@ -5,7 +5,7 @@ import { GithubCard } from './_components/github-card';
 import { TwitterCard } from './_components/twitter-card';
 import { LinkedInCard } from './_components/linkedin-card';
 import { EmailCard } from './_components/email-card';
-import { SteamCard } from './_components/steam-card';
+import { ThemeCard } from './_components/theme-card';
 import { MusicCard } from './_components/music-card';
 import { FeaturedProjectsFeed } from './_components/featured/featured-project-feed';
 
@@ -23,7 +23,7 @@ export default async function HomePage() {
           <TwitterCard />
           <LinkedInCard />
           <EmailCard />
-          <SteamCard />
+          <ThemeCard />
           <MusicCard />
         </div>
       </div>

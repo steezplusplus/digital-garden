@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Lora } from 'next/font/google';
+import { ThemeProvider } from './_components/theme-provider';
 
 import './globals.css';
 import { Nav } from './_components/nav';
@@ -18,15 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={lora.className}>
-        <nav>
-          <Nav />
-        </nav>
-        <main>{children}</main>
-        <footer>
-          <Footer />
-        </footer>
+        <ThemeProvider>
+          <nav>
+            <Nav />
+          </nav>
+          <main>{children}</main>
+          <footer>
+            <Footer />
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
