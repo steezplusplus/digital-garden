@@ -19,7 +19,7 @@
   }
 
   body > nav {
-    @apply border-b;
+    @apply border-b border-stone-300;
     @apply bg-white/50;
     @apply dark:bg-indigo-100/5;
     grid-area: nav;
@@ -33,7 +33,7 @@
   }
 
   body > footer {
-    @apply border-t;
+    @apply border-t border-stone-300;
     @apply bg-white/50;
     @apply dark:bg-indigo-100/5;
     grid-area: footer;
