@@ -54,7 +54,7 @@ export async function FeaturedProject(props: FeaturedProjectProps) {
         <Link
           href={project.html_url}
           target="_blank"
-          className="flex items-center justify-center gap-x-2 rounded border px-2 py-1"
+          className="flex items-center justify-center gap-x-2 rounded border border-stone-400 px-2 py-1"
         >
           Source code
         </Link>
@@ -62,7 +62,7 @@ export async function FeaturedProject(props: FeaturedProjectProps) {
           <Link
             href={websiteUrl}
             target="_blank"
-            className="flex items-center justify-center gap-x-2 rounded border px-2 py-1"
+            className="flex items-center justify-center gap-x-2 rounded border border-stone-400 px-2 py-1"
           >
             Website
           </Link>
