@@ -1,8 +1,12 @@
 # TODO
 
-- Observation Observer, animations, and fetch to do infinite scroll
-- Fetch pinned projects from my github to display?
+- Observation Observer, animations
 - Scrollbar color pseudo
-- view transition name
-- open modal at bottom of blog posts like this https://lo-victoria.com/introduction-to-the-github-graphql-api-step-by-step-guide
+- Blog from codesteez
+  - open modal at bottom of blog posts like this https://lo-victoria.com/introduction-to-the-github-graphql-api-step-by-step-guide
 - https://tailwindcss.com/docs/font-smoothing
+- buttons to fork and star projects
+- Make theme button look like video player
+- Profile card needs asset. Maybe use Phaser?
+- Footer needs links
+- Repos need more tags for discoverability
