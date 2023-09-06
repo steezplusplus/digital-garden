@@ -12,3 +12,4 @@
 - Repos need more tags for discoverability
 - "NEW" banner for featured projects
 - Listening to card audio element does scale
+- https://daisyui.com/components/countdown/ for music player?
