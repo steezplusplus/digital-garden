@@ -30,11 +30,7 @@ export default function Loading() {
       <div className="flex flex-col gap-y-2">
         <h2 className="text-3xl">Older works</h2>
         <p>Loading...</p>
-        <div className="flex justify-center">
-          <button className="rounded-md border border-stone-400 px-2 py-1 hover:bg-stone-300/50 hover:dark:bg-black/50">
-            Load more
-          </button>
-        </div>
+        <div className="flex justify-center"></div>
       </div>
     </>
   );
