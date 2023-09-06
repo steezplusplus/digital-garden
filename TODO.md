@@ -10,3 +10,5 @@
 - Profile card needs asset. Maybe use Phaser?
 - Footer needs links
 - Repos need more tags for discoverability
+- "NEW" banner for featured projects
+- Listening to card audio element does scale
