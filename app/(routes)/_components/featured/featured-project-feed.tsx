@@ -39,7 +39,7 @@ const featProjects: FeaturedProjectFeed[] = [
 // TODO Create better suspsene fallback that creates less CLS
 export function FeaturedProjectsFeed() {
   return (
-    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 md:gap-8">
       {featProjects.map((featuredProject) => (
         <Suspense
           key={featuredProject.key}
