@@ -10,6 +10,7 @@ const lora = Lora({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Jesse's Homepage",
+  description: 'A collection of expertly built programming projects.',
 };
 
 export default function RootLayout({
