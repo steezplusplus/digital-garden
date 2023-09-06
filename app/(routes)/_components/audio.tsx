@@ -45,7 +45,7 @@ export function Audio(props: AudioProps) {
         <div className="flex w-full items-center gap-x-1 px-3">
           <Volume1 size={22} />
           <input
-            className="w-full"
+            className="w-full accent-slate-500"
             type="range"
             max="100"
             min="0"
