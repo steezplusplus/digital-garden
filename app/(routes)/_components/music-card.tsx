@@ -13,7 +13,7 @@ export function MusicCard() {
       <div className="my-auto flex justify-center">
         <Audio songPath={songPath} />
       </div>
-      <Music className="mt-auto self-start" />
+      <Music className="mt-2 self-start" />
     </div>
   );
 }
