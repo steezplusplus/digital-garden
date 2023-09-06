@@ -15,7 +15,7 @@
     grid-template:
       'nav' 3rem
       'main' 1fr
-      'footer' 2.5rem;
+      'footer' 4rem;
   }
 
   body > nav {
