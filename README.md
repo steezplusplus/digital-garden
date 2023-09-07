@@ -1,28 +1,28 @@
 <div align="center">
   <section>
     <h1>
-      <a href="https://digital-garden-steez.vercel.app/">
+      <a href="https://digital-garden-steez.vercel.app/" target="_blank" >
         Visit my garden
       </a>
     </h1>
   </section>
   <br />
   <section>
-    <a href="https://github.com/steezplusplus/digital-garden/stargazers">
+    <a href="https://github.com/steezplusplus/digital-garden/stargazers" target="_blank" >
       <img
         alt="Jesses's garden number of stargazers"
         title="Jesses's garden number of stargazers"
         src="https://custom-icon-badges.demolab.com/github/stars/steezplusplus/digital-garden?logo=star"
       />
     </a>
-    <a href="https://github.com/steezplusplus/digital-garden/issues">
+    <a href="https://github.com/steezplusplus/digital-garden/issues" target="_blank" >
       <img
         alt="Jesses's garden number of issues"
         title="Jesses's garden number of issues"
         src="https://custom-icon-badges.demolab.com/github/issues-raw/steezplusplus/digital-garden?logo=issue"
       />
     </a>
-    <a href="/LICENSE">
+    <a href="/LICENSE" target="_blank" >
       <img
         alt="Jesses's garden license"
         title="Jesses's garden license"
