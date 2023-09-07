@@ -1,34 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<div align="center">
+  <section>
+    <h1>
+      <a href="https://digital-garden-steez.vercel.app/">
+        Visit my garden
+      </a>
+    </h1>
+  </section>
+  <br />
+  <section>
+    <a href="#">
+      <img
+        alt="Jesses's garden number of stargazers"
+        title="Jesses's garden number of stargazers"
+        src="https://custom-icon-badges.demolab.com/github/stars/steezplusplus/digital-garden?logo=star"
+      />
+      <img
+        alt="Jesses's garden number of issues"
+        title="Jesses's garden number of issues"
+        src="https://custom-icon-badges.demolab.com/github/issues-raw/steezplusplus/digital-garden?logo=issue"
+      />
+      <img
+        alt="Jesses's garden license"
+        title="Jesses's garden license"
+        src="https://custom-icon-badges.demolab.com/github/license/steezplusplus/digital-garden?logo=law"
+      />
+      <img
+        alt="Jesses's garden last commit time"
+        title="Jesses's garden last commit time"
+        src="https://custom-icon-badges.demolab.com/github/last-commit/steezplusplus/digital-garden?logo=history&logoColor=white"
+      />
+      <img
+        alt="Jesses's garden num of bytes"
+        title="Jesses's garden num of bytes"
+        src="https://custom-icon-badges.demolab.com/github/languages/code-size/steezplusplus/digital-garden?logo=file-code&logoColor=white"
+      />
+    </a>
+  </section>
+  <br />
+  <section>
+    <h2>Built with</h2>
+    <p>typescript - postcss - eslint - prettier - tailwind vercel - nextjs13</p>
+  </section>
+  <br />
+  <section>
+    <h2>Support me!</h2>
+    <p>
+      If you liked my garden then
+      <br />
+      <em>Leave a ⭐</em>
+    </p>
+    <p>
+      Have a question?
+      <br />
+      <em>
+        <a href="https://twitter.com/CodingSteez" target="_blank">Send me a tweet</a>
+      </em>
+    </p>
+    <p>
+      Want to use my code?
+      <br />
+      <em>
+        Go ahead! If you make anything cool, I'd love to see it.
+      <em>
+    </p>
+    <p>
+      Find an issue?
+      <br />
+      <em>
+        <a href="https://github.com/steezplusplus/digital-garden/issues" target="_blank">Please open an issue</a>
+      <em>
+    </p>
+  </section>
+</div>
