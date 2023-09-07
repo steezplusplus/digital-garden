@@ -14,21 +14,29 @@
         title="Jesses's garden number of stargazers"
         src="https://custom-icon-badges.demolab.com/github/stars/steezplusplus/digital-garden?logo=star"
       />
+    </a>
+    <a href="#">
       <img
         alt="Jesses's garden number of issues"
         title="Jesses's garden number of issues"
         src="https://custom-icon-badges.demolab.com/github/issues-raw/steezplusplus/digital-garden?logo=issue"
       />
+    </a>
+    <a href="#">
       <img
         alt="Jesses's garden license"
         title="Jesses's garden license"
         src="https://custom-icon-badges.demolab.com/github/license/steezplusplus/digital-garden?logo=law"
       />
+    </a>
+    <a href="#">
       <img
         alt="Jesses's garden last commit time"
         title="Jesses's garden last commit time"
         src="https://custom-icon-badges.demolab.com/github/last-commit/steezplusplus/digital-garden?logo=history&logoColor=white"
       />
+    </a>
+    <a href="#">
       <img
         alt="Jesses's garden num of bytes"
         title="Jesses's garden num of bytes"
