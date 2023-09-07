@@ -8,21 +8,21 @@
   </section>
   <br />
   <section>
-    <a href="#">
+    <a href="https://github.com/steezplusplus/digital-garden/stargazers">
       <img
         alt="Jesses's garden number of stargazers"
         title="Jesses's garden number of stargazers"
         src="https://custom-icon-badges.demolab.com/github/stars/steezplusplus/digital-garden?logo=star"
       />
     </a>
-    <a href="#">
+    <a href="https://github.com/steezplusplus/digital-garden/issues">
       <img
         alt="Jesses's garden number of issues"
         title="Jesses's garden number of issues"
         src="https://custom-icon-badges.demolab.com/github/issues-raw/steezplusplus/digital-garden?logo=issue"
       />
     </a>
-    <a href="#">
+    <a href="/LICENSE">
       <img
         alt="Jesses's garden license"
         title="Jesses's garden license"
