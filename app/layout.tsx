@@ -9,7 +9,7 @@ import { Providers } from './_components/providers';
 const lora = Lora({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Jesse's Homepage",
+  title: "Jesse's Digital Garden",
   description: 'A collection of expertly built programming projects.',
 };
 

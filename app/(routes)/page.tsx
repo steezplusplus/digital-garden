@@ -10,7 +10,7 @@ import { MusicCard } from './_components/music-card';
 import { FeaturedProjectsFeed } from './_components/featured/featured-project-feed';
 
 export const metadata: Metadata = {
-  title: "Jesse's Homepage",
+  title: "Jesse's Digital Garden",
 };
 
 export default async function HomePage() {
