@@ -9,7 +9,7 @@
 
   body {
     @apply transition-colors duration-500 ease-out;
-    @apply bg-neutral-100 text-black;
+    @apply bg-indigo-50 text-black;
     @apply dark:bg-neutral-900 dark:text-indigo-50;
     @apply grid h-screen;
     grid-template:
