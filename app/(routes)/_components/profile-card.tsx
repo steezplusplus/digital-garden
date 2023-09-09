@@ -13,9 +13,9 @@ export function ProfileCard() {
         <Image
           src="/primary.jpg"
           alt="A profile picture"
-          width="64"
-          height="64"
-          className="h-16 w-16 rounded-full grayscale duration-200 hover:grayscale-0"
+          width="128"
+          height="128"
+          className="h-32 w-32 rounded-full duration-200 dark:grayscale dark:hover:grayscale-0"
         />
         <figcaption className="mt-2 text-center text-sm">
           Welcome to my digital garden
