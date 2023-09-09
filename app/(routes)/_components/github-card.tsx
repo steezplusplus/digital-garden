@@ -8,7 +8,7 @@ export function GithubCard() {
     <Link
       href={href}
       target="_blank"
-      className="flex aspect-square flex-col rounded-xl border border-stone-400 p-4"
+      className="flex aspect-square flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5"
     >
       <h2 className="mb-1 text-lg first-letter:text-2xl">{label}</h2>
       <h3 className="font-italic text-sm">SteezPlusPlus</h3>

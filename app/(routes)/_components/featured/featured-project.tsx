@@ -18,7 +18,7 @@ export async function FeaturedProject(props: FeaturedProjectProps) {
   // TODO Error fallback UI?
   if (project === undefined) {
     return (
-      <div className="aspect-auto rounded-xl border border-stone-400 p-4">
+      <div className="aspect-auto rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">
         <p>Uh-oh! Something went wrong.</p>
       </div>
     );
@@ -29,8 +29,8 @@ export async function FeaturedProject(props: FeaturedProjectProps) {
       className="
         relative flex aspect-auto flex-col 
         rounded-xl border 
-        border-stone-400 px-6
-        py-2
+        border-stone-400 bg-white/50 px-6
+        py-2 dark:bg-indigo-100/5
       "
     >
       {showBadge === true && <Badge />}

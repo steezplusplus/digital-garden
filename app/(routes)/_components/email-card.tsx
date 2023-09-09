@@ -10,7 +10,7 @@ export function EmailCard() {
     <Link
       href={href}
       target="_blank"
-      className="flex aspect-square flex-col rounded-xl border border-stone-400 p-4"
+      className="flex aspect-square flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5"
     >
       <Mail className="mb-auto self-start" />
       <h2 className="mb-1 self-end text-lg first-letter:text-2xl">{label}</h2>
