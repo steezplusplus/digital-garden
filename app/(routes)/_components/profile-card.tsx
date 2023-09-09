@@ -15,7 +15,7 @@ export function ProfileCard() {
           alt="A profile picture"
           width="64"
           height="64"
-          className="h-16 w-16 rounded-full"
+          className="h-16 w-16 rounded-full grayscale duration-200 hover:grayscale-0"
         />
         <figcaption className="mt-2 text-center text-sm">
           Welcome to my digital garden
