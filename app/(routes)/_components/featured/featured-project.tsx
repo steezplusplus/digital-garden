@@ -35,7 +35,7 @@ export async function FeaturedProject(props: FeaturedProjectProps) {
     >
       {showBadge === true && <Badge />}
       <header className="mb-4">
-        <h2 className="first-letter:text-2xl">{displayName}</h2>
+        <h2 className="text-lg">{displayName}</h2>
       </header>
 
       <section className="mb-5">

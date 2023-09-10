@@ -8,7 +8,7 @@ export function MusicCard() {
   const label = 'Listening to...';
   return (
     <div className="col-span-2 flex aspect-auto flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">
-      <h2 className="mb-1 self-end text-lg first-letter:text-2xl">{label}</h2>
+      <h2 className="mb-1 self-end text-lg">{label}</h2>
       <h3 className="self-end text-sm">{genre}</h3>
       <div className="my-auto flex justify-center">
         <Audio songPath={songPath} />
