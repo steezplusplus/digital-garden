@@ -25,11 +25,11 @@ jobs:
     name: Lint with ESLint
     runs-on: ubuntu-latest
     steps:
-      - name: Run ESlint
-      run: npm run lint
+      - name: Run  ESLint
+        run: npm run eslint
   build:
     name: Ensure successful build
     runs-on: ubuntu-latest
     steps:
       - name: Run build
-      run: npm run build
+        run: npm run build
