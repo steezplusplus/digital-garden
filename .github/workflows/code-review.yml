@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  format:
-    name: Format with Prettier
+  code-review:
+    name: Code Review
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
@@ -21,15 +21,7 @@ jobs:
         run: npm ci
       - name: Run Prettier
         run: npm run prettier
-  lint:
-    name: Lint with ESLint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run  ESLint
-        run: npm run eslint
-  build:
-    name: Ensure successful build
-    runs-on: ubuntu-latest
-    steps:
+      - name: Run ESLint
+        run: npm run lint
       - name: Run build
         run: npm run build
