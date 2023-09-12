@@ -3,7 +3,7 @@ import { Lora } from 'next/font/google';
 
 import './globals.css';
 import { Nav } from './_components/nav/nav';
-import { Footer } from './_components/footer';
+import { Footer } from './_components/footer/footer';
 import { Providers } from './_components/providers';
 
 const lora = Lora({ subsets: ['latin'] });
