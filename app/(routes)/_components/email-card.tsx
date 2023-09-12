@@ -4,7 +4,7 @@ import { Mail } from 'lucide-react';
 export function EmailCard() {
   const label = 'Hire me';
   const subLael = 'Send me an e-mail';
-  const href = 'mailto::';
+  const href = 'mailto:PenelloJ2@gmail.com';
 
   return (
     <Link
