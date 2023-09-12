@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { Lora } from 'next/font/google';
 
 import './globals.css';
-import { Nav } from './_components/nav';
-import { Footer } from './_components/footer';
-import { Providers } from './_components/providers';
+import { Nav } from './_components/nav/nav';
+import { Footer } from './_components/footer/footer';
+import { Providers } from './_components/providers/providers';
 
 const lora = Lora({ subsets: ['latin'] });
 
