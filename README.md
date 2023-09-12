@@ -1,28 +1,39 @@
 <div align="center">
   <section>
     <h1>
-      <a href="https://digital-garden-steez.vercel.app/" target="_blank" >
+      <a href="https://digital-garden-steez.vercel.app/" target="_blank">
         Visit my garden
       </a>
     </h1>
+    <img 
+      alt="Blue and white textured pattern"
+      title="Blue and white textured pattern"
+      src="https://images.unsplash.com/photo-1496096265110-f83ad7f96608?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&"
+    />
   </section>
   <br />
   <section>
-    <a href="https://github.com/steezplusplus/digital-garden/stargazers" target="_blank" >
+    <a
+      href="https://github.com/steezplusplus/digital-garden/stargazers"
+      target="_blank"
+    >
       <img
         alt="Jesses's garden number of stargazers"
         title="Jesses's garden number of stargazers"
         src="https://custom-icon-badges.demolab.com/github/stars/steezplusplus/digital-garden?logo=star"
       />
     </a>
-    <a href="https://github.com/steezplusplus/digital-garden/issues" target="_blank" >
+    <a
+      href="https://github.com/steezplusplus/digital-garden/issues"
+      target="_blank"
+    >
       <img
         alt="Jesses's garden number of issues"
         title="Jesses's garden number of issues"
         src="https://custom-icon-badges.demolab.com/github/issues-raw/steezplusplus/digital-garden?logo=issue"
       />
     </a>
-    <a href="/LICENSE" target="_blank" >
+    <a href="/LICENSE" target="_blank">
       <img
         alt="Jesses's garden license"
         title="Jesses's garden license"
@@ -61,22 +72,27 @@
       Have a question?
       <br />
       <em>
-        <a href="https://twitter.com/CodingSteez" target="_blank">Send me a tweet</a>
+        <a href="https://twitter.com/CodingSteez" target="_blank">
+          Send me a tweet
+        </a>
       </em>
     </p>
     <p>
       Want to use my code?
       <br />
-      <em>
-        Go ahead! If you make anything cool, I'd love to see it.
-      <em>
+      <em> Go ahead! If you make anything cool, I'd love to see it.</em>
     </p>
     <p>
       Find an issue?
       <br />
       <em>
-        <a href="https://github.com/steezplusplus/digital-garden/issues" target="_blank">Please open an issue</a>
-      <em>
+        <a
+          href="https://github.com/steezplusplus/digital-garden/issues"
+          target="_blank"
+        >
+          Please open an issue
+        </a>
+      </em>
     </p>
   </section>
 </div>
