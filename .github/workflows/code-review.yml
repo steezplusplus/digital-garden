@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  GIT_PAT: ${{ secrets.GIT_PAT }}
+  GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+
 jobs:
   code-review:
     name: Code Review
