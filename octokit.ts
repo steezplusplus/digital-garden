@@ -1,10 +1,10 @@
 import { Octokit } from '@octokit/rest';
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const GITHUB_USERNAME = process.env.GITHUB_USERNAME; // TODO Type assertion with Zod
+const GIT_PAT = process.env.GIT_PAT;
+const GIT_USERNAME = process.env.GIT_USERNAME; // TODO Type assertion with Zod
 
 export const octokit = new Octokit({
-  auth: GITHUB_TOKEN,
+  auth: GIT_PAT,
 });
 
 /**
@@ -39,13 +39,13 @@ export async function getUser() {
  * @param repo The name of the repository without the .git extension.
  */
 export async function getProject(repoName: string) {
-  if (!GITHUB_USERNAME) {
-    throw new Error('[GET_PROJECT]: GITHUB_USERNAME is required');
+  if (!GIT_USERNAME) {
+    throw new Error('[GET_PROJECT]: GIT_USERNAME is required');
   }
 
   try {
     const { data } = await octokit.rest.repos.get({
-      owner: GITHUB_USERNAME,
+      owner: GIT_USERNAME,
       repo: repoName,
     });
 
