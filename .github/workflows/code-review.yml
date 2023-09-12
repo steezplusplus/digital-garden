@@ -1,0 +1,35 @@
+name: Code Review
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  format:
+    name: Format with Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+      - name: Setup node with npm
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Download dependencies
+        run: npm ci
+      - name: Run Prettier
+        run: npm run prettier
+  lint:
+    name: Lint with ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run ESlint
+      run: npm run lint
+  build:
+    name: Ensure successful build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run build
+      run: npm run build
