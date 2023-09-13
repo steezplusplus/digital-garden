@@ -1,29 +1,32 @@
 import { Octokit } from '@octokit/rest';
-import { GetResponseTypeFromEndpointMethod } from "@octokit/types";
+import { GetResponseTypeFromEndpointMethod } from '@octokit/types';
 
 // TODO Validators with Zod
 const GIT_PAT = process.env.GIT_PAT;
-const GIT_USERNAME = process.env.GIT_USERNAME; 
+const GIT_USERNAME = process.env.GIT_USERNAME;
 const NODE_ENV = process.env.NODE_ENV;
 
 const octokitClient = new Octokit({
   auth: GIT_PAT,
   userAgent: 'steezplusplus',
-  log: NODE_ENV === 'development' ? console : undefined
+  log: NODE_ENV === 'development' ? console : undefined,
 });
 
 type GetReposResponseType = GetResponseTypeFromEndpointMethod<
   typeof octokitClient.repos.get
 >;
 
-type GetUserResponseType = GetResponseTypeFromEndpointMethod<typeof octokitClient.users.getAuthenticated>;
+type GetUserResponseType = GetResponseTypeFromEndpointMethod<
+  typeof octokitClient.users.getAuthenticated
+>;
 
 /**
  * https://octokit.github.io/rest.js/v20#users-get-authenticated
  */
 export async function getUser() {
   try {
-    const response: GetUserResponseType = await octokitClient.rest.users.getAuthenticated();
+    const response: GetUserResponseType =
+      await octokitClient.rest.users.getAuthenticated();
 
     const filteredData = {
       username: response.data.login,
