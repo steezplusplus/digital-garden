@@ -1,13 +1,16 @@
 import { Metadata } from 'next';
 
 import { ProfileCard } from './_components/profile-card';
-import { GithubCard } from './_components/github-card';
-import { TwitterCard } from './_components/twitter-card';
-import { LinkedInCard } from './_components/linkedin-card';
-import { EmailCard } from './_components/email-card';
 import { ThemeCard } from './_components/theme-card';
 import { MusicCard } from './_components/music-card';
 import { FeaturedProjectsFeed } from './_components/featured/featured-project-feed';
+import { GithubIcon, Twitter, Linkedin, Mail } from 'lucide-react';
+import {
+  TopLeftCard,
+  TopRightCard,
+  BottomLeftCard,
+  BottomRightCard,
+} from './_components/mini-cards';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
@@ -19,10 +22,30 @@ export default async function HomePage() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <ProfileCard />
         <div className="grid grid-cols-2 gap-4">
-          <GithubCard />
-          <TwitterCard />
-          <LinkedInCard />
-          <EmailCard />
+          <TopLeftCard
+            href="https://github.com/steezplusplus"
+            label="Github"
+            subLabel="SteezPlusPlus"
+            icon={<GithubIcon />}
+          />
+          <TopRightCard
+            href="https://twitter.com/CodingSteez"
+            label="Twitter"
+            subLabel="@CodingSteez"
+            icon={<Twitter />}
+          />
+          <BottomLeftCard
+            href="https://www.linkedin.com/in/jesse-bp/"
+            label="LinkedIn"
+            subLabel="in/jesse-bp"
+            icon={<Linkedin />}
+          />
+          <BottomRightCard
+            href="mailto:PenelloJ2@gmail.com"
+            label="Contact"
+            subLabel="Email me"
+            icon={<Mail />}
+          />
           <ThemeCard />
           <MusicCard />
         </div>
