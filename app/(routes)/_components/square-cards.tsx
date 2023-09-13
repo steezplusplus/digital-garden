@@ -20,7 +20,7 @@ export function TopLeftSquare(props: SquareCardProps) {
       "
     >
       <h2 className="mb-1 text-lg">{label}</h2>
-      <h3 className="font-italic text-sm">{subLabel}</h3>
+      <h3 className="text-sm italic">{subLabel}</h3>
       <div className="mt-auto self-end">{icon}</div>
     </Link>
   );
@@ -39,7 +39,7 @@ export function TopRightSquare(props: SquareCardProps) {
       "
     >
       <h2 className="mb-1 self-end text-lg">{label}</h2>
-      <h3 className="font-italic self-end text-sm">{subLabel}</h3>
+      <h3 className="self-end text-sm italic">{subLabel}</h3>
       <div className="mt-auto self-start">{icon}</div>
     </Link>
   );
@@ -59,7 +59,7 @@ export function BottomLeftSquare(props: SquareCardProps) {
     >
       <div className="mb-auto self-end">{icon}</div>
       <h2 className="mb-1 text-lg">{label}</h2>
-      <h3 className="font-italic text-sm">{subLabel}</h3>
+      <h3 className="text-sm italic">{subLabel}</h3>
     </Link>
   );
 }
@@ -78,7 +78,7 @@ export function BottomRightSquare(props: SquareCardProps) {
     >
       <div className="mb-auto self-start">{icon}</div>
       <h2 className="mb-1 self-end text-lg">{label}</h2>
-      <h3 className="font-italic self-end text-sm">{subLabel}</h3>
+      <h3 className="self-end text-sm italic">{subLabel}</h3>
     </Link>
   );
 }
