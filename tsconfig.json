@@ -4,7 +4,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "target": "ESNext",
+    "target": "es5",
     "allowJs": true,
     "resolveJsonModule": true,
     "incremental": true,
