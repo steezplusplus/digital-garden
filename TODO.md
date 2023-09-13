@@ -7,3 +7,4 @@
 - Unit tests
 - Observation Observer, animations
 - Scrollbar color pseudo
+- Validator functions with ZOD
