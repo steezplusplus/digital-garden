@@ -1,14 +1,13 @@
-import type { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 
-type CardProps = {
+type SquareCardProps = {
   href: string;
   label: string;
   subLabel: string;
   icon: JSX.Element;
 };
 
-export function TopLeftCard(props: CardProps) {
+export function TopLeftSquare(props: SquareCardProps) {
   const { href, label, subLabel, icon } = props;
   return (
     <Link
@@ -27,7 +26,7 @@ export function TopLeftCard(props: CardProps) {
   );
 }
 
-export function TopRightCard(props: CardProps) {
+export function TopRightSquare(props: SquareCardProps) {
   const { href, label, subLabel, icon } = props;
   return (
     <Link
@@ -46,7 +45,7 @@ export function TopRightCard(props: CardProps) {
   );
 }
 
-export function BottomLeftCard(props: CardProps) {
+export function BottomLeftSquare(props: SquareCardProps) {
   const { href, label, subLabel, icon } = props;
   return (
     <Link
@@ -65,7 +64,7 @@ export function BottomLeftCard(props: CardProps) {
   );
 }
 
-export function BottomRightCard(props: CardProps) {
+export function BottomRightSquare(props: SquareCardProps) {
   const { href, label, subLabel, icon } = props;
   return (
     <Link

@@ -6,11 +6,11 @@ import { MusicCard } from './_components/music-card';
 import { FeaturedProjectsFeed } from './_components/featured/featured-project-feed';
 import { GithubIcon, Twitter, Linkedin, Mail } from 'lucide-react';
 import {
-  TopLeftCard,
-  TopRightCard,
-  BottomLeftCard,
-  BottomRightCard,
-} from './_components/mini-cards';
+  TopLeftSquare,
+  TopRightSquare,
+  BottomLeftSquare,
+  BottomRightSquare,
+} from './_components/square-cards';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
@@ -22,25 +22,25 @@ export default async function HomePage() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <ProfileCard />
         <div className="grid grid-cols-2 gap-4">
-          <TopLeftCard
+          <TopLeftSquare
             href="https://github.com/steezplusplus"
             label="Github"
             subLabel="SteezPlusPlus"
             icon={<GithubIcon />}
           />
-          <TopRightCard
+          <TopRightSquare
             href="https://twitter.com/CodingSteez"
             label="Twitter"
             subLabel="@CodingSteez"
             icon={<Twitter />}
           />
-          <BottomLeftCard
+          <BottomLeftSquare
             href="https://www.linkedin.com/in/jesse-bp/"
             label="LinkedIn"
             subLabel="in/jesse-bp"
             icon={<Linkedin />}
           />
-          <BottomRightCard
+          <BottomRightSquare
             href="mailto:PenelloJ2@gmail.com"
             label="Contact"
             subLabel="Email me"
