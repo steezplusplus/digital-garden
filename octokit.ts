@@ -1,30 +1,41 @@
 import { Octokit } from '@octokit/rest';
+import { GetResponseTypeFromEndpointMethod } from "@octokit/types";
 
+// TODO Validators with Zod
 const GIT_PAT = process.env.GIT_PAT;
-const GIT_USERNAME = process.env.GIT_USERNAME; // TODO Type assertion with Zod
+const GIT_USERNAME = process.env.GIT_USERNAME; 
+const NODE_ENV = process.env.NODE_ENV;
 
-export const octokit = new Octokit({
+const octokitClient = new Octokit({
   auth: GIT_PAT,
+  userAgent: 'steezplusplus',
+  log: NODE_ENV === 'development' ? console : undefined
 });
+
+type GetReposResponseType = GetResponseTypeFromEndpointMethod<
+  typeof octokitClient.repos.get
+>;
+
+type GetUserResponseType = GetResponseTypeFromEndpointMethod<typeof octokitClient.users.getAuthenticated>;
 
 /**
  * https://octokit.github.io/rest.js/v20#users-get-authenticated
  */
 export async function getUser() {
   try {
-    const { data } = await octokit.rest.users.getAuthenticated();
+    const response: GetUserResponseType = await octokitClient.rest.users.getAuthenticated();
 
     const filteredData = {
-      username: data.login,
-      avatar_url: data.avatar_url,
-      url: data.html_url,
-      name: data.name,
-      location: data.location,
-      bio: data.bio,
-      num_public_repos: data.public_repos,
-      num_public_gists: data.public_gists,
-      num_followers: data.followers,
-      created_at: data.created_at,
+      username: response.data.login,
+      avatar_url: response.data.avatar_url,
+      url: response.data.html_url,
+      name: response.data.name,
+      location: response.data.location,
+      bio: response.data.bio,
+      num_public_repos: response.data.public_repos,
+      num_public_gists: response.data.public_gists,
+      num_followers: response.data.followers,
+      created_at: response.data.created_at,
     };
 
     return filteredData;
@@ -44,19 +55,19 @@ export async function getProject(repoName: string) {
   }
 
   try {
-    const { data } = await octokit.rest.repos.get({
+    const response: GetReposResponseType = await octokitClient.rest.repos.get({
       owner: GIT_USERNAME,
       repo: repoName,
     });
 
     const filteredProjectData = {
-      html_url: data.html_url,
-      description: data.description,
-      language: data.language,
-      num_stars: data.stargazers_count,
-      num_forks: data.forks,
-      num_subscribers: data.subscribers_count,
-      license: data.license,
+      html_url: response.data.html_url,
+      description: response.data.description,
+      language: response.data.language,
+      num_stars: response.data.stargazers_count,
+      num_forks: response.data.forks,
+      num_subscribers: response.data.subscribers_count,
+      license: response.data.license,
     };
 
     return filteredProjectData;
