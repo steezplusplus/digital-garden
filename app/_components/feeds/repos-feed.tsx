@@ -1,5 +1,5 @@
 import { getRepos } from '@/octokit';
-import { RepoCard } from '../cards/repo-card';
+import { RepoCard } from '../cards/repo-card/repo-card';
 
 export async function ReposFeed() {
   const repos = await getRepos();
