@@ -9,8 +9,7 @@ import { TwitterCard } from './_components/cards/twitter-card/twitter-card';
 import { GithubCard } from './_components/cards/github-card/github-card';
 import { LinkedinCard } from './_components/cards/linkedin-card/linkedin-card';
 import { ContactCard } from './_components/cards/contact-card/contact-card';
-import { ThemeSwitcher } from './_components/theme-switcher';
-import { Audio } from './_components/audio';
+import { Audio } from './_components/cards/music-card/audio';
 import { ReposFeed } from './_components/feeds/repos-feed';
 
 export const metadata: Metadata = {
@@ -28,12 +27,8 @@ export default function HomePage() {
           <TwitterCard {...schema.twitterSchema} />
           <LinkedinCard {...schema.linkedinSchema} />
           <ContactCard {...schema.contactSchema} />
-          <ThemeCard {...schema.themeSchema}>
-            <ThemeSwitcher />
-          </ThemeCard>
-          <MusicCard {...schema.musicSchema}>
-            <Audio {...schema.audioSchema} />
-          </MusicCard>
+          <ThemeCard {...schema.themeSchema} />
+          <MusicCard {...schema.musicSchema} />
         </div>
       </div>
 

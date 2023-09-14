@@ -1,12 +1,13 @@
+import { Audio } from './audio';
+
 type MusicCardProps = {
   label: string;
   subLabel?: string;
-  children: React.ReactNode;
   icon: JSX.Element;
 };
 
 export function MusicCard(props: MusicCardProps) {
-  const { label, subLabel, children, icon } = props;
+  const { label, subLabel, icon } = props;
   return (
     <div
       className="
@@ -17,7 +18,7 @@ export function MusicCard(props: MusicCardProps) {
     >
       <h2 className="mb-1 self-end text-lg">{label}</h2>
       {subLabel && <h3 className="self-end text-sm italic">{subLabel}</h3>}
-      {children}
+      <Audio songPath="/song.mp3" />
       <div className="mt-auto">{icon}</div>
     </div>
   );

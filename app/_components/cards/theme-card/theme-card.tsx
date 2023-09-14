@@ -1,12 +1,13 @@
+import { ThemeSwitcher } from './theme-switcher';
+
 type ThemeCardProps = {
   label: string;
   subLabel?: string;
-  children: React.ReactNode;
   icon: JSX.Element;
 };
 
 export function ThemeCard(props: ThemeCardProps) {
-  const { label, subLabel, children, icon } = props;
+  const { label, subLabel, icon } = props;
   return (
     <div
       className="
@@ -17,7 +18,7 @@ export function ThemeCard(props: ThemeCardProps) {
     >
       <h2 className="mb-1 text-lg">{label}</h2>
       {subLabel && <h3 className="text-sm italic">{subLabel}</h3>}
-      {children}
+      <ThemeSwitcher />
       <div className="mt-2 self-end">{icon}</div>
     </div>
   );
