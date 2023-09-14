@@ -18,9 +18,7 @@ export function ProfileCard() {
           height="128"
           className="h-32 w-32 rounded-full duration-200 dark:grayscale dark:hover:grayscale-0"
         />
-        <figcaption className="mt-2 text-center text-sm">
-          Welcome to my digital garden
-        </figcaption>
+        <figcaption className="mt-2 text-center text-sm">Welcome to my digital garden</figcaption>
       </div>
     </div>
   );
