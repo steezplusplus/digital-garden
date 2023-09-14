@@ -1,3 +1,6 @@
+import { GitFork, Star } from 'lucide-react';
+import Link from 'next/link';
+
 type RepoCardProps = {
   id: number;
   name: string;
@@ -8,11 +11,23 @@ type RepoCardProps = {
   numWatchers: number;
   numForks: number;
   numSubscribers: number | undefined;
+  githubUrl: string;
 };
 
 // TODO Finish view
 export function RepoCard(props: RepoCardProps) {
-  const { id, name, description } = props;
+  const {
+    id,
+    name,
+    description,
+    language,
+    topics,
+    numStargazers,
+    numWatchers,
+    numForks,
+    numSubscribers,
+    githubUrl,
+  } = props;
 
   return (
     <article
@@ -24,8 +39,28 @@ export function RepoCard(props: RepoCardProps) {
         py-2 dark:bg-indigo-100/5
       "
     >
-      <h3 className="text-lg">{name}</h3>
-      <p className="text-sm">{description}</p>
+      <h3 className="mb-3 text-lg">{name}</h3>
+
+      <p className="mb-2 flex items-center text-sm">{description}</p>
+
+      <div className="my-auto mb-1 flex justify-evenly text-xs">
+        <span className="flex items-center">
+          <Star size={16} className="mr-1" /> {numStargazers}
+        </span>
+        <span className="flex items-center">
+          <GitFork size={16} className="mr-1" /> {numForks}
+        </span>
+      </div>
+
+      <div className="flex flex-col items-center">
+        <Link
+          className="text-blue-500 underline hover:text-blue-300"
+          href={githubUrl}
+          target="_blank"
+        >
+          View source code
+        </Link>
+      </div>
     </article>
   );
 }

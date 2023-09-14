@@ -32,11 +32,12 @@ export async function getRepos() {
         numWatchers: repo.watchers_count,
         numForks: repo.forks_count,
         numSubscribers: repo.subscribers_count,
+        githubUrl: repo.html_url,
       };
     });
 
     return filteredData;
   } catch (error) {
-    console.error('[GET_REPOs]:', error);
+    console.error('[GET_REPOS]:', error);
   }
 }
