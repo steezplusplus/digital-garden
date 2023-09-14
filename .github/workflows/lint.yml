@@ -1,4 +1,4 @@
-name: Lint
+name: Prettify & Lint
 
 on:
   pull_request:
@@ -9,6 +9,7 @@ env:
 
 jobs:
   lint:
+    name: Prettify & Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
