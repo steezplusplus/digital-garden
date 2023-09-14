@@ -3,14 +3,15 @@ import { Metadata } from 'next';
 
 import * as schema from './_schema/schema';
 import { ProfileCard } from './_components/cards/profile-card/profile-card';
-import { TopLeftRectangle, TopRightRectangle } from './_components/cards/rectangle-cards';
-import { ThemeSwitcher } from './_components/theme-switcher';
-import { Audio } from './_components/audio';
-import { ReposFeed } from './_components/feeds/repos-feed';
+import { MusicCard } from './_components/cards/music-card/music-card';
+import { ThemeCard } from './_components/cards/theme-card/theme-card';
 import { TwitterCard } from './_components/cards/twitter-card/twitter-card';
 import { GithubCard } from './_components/cards/github-card/github-card';
 import { LinkedinCard } from './_components/cards/linkedin-card/linkedin-card';
 import { ContactCard } from './_components/cards/contact-card/contact-card';
+import { ThemeSwitcher } from './_components/theme-switcher';
+import { Audio } from './_components/audio';
+import { ReposFeed } from './_components/feeds/repos-feed';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
@@ -27,12 +28,12 @@ export default function HomePage() {
           <TwitterCard {...schema.twitterSchema} />
           <LinkedinCard {...schema.linkedinSchema} />
           <ContactCard {...schema.contactSchema} />
-          <TopLeftRectangle {...schema.musicSchema}>
+          <ThemeCard {...schema.themeSchema}>
             <ThemeSwitcher />
-          </TopLeftRectangle>
-          <TopRightRectangle {...schema.themeSchema}>
+          </ThemeCard>
+          <MusicCard {...schema.musicSchema}>
             <Audio {...schema.audioSchema} />
-          </TopRightRectangle>
+          </MusicCard>
         </div>
       </div>
 

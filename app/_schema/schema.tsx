@@ -31,13 +31,13 @@ export const contactSchema = {
 export const themeSchema = {
   label: 'Theme',
   subLabel: '',
-  icon: <Music />,
+  icon: <></>,
 };
 
 export const musicSchema = {
   label: 'Listening to...',
   subLabel: 'LoFi',
-  icon: <></>,
+  icon: <Music />,
 };
 
 export const audioSchema = {

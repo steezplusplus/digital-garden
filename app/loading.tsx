@@ -1,10 +1,11 @@
 import * as schema from './_schema/schema';
 import { ProfileCard } from './_components/cards/profile-card/profile-card';
-import { TopLeftRectangle, TopRightRectangle } from './_components/cards/rectangle-cards';
 import { TwitterCard } from './_components/cards/twitter-card/twitter-card';
 import { GithubCard } from './_components/cards/github-card/github-card';
 import { LinkedinCard } from './_components/cards/linkedin-card/linkedin-card';
 import { ContactCard } from './_components/cards/contact-card/contact-card';
+import { MusicCard } from './_components/cards/music-card/music-card';
+import { ThemeCard } from './_components/cards/theme-card/theme-card';
 
 // TODO Less CLS issues
 export default function Loading() {
@@ -17,12 +18,12 @@ export default function Loading() {
           <TwitterCard {...schema.twitterSchema} />
           <LinkedinCard {...schema.linkedinSchema} />
           <ContactCard {...schema.contactSchema} />
-          <TopLeftRectangle {...schema.musicSchema}>
+          <ThemeCard {...schema.themeSchema}>
             <></>
-          </TopLeftRectangle>
-          <TopRightRectangle {...schema.themeSchema}>
+          </ThemeCard>
+          <MusicCard {...schema.musicSchema}>
             <></>
-          </TopRightRectangle>
+          </MusicCard>
         </div>
       </div>
 
