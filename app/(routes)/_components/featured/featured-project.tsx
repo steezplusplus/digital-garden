@@ -38,7 +38,7 @@ export async function FeaturedProject(props: FeaturedProjectProps) {
         <h2 className="text-lg">{displayName}</h2>
       </header>
 
-      <section className="mb-5">
+      <section className="mb-5 flex h-full items-center">
         <p className="text-sm">{project.description}</p>
       </section>
 

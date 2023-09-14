@@ -7,7 +7,7 @@ type SquareCardProps = {
   icon: JSX.Element;
 };
 
-export function TopLeftSquare(props: SquareCardProps) {
+export function TLSquare(props: SquareCardProps) {
   const { href, label, subLabel, icon } = props;
   return (
     <Link
@@ -26,7 +26,7 @@ export function TopLeftSquare(props: SquareCardProps) {
   );
 }
 
-export function TopRightSquare(props: SquareCardProps) {
+export function TRSquare(props: SquareCardProps) {
   const { href, label, subLabel, icon } = props;
   return (
     <Link
@@ -45,7 +45,7 @@ export function TopRightSquare(props: SquareCardProps) {
   );
 }
 
-export function BottomLeftSquare(props: SquareCardProps) {
+export function BLSquare(props: SquareCardProps) {
   const { href, label, subLabel, icon } = props;
   return (
     <Link
@@ -64,7 +64,7 @@ export function BottomLeftSquare(props: SquareCardProps) {
   );
 }
 
-export function BottomRightSquare(props: SquareCardProps) {
+export function BRSquare(props: SquareCardProps) {
   const { href, label, subLabel, icon } = props;
   return (
     <Link
