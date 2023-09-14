@@ -11,7 +11,8 @@
     "prettier": "prettier --check --ignore-path .gitignore .",
     "prettier:fix": "prettier --write --ignore-path .gitignore .",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@octokit/rest": "^20.0.1",
