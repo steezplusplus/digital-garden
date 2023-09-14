@@ -1,22 +1,19 @@
-name: Code Review
+name: Lint
 
 on:
   pull_request:
-    branches:
-      - main
 
 env:
   GIT_PAT: ${{ secrets.GIT_PAT }}
   GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
 
 jobs:
-  code-review:
-    name: Code Review
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repo
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup node with npm
+      - name: Setup node
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -27,5 +24,3 @@ jobs:
         run: npm run prettier
       - name: Run ESLint
         run: npm run lint
-      - name: Run build
-        run: npm run build
