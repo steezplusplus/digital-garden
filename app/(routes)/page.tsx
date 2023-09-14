@@ -1,16 +1,20 @@
 import { Metadata } from 'next';
 
+import { Audio } from './_components/audio';
+import { ThemeSwitcher } from './_components/theme-switcher';
 import { ProfileCard } from './_components/profile-card';
-import { ThemeCard } from './_components/theme-card';
-import { MusicCard } from './_components/music-card';
 import { FeaturedProjectsFeed } from './_components/featured/featured-project-feed';
-import { GithubIcon, Twitter, Linkedin, Mail } from 'lucide-react';
+import { GithubIcon, Twitter, Linkedin, Mail, Music } from 'lucide-react';
 import {
   TopLeftSquare,
   TopRightSquare,
   BottomLeftSquare,
   BottomRightSquare,
 } from './_components/square-cards';
+import {
+  TopLeftRectangle,
+  TopRightRectangle,
+} from './_components/rectangle-cards';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
@@ -46,8 +50,16 @@ export default async function HomePage() {
             subLabel="Email me"
             icon={<Mail />}
           />
-          <ThemeCard />
-          <MusicCard />
+          <TopLeftRectangle label="Theme" icon={<></>}>
+            <ThemeSwitcher />
+          </TopLeftRectangle>
+          <TopRightRectangle
+            label="Listening to..."
+            subLabel="LoFi"
+            icon={<Music />}
+          >
+            <Audio songPath="/song.mp3" />
+          </TopRightRectangle>
         </div>
       </div>
 

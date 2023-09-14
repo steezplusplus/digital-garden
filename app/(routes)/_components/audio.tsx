@@ -34,7 +34,7 @@ export function Audio(props: AudioProps) {
   }, [isPlaying, audioRef]);
 
   return (
-    <>
+    <div className="my-auto flex justify-center">
       <audio ref={audioRef} src={songPath}>
         Your browser does not support the <code>audio</code> element.
       </audio>
@@ -54,6 +54,6 @@ export function Audio(props: AudioProps) {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }

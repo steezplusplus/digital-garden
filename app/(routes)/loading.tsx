@@ -1,7 +1,11 @@
-import { GithubIcon, Twitter, Linkedin, Mail } from 'lucide-react';
+import { GithubIcon, Twitter, Linkedin, Mail, Music } from 'lucide-react';
+import { Audio } from './_components/audio';
+import { ThemeSwitcher } from './_components/theme-switcher';
 import { ProfileCard } from './_components/profile-card';
-import { ThemeCard } from './_components/theme-card';
-import { MusicCard } from './_components/music-card';
+import {
+  TopLeftRectangle,
+  TopRightRectangle,
+} from './_components/rectangle-cards';
 import {
   TopLeftSquare,
   TopRightSquare,
@@ -40,8 +44,16 @@ export default function Loading() {
             subLabel="Email me"
             icon={<Mail />}
           />
-          <ThemeCard />
-          <MusicCard />
+          <TopLeftRectangle label="Theme" icon={<></>}>
+            <ThemeSwitcher />
+          </TopLeftRectangle>
+          <TopRightRectangle
+            label="Listening to..."
+            subLabel="LoFi"
+            icon={<Music />}
+          >
+            <Audio songPath="/song.mp3" />
+          </TopRightRectangle>
         </div>
       </div>
 
