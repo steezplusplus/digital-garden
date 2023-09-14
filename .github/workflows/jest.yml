@@ -1,4 +1,4 @@
-name: Code Review
+name: Jest
 
 on:
   pull_request:
@@ -8,10 +8,11 @@ on:
 env:
   GIT_PAT: ${{ secrets.GIT_PAT }}
   GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+  CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
 jobs:
-  code-review:
-    name: Code Review
+  jest:
+    name: Run Jest
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
@@ -23,9 +24,7 @@ jobs:
           cache: 'npm'
       - name: Download dependencies
         run: npm ci
-      - name: Run Prettier
-        run: npm run prettier
-      - name: Run ESLint
-        run: npm run lint
-      - name: Run build
-        run: npm run build
+      - name: Run Jest
+        run: npm run test
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
