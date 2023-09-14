@@ -11,6 +11,7 @@ const props = {
   numWatchers: 0,
   numForks: 0,
   numSubscribers: 0,
+  githubUrl: 'https://www.not-real.com',
 };
 
 describe('<RepoCard />', () => {
