@@ -9,7 +9,7 @@ import { TwitterCard } from './_components/cards/twitter-card/twitter-card';
 import { GithubCard } from './_components/cards/github-card/github-card';
 import { LinkedinCard } from './_components/cards/linkedin-card/linkedin-card';
 import { ContactCard } from './_components/cards/contact-card/contact-card';
-import { ReposFeed } from './_components/feeds/repos-feed';
+import { ReposFeed } from './_components/repos-feed/repos-feed';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
