@@ -1,5 +1,5 @@
 import * as schema from './_schema/schema';
-import { ProfileCard } from './_components/cards/profile-card';
+import { ProfileCard } from './_components/cards/profile-card/profile-card';
 import { TopLeftRectangle, TopRightRectangle } from './_components/cards/rectangle-cards';
 import { TwitterCard } from './_components/cards/twitter-card/twitter-card';
 import { GithubCard } from './_components/cards/github-card/github-card';

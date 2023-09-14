@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { Metadata } from 'next';
 
 import * as schema from './_schema/schema';
-import { ProfileCard } from './_components/cards/profile-card';
+import { ProfileCard } from './_components/cards/profile-card/profile-card';
 import { TopLeftRectangle, TopRightRectangle } from './_components/cards/rectangle-cards';
 import { ThemeSwitcher } from './_components/theme-switcher';
 import { Audio } from './_components/audio';
