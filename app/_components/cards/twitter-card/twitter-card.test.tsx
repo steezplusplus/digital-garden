@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { GithubCard } from './github-card';
+import { TwitterCard } from './twitter-card';
 
 const props = {
   href: 'https://www.not-real.com',
@@ -8,9 +8,9 @@ const props = {
   icon: <div></div>,
 };
 
-describe('<GithubCard />', () => {
+describe('<TwitterCard />', () => {
   it('Should render with no errors', () => {
-    render(<GithubCard {...props} />);
+    render(<TwitterCard {...props} />);
     const anchor = screen.getByRole('link');
     const heading2 = screen.getByRole('heading', { level: 2 });
     const heading3 = screen.getByRole('heading', { level: 3 });
