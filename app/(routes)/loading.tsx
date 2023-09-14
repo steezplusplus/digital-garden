@@ -1,5 +1,3 @@
-import { GithubIcon, Twitter, Linkedin, Mail, Music } from 'lucide-react';
-
 import * as schema from '../_schema/schema';
 import { ProfileCard } from './_components/cards/profile-card';
 import { TopLeftRectangle, TopRightRectangle } from './_components/cards/rectangle-cards';
@@ -26,7 +24,7 @@ export default function Loading() {
       </div>
 
       <div>
-        <h2 className="mb-4 text-3xl">Featured Projects</h2>
+        <h2 className="mb-4 text-3xl">Most recently updated projects</h2>
         <></>
       </div>
     </>
