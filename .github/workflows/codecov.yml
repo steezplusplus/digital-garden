@@ -1,4 +1,4 @@
-name: Jest
+name: Code Coverage Reporter
 
 on:
   pull_request:
@@ -11,8 +11,8 @@ env:
   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
 jobs:
-  jest:
-    name: Run Jest
+  coverage:
+    name: Get Code Coverage
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
@@ -25,6 +25,6 @@ jobs:
       - name: Download dependencies
         run: npm ci
       - name: Run Jest
-        run: npm run test
+        run: npm run test:coverage
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
