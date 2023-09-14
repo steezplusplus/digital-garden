@@ -1,9 +1,9 @@
 import { GithubIcon, Twitter, Linkedin, Mail, Music } from 'lucide-react';
 
 import * as schema from '../_schema/schema';
-import { ProfileCard } from './_components/profile-card';
-import { TopLeftRectangle, TopRightRectangle } from './_components/rectangle-cards';
-import { TLSquare, TRSquare, BLSquare, BRSquare } from './_components/square-cards';
+import { ProfileCard } from './_components/cards/profile-card';
+import { TopLeftRectangle, TopRightRectangle } from './_components/cards/rectangle-cards';
+import { TLSquare, TRSquare, BLSquare, BRSquare } from './_components/cards/square-cards';
 
 // TODO Less CLS issues
 export default function Loading() {

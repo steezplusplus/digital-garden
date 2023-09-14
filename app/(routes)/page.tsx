@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 
 import * as schema from '../_schema/schema';
-import { ProfileCard } from './_components/profile-card';
+import { ProfileCard } from './_components/cards/profile-card';
+import { TopLeftRectangle, TopRightRectangle } from './_components/cards/rectangle-cards';
+import { TLSquare, TRSquare, BLSquare, BRSquare } from './_components/cards/square-cards';
 import { FeaturedProjectsFeed } from './_components/featured/featured-project-feed';
-import { TopLeftRectangle, TopRightRectangle } from './_components/rectangle-cards';
-import { TLSquare, TRSquare, BLSquare, BRSquare } from './_components/square-cards';
 import { Audio } from './_components/audio';
 import { ThemeSwitcher } from './_components/theme-switcher';
 
