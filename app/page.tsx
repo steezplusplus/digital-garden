@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 
-import * as schema from '../_schema/schema';
+import * as schema from './_schema/schema';
 import { ProfileCard } from './_components/cards/profile-card';
 import { TopLeftRectangle, TopRightRectangle } from './_components/cards/rectangle-cards';
 import { TLSquare, TRSquare, BLSquare, BRSquare } from './_components/cards/square-cards';
