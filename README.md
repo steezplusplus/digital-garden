@@ -13,6 +13,9 @@
   </section>
   <br />
   <section>
+    <a href="https://codecov.io/gh/steezplusplus/digital-garden" target="_blank"> 
+     <img src="https://codecov.io/gh/steezplusplus/digital-garden/graph/badge.svg?token=IVWNLISFWI"/> 
+    </a>
     <a
       href="https://github.com/steezplusplus/digital-garden/stargazers"
       target="_blank"
