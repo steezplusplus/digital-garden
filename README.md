@@ -67,17 +67,18 @@
   <section>
     <h2>Available commands</h2>
 
-    | command        | description                                 |
-    | :------------- | :------------------------------------------ |
-    | `dev`          | Starts a development instance of the app    |
-    | `build`        | Builds a production instance of the app     |
-    | `start`        | Starts a production instance of the app     |
-    | `lint`         | Runs ESLint                                 |
-    | `lint:fix`     | Runs ESLint and fixes syntax                |
-    | `prettier`     | Runs Prettier                               |
-    | `prettier:fix` | Runs Prettier and fixes formatting          |
-    | `test`         | Runs Jest                                   |
-    | `test:watch`   | Runs Jest and watch files for changes       |
+    | command           | description                                 |
+    | :---------------- | :------------------------------------------ |
+    | `dev`             | Starts a development instance of the app    |
+    | `build`           | Builds a production instance of the app     |
+    | `start`           | Starts a production instance of the app     |
+    | `lint`            | Runs ESLint                                 |
+    | `lint:fix`        | Runs ESLint and fixes syntax                |
+    | `prettier`        | Runs Prettier                               |
+    | `prettier:fix`    | Runs Prettier and fixes formatting          |
+    | `test`            | Runs Jest                                   |
+    | `test:watch`      | Runs Jest and watch files for changes       |
+    | `test:coverage`   | Runs Jest and generates lcov report         |
 
   </section>
   <br />
