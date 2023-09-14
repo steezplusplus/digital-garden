@@ -7,7 +7,7 @@ import { TopLeftRectangle, TopRightRectangle } from './_components/cards/rectang
 import { TLSquare, TRSquare, BLSquare, BRSquare } from './_components/cards/square-cards';
 import { ThemeSwitcher } from './_components/theme-switcher';
 import { Audio } from './_components/audio';
-import { ReposFeed } from './_components/repos-feed';
+import { ReposFeed } from './_components/feeds/repos-feed';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
