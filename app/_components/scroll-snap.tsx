@@ -4,11 +4,7 @@ type SnapContainerProps = {
 
 export function SnapContainer(props: SnapContainerProps) {
   const { children } = props;
-  return (
-    <div className="h-full snap-y snap-mandatory overflow-scroll">
-      {children}
-    </div>
-  );
+  return <div className="h-full snap-y snap-mandatory overflow-scroll">{children}</div>;
 }
 
 type SnapSectionProps = {

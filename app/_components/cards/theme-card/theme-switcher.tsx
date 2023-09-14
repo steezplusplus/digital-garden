@@ -34,9 +34,7 @@ export function ThemeSwitcher() {
           Toggle
         </button>
       </div>
-      <div className="mt-auto self-end">
-        {isDark ? <Moon /> : <SunMedium />}
-      </div>
+      <div className="mt-auto self-end">{isDark ? <Moon /> : <SunMedium />}</div>
     </>
   );
 }
