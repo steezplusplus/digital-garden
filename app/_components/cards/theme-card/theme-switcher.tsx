@@ -2,39 +2,32 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { Moon, SunMedium } from 'lucide-react';
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState<boolean>(false);
-  const [isDark, setIsDark] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
-    setIsDark(theme === 'dark');
   }, [theme]);
 
   if (!mounted) {
     return null;
   }
 
-  const toggleDarkMode = () => {
-    setIsDark(!isDark);
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
-
   return (
     <>
       <div className="my-auto flex justify-center">
-        <button
-          aria-pressed={isDark}
-          onClick={toggleDarkMode}
-          className="rounded border border-stone-400 px-3 py-2 text-sm"
+        <select
+          className="rounded-md border border-slate-400 p-2 text-xs"
+          value={theme}
+          onChange={(e) => setTheme(e.target.value)}
         >
-          Toggle
-        </button>
+          <option value="system">System</option>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
       </div>
-      <div className="mt-auto self-end">{isDark ? <Moon /> : <SunMedium />}</div>
     </>
   );
 }
