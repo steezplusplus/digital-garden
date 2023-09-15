@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { Lightbulb, Moon, SunMedium } from 'lucide-react';
+import { Moon, SunMedium } from 'lucide-react';
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState<boolean>(false);
