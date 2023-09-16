@@ -1,4 +1,4 @@
-import { ThemeSwitcher } from './theme-switcher';
+import { ThemeSelect } from './theme-select/theme-select';
 
 type ThemeCardProps = {
   label: string;
@@ -18,7 +18,7 @@ export function ThemeCard(props: ThemeCardProps) {
     >
       <h2 className="mb-1 text-lg">{label}</h2>
       {subLabel && <h3 className="text-sm italic">{subLabel}</h3>}
-      <ThemeSwitcher />
+      <ThemeSelect />
       <div className="mt-2 self-end">{icon}</div>
     </div>
   );

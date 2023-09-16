@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Providers } from './providers';
 
 describe('<Providers />', () => {
@@ -17,8 +17,15 @@ describe('<Providers />', () => {
       })),
     });
   });
-  const para = <p>anything</p>;
-  it('Should render Providers with no errors', () => {
-    render(<Providers>{para}</Providers>);
+  const children = (
+    <>
+      <p data-testid="test">find me</p>
+    </>
+  );
+  it('Should render with no errors', () => {
+    render(<Providers>{children}</Providers>);
+    debugger;
+    const para = screen.getByTestId('test');
+    expect(para).toBeInTheDocument();
   });
 });
