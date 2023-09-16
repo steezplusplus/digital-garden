@@ -18,7 +18,9 @@ export default function Loading() {
           <TwitterCard {...schema.twitterSchema} />
           <LinkedinCard {...schema.linkedinSchema} />
           <ContactCard {...schema.contactSchema} />
-          <ThemeCard {...schema.themeSchema} />
+          <ThemeCard {...schema.themeSchema}>
+            <div className="h-12 w-9 rounded-md border border-slate-400" />
+          </ThemeCard>
           <MusicCard {...schema.musicSchema} />
         </div>
       </div>
