@@ -9,7 +9,7 @@ import { TwitterCard } from './_components/cards/twitter-card/twitter-card';
 import { GithubCard } from './_components/cards/github-card/github-card';
 import { LinkedinCard } from './_components/cards/linkedin-card/linkedin-card';
 import { ContactCard } from './_components/cards/contact-card/contact-card';
-import { ReposFeed } from './_components/repos-feed/repos-feed';
+import { ReposFeed, ReposFeedSkeleton } from './_components/repos-feed/repos-feed';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
@@ -34,7 +34,7 @@ export default function HomePage() {
       <div>
         <h2 className="mb-4 text-3xl">Most recently updated projects</h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 md:gap-8">
-          <Suspense fallback={<p>Loading projects...</p>}>
+          <Suspense fallback={<ReposFeedSkeleton />}>
             <ReposFeed />
           </Suspense>
         </div>

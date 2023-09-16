@@ -1,10 +1,8 @@
 import { getRepos } from '@/octokit';
-import { RepoCard } from '../cards/repo-card/repo-card';
+import { RepoCard, RepoCardSkeleton } from '../cards/repo-card/repo-card';
 
 export async function ReposFeed() {
   const repos = await getRepos();
-  // throw new Promise(() => {}); // Use to test suspense fallback
-
   // TODO When would this be undefined?
   if (repos === undefined) {
     return (
@@ -19,6 +17,16 @@ export async function ReposFeed() {
       {repos.map((repo) => {
         return <RepoCard key={repo.id} {...repo} />;
       })}
+    </>
+  );
+}
+
+export function ReposFeedSkeleton() {
+  return (
+    <>
+      <RepoCardSkeleton />
+      <RepoCardSkeleton />
+      <RepoCardSkeleton />
     </>
   );
 }

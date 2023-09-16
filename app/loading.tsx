@@ -18,18 +18,13 @@ export default function Loading() {
           <TwitterCard {...schema.twitterSchema} />
           <LinkedinCard {...schema.linkedinSchema} />
           <ContactCard {...schema.contactSchema} />
-          <ThemeCard {...schema.themeSchema}>
-            <></>
-          </ThemeCard>
-          <MusicCard {...schema.musicSchema}>
-            <></>
-          </MusicCard>
+          <ThemeCard {...schema.themeSchema} />
+          <MusicCard {...schema.musicSchema} />
         </div>
       </div>
 
       <div>
         <h2 className="mb-4 text-3xl">Most recently updated projects</h2>
-        <></>
       </div>
     </>
   );
