@@ -19,17 +19,14 @@ export default function Loading() {
           <LinkedinCard {...schema.linkedinSchema} />
           <ContactCard {...schema.contactSchema} />
           <ThemeCard {...schema.themeSchema}>
-            <></>
+            <div className="h-12 w-9 rounded-md border border-slate-400" />
           </ThemeCard>
-          <MusicCard {...schema.musicSchema}>
-            <></>
-          </MusicCard>
+          <MusicCard {...schema.musicSchema} />
         </div>
       </div>
 
       <div>
         <h2 className="mb-4 text-3xl">Most recently updated projects</h2>
-        <></>
       </div>
     </>
   );
