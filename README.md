@@ -12,10 +12,11 @@
     />
   </section>
   <br />
-  <section>
+  <section>    
     <a href="https://codecov.io/gh/steezplusplus/digital-garden" target="_blank"> 
      <img src="https://codecov.io/gh/steezplusplus/digital-garden/graph/badge.svg?token=IVWNLISFWI"/> 
     </a>
+    &nbsp;
     <a
       href="https://github.com/steezplusplus/digital-garden/stargazers"
       target="_blank"
@@ -26,6 +27,7 @@
         src="https://custom-icon-badges.demolab.com/github/stars/steezplusplus/digital-garden?logo=star"
       />
     </a>
+    &nbsp;
     <a
       href="https://github.com/steezplusplus/digital-garden/issues"
       target="_blank"
@@ -36,6 +38,7 @@
         src="https://custom-icon-badges.demolab.com/github/issues-raw/steezplusplus/digital-garden?logo=issue"
       />
     </a>
+    &nbsp;
     <a href="/LICENSE" target="_blank">
       <img
         alt="Jesses's garden license"
@@ -43,6 +46,7 @@
         src="https://custom-icon-badges.demolab.com/github/license/steezplusplus/digital-garden?logo=law"
       />
     </a>
+    &nbsp;
     <a href="#">
       <img
         alt="Jesses's garden last commit time"
@@ -50,12 +54,18 @@
         src="https://custom-icon-badges.demolab.com/github/last-commit/steezplusplus/digital-garden?logo=history&logoColor=white"
       />
     </a>
+    &nbsp;
     <a href="#">
       <img
         alt="Jesses's garden num of bytes"
         title="Jesses's garden num of bytes"
         src="https://custom-icon-badges.demolab.com/github/languages/code-size/steezplusplus/digital-garden?logo=file-code&logoColor=white"
       />
+    </a>
+    <br />
+    <br />
+    <a href="https://ko-fi.com/W7W5PB4J9" target="_blank"> 
+      <img src="https://ko-fi.com/img/githubbutton_sm.svg"/> 
     </a>
   </section>
   <br />
