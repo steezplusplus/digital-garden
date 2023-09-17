@@ -62,11 +62,6 @@
         src="https://custom-icon-badges.demolab.com/github/languages/code-size/steezplusplus/digital-garden?logo=file-code&logoColor=white"
       />
     </a>
-    <br />
-    <br />
-    <a href="https://ko-fi.com/W7W5PB4J9" target="_blank"> 
-      <img src="https://ko-fi.com/img/githubbutton_sm.svg"/> 
-    </a>
   </section>
   <br />
   <section>
@@ -94,36 +89,11 @@
   <br />
   <section>
     <h2>Support me!</h2>
+    <a href="https://ko-fi.com/W7W5PB4J9" target="_blank"> 
+      <img src="https://ko-fi.com/img/githubbutton_sm.svg"/> 
+    </a>
     <p>
-      If you liked my garden then
-      <br />
-      <em>Leave a ⭐</em>
-    </p>
-    <p>
-      Have a question?
-      <br />
-      <em>
-        <a href="https://twitter.com/CodingSteez" target="_blank">
-          Send me a tweet
-        </a>
-      </em>
-    </p>
-    <p>
-      Want to use my code?
-      <br />
-      <em> Go ahead! If you make anything cool, I'd love to see it.</em>
-    </p>
-    <p>
-      Find an issue?
-      <br />
-      <em>
-        <a
-          href="https://github.com/steezplusplus/digital-garden/issues"
-          target="_blank"
-        >
-          Please open an issue
-        </a>
-      </em>
+      Or leave a ⭐
     </p>
   </section>
 </div>
