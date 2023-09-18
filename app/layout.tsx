@@ -10,7 +10,28 @@ const lora = Lora({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
-  description: 'A collection of expertly built programming projects.',
+  description: 'An open source web dev portfolio',
+  openGraph: {
+    title: "Jesse's Digital Garden",
+    description: 'An open source web dev portfolio',
+    url: 'https://digital-garden-steez.vercel.app/',
+    siteName: "Jesse's Digital Garden",
+    images: [
+      {
+        url: './primry.jpg',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: './primary.jpg',
+        width: 1800,
+        height: 1600,
+        alt: 'Image of neon light tubes',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
