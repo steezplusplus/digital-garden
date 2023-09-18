@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 type SupportCardProps = {
   label: string;
-  subLabel?: string;
+  subLabel: string;
   href: string;
   image: JSX.Element;
 };
@@ -21,7 +21,7 @@ export function SupportCard(props: SupportCardProps) {
     >
       <h2 className="mb-1 text-lg">{label}</h2>
       <div className="mt-2 self-center">{image}</div>
-      {subLabel && <h3 className="self-end text-sm italic">{subLabel}</h3>}
+      <h3 className="self-end text-sm italic">{subLabel}</h3>
     </Link>
   );
 }
