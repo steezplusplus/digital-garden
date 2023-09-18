@@ -39,7 +39,11 @@ export function Audio(props: AudioProps) {
         Your browser does not support the <code>audio</code> element.
       </audio>
       <div className="flex rounded border border-slate-400 px-2 py-1">
-        <button className="h-full border-r px-2" onClick={togglePlayPause}>
+        <button
+          className="h-full border-r px-2"
+          onClick={togglePlayPause}
+          aria-label={`${isPlaying ? 'Pause' : 'Play'} the audio`}
+        >
           {isPlaying ? <Pause size={16} /> : <Play size={16} />}
         </button>
         <div className="flex w-full items-center gap-x-1 px-3">
@@ -51,6 +55,7 @@ export function Audio(props: AudioProps) {
             min="0"
             value={volume}
             onChange={(e) => setVolume(Number(e.target.value))}
+            aria-label="Adjust the volume"
           />
         </div>
       </div>

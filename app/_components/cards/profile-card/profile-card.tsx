@@ -12,6 +12,7 @@ export function ProfileCard() {
     >
       <div className="flex h-full flex-col items-center justify-center">
         <Image
+          priority
           src="/primary.jpg"
           alt="A profile picture"
           width="128"
