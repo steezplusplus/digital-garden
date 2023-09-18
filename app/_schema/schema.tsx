@@ -31,8 +31,6 @@ export const contactSchema = {
 
 export const themeSchema = {
   label: 'Theme',
-  subLabel: '',
-  icon: <></>,
 };
 
 export const musicSchema = {

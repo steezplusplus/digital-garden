@@ -6,8 +6,8 @@ const props = {
   subLabel: 'subLabel',
 };
 
-describe('<Nav />', () => {
-  it('Should render an anchor', () => {
+describe('<MusicCard />', () => {
+  it('Should expected elements', () => {
     render(<MusicCard {...props} />);
     const h2 = screen.getByRole('heading', { level: 2 });
     const h3 = screen.getByRole('heading', { level: 3 });
