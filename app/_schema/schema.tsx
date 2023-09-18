@@ -38,7 +38,6 @@ export const themeSchema = {
 export const musicSchema = {
   label: 'Listening to...',
   subLabel: 'LoFi',
-  icon: <Music />,
 };
 
 export const audioSchema = {

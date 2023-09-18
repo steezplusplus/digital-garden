@@ -1,13 +1,12 @@
-import { Audio } from './audio';
+import { MusicPlayer } from './music-player/music-player';
 
 type MusicCardProps = {
   label: string;
-  subLabel?: string;
-  icon: JSX.Element;
+  subLabel: string;
 };
 
 export function MusicCard(props: MusicCardProps) {
-  const { label, subLabel, icon } = props;
+  const { label, subLabel } = props;
   return (
     <div
       className="
@@ -17,9 +16,8 @@ export function MusicCard(props: MusicCardProps) {
       "
     >
       <h2 className="mb-1 self-end text-lg">{label}</h2>
-      {subLabel && <h3 className="self-end text-sm italic">{subLabel}</h3>}
-      <Audio songPath="/song.mp3" />
-      <div className="mt-auto">{icon}</div>
+      <h3 className="self-end text-sm italic">{subLabel}</h3>
+      <MusicPlayer songPath="/song.mp3" />
     </div>
   );
 }

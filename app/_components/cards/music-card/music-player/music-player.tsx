@@ -3,11 +3,13 @@
 import { useRef, useState, useEffect } from 'react';
 import { Volume1, Play, Pause } from 'lucide-react';
 
-type AudioProps = {
+type MusicPlayerProps = {
   songPath: string;
 };
 
-export function Audio(props: AudioProps) {
+// TODO Unit test
+// TODO When song ends, should reset to initial state - i.e. button goes to pause and can play again.
+export function MusicPlayer(props: MusicPlayerProps) {
   const { songPath } = props;
   const audioRef: React.RefObject<HTMLAudioElement> = useRef(null);
 
