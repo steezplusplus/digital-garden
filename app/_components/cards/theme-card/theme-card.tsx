@@ -2,10 +2,11 @@ import { ThemeSelect } from './theme-select/theme-select';
 
 type ThemeCardProps = {
   label: string;
+  icon: JSX.Element;
 };
 
 export function ThemeCard(props: ThemeCardProps) {
-  const { label } = props;
+  const { label, icon } = props;
   return (
     <div
       className="
@@ -14,8 +15,9 @@ export function ThemeCard(props: ThemeCardProps) {
         p-4 dark:bg-indigo-100/5
       "
     >
-      <h2 className="mb-1 text-lg">{label}</h2>
+      <h2 className="mb-1 self-end text-lg">{label}</h2>
       <ThemeSelect />
+      <div className="self-start text-sm italic">{icon}</div>
     </div>
   );
 }

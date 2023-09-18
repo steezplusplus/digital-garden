@@ -1,5 +1,4 @@
-import { GithubIcon, Twitter, Linkedin, Mail, Music, Coffee } from 'lucide-react';
-import Image from 'next/image';
+import { GithubIcon, Twitter, Linkedin, Mail, Music, Coffee, SunMoon } from 'lucide-react';
 
 export const githubSchema = {
   href: 'https://github.com/steezplusplus',
@@ -31,6 +30,7 @@ export const contactSchema = {
 
 export const themeSchema = {
   label: 'Theme',
+  icon: <SunMoon />,
 };
 
 export const musicSchema = {
