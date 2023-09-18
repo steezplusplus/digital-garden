@@ -54,7 +54,11 @@ export function RepoCard(props: RepoCardProps) {
 
       <div className="flex flex-col items-center">
         <Link
-          className="text-blue-500 underline hover:text-blue-300"
+          className="
+            mt-6 text-blue-700
+            underline hover:text-blue-900
+          dark:text-purple-400 dark:hover:text-purple-600
+          "
           href={githubUrl}
           target="_blank"
         >
