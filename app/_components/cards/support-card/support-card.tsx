@@ -4,11 +4,11 @@ type SupportCardProps = {
   label: string;
   subLabel: string;
   href: string;
-  image: JSX.Element;
+  icon: JSX.Element;
 };
 
 export function SupportCard(props: SupportCardProps) {
-  const { label, subLabel, href, image } = props;
+  const { label, subLabel, href, icon } = props;
   return (
     <Link
       href={href}
@@ -20,7 +20,7 @@ export function SupportCard(props: SupportCardProps) {
       "
     >
       <h2 className="mb-1 text-lg">{label}</h2>
-      <div className="mt-2 self-center">{image}</div>
+      <div className="mt-2 self-center">{icon}</div>
       <h3 className="self-end text-sm italic">{subLabel}</h3>
     </Link>
   );

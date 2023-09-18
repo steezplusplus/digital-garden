@@ -1,4 +1,4 @@
-import { GithubIcon, Twitter, Linkedin, Mail, Music } from 'lucide-react';
+import { GithubIcon, Twitter, Linkedin, Mail, Music, Coffee } from 'lucide-react';
 import Image from 'next/image';
 
 export const githubSchema = {
@@ -49,5 +49,5 @@ export const supportCard = {
   label: 'Support me!',
   subLabel: 'Buy me a coffee',
   href: 'https://ko-fi.com/W7W5PB4J9',
-  image: <Image src="/kofi.svg" alt="Ko-Fi icon" width="32" height="32" />,
+  icon: <Coffee />,
 };
