@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     siteName: "Jesse's Digital Garden",
     images: [
       {
-        url: './primry.svg',
+        url: './primry.jpg',
         width: 800,
         height: 600,
       },
       {
-        url: './primary.svg',
+        url: './primary.jpg',
         width: 1800,
         height: 1600,
         alt: 'Image of neon light tubes',
