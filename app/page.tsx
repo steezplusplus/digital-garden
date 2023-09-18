@@ -10,6 +10,7 @@ import { GithubCard } from './_components/cards/github-card/github-card';
 import { LinkedinCard } from './_components/cards/linkedin-card/linkedin-card';
 import { ContactCard } from './_components/cards/contact-card/contact-card';
 import { ReposFeed, ReposFeedSkeleton } from './_components/repos-feed/repos-feed';
+import { SupportCard } from './_components/cards/support-card/support-card';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
@@ -26,6 +27,7 @@ export default function HomePage() {
           <TwitterCard {...schema.twitterSchema} />
           <LinkedinCard {...schema.linkedinSchema} />
           <ContactCard {...schema.contactSchema} />
+          <SupportCard {...schema.supportCard} />
           <ThemeCard {...schema.themeSchema} />
           <MusicCard {...schema.musicSchema} />
         </div>

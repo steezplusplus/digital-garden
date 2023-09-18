@@ -1,4 +1,5 @@
 import { GithubIcon, Twitter, Linkedin, Mail, Music } from 'lucide-react';
+import Image from 'next/image';
 
 export const githubSchema = {
   href: 'https://github.com/steezplusplus',
@@ -42,4 +43,11 @@ export const musicSchema = {
 
 export const audioSchema = {
   songPath: '/song.mp3',
+};
+
+export const supportCard = {
+  label: 'Support me!',
+  subLabel: 'Buy me a coffee',
+  href: 'https://ko-fi.com/W7W5PB4J9',
+  image: <Image src="/kofi.svg" alt="Ko-Fi icon" width="32" height="32" />,
 };
