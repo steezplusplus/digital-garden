@@ -1,8 +1,9 @@
 # TODO
 
-- Root loading.tsx with a <Skeleton> component.
-  - https://delba.dev/blog/animated-loading-skeletons-with-tailwind
 - Dependabot
 - Observation Observer, animations
-- Scrollbar color pseudo
+- Unit test Audio component
+- RepoCard styling
 - Validator functions with ZOD
+- Hover animations on all links
+- <MusicPlayer> should reset when song ends
