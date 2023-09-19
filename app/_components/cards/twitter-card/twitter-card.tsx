@@ -14,12 +14,12 @@ export function TwitterCard(props: TwitterCardProps) {
       href={href}
       target="_blank"
       className="
-        flex aspect-square flex-col rounded-xl
-        border border-stone-400 bg-white/50
-        p-4 dark:bg-indigo-100/5
+        group flex aspect-square flex-col
+        rounded-xl border border-stone-400
+        bg-white/50 p-4 dark:bg-indigo-100/5
       "
     >
-      <h2 className="mb-1 self-end text-lg">{label}</h2>
+      <h2 className="mb-1 self-end text-lg group-hover:underline">{label}</h2>
       <h3 className="self-end text-sm italic">{subLabel}</h3>
       <div className="mt-auto self-start">{icon}</div>
     </Link>
