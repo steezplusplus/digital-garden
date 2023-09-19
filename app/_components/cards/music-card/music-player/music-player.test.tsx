@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { MusicPlayer } from './music-player';
 
 const props = {
@@ -13,5 +14,12 @@ describe('<MusicPlayer />', () => {
     const slider = screen.getByRole('slider');
     expect(button).toBeInTheDocument();
     expect(slider).toBeInTheDocument();
+  });
+  it('Should update aria label on click', async () => {
+    window.HTMLMediaElement.prototype.pause = jest.fn().mockImplementation(() => {}); // Mock pause fn
+    render(<MusicPlayer {...props} />);
+    expect(screen.getByLabelText('Play the audio'));
+    await userEvent.click(screen.getByRole('button'));
+    expect(screen.getByLabelText('Pause the audio'));
   });
 });
