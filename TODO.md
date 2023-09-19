@@ -2,8 +2,8 @@
 
 - Dependabot
 - Observation Observer, animations
-- Unit test Audio component
+- Unit test MusicPlayer and ThemeSelect component
+- Music player should reset when the song ends
+- Move codesteez blog posts here
 - RepoCard styling
 - Validator functions with ZOD
-- Hover animations on all links
-- <MusicPlayer> should reset when song ends
