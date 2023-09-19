@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react';
-import { RepoCard } from './repo-card';
+import { render, screen } from '@testing-library/react';
+import { RepoCard, RepoCardSkeleton } from './repo-card';
 
 const props = {
   id: 0,
@@ -17,5 +17,15 @@ const props = {
 describe('<RepoCard />', () => {
   it('Should render with no errors', () => {
     render(<RepoCard {...props} />);
+    const heading3 = screen.getByRole('heading', { level: 3, name: props.name });
+    const anchor = screen.getByRole('link');
+    expect(heading3).toBeInTheDocument();
+    expect(anchor).toHaveAttribute('href', props.githubUrl);
+  });
+});
+
+describe('<RepoCardSkeleton />', () => {
+  it('Should render with no errors', () => {
+    render(<RepoCardSkeleton />);
   });
 });
