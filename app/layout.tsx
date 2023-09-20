@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Lora } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
 import { Nav } from './_components/nav/nav';
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={lora.className}>
+        <Analytics />
         <Providers>
           <nav>
             <Nav />
