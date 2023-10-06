@@ -1,6 +1,8 @@
 import { getRepos } from '@/octokit';
 import { RepoCard, RepoCardSkeleton } from '../cards/repo-card/repo-card';
 
+export const revalidate = 0;
+
 export async function ReposFeed() {
   const repos = await getRepos();
   // TODO When would this be undefined?
