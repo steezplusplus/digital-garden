@@ -17,7 +17,7 @@ export async function getRepos() {
       visibility: 'public',
       affiliation: 'owner',
       sort: 'updated',
-      per_page: 6,
+      per_page: 9,
       page: 0,
     });
 
