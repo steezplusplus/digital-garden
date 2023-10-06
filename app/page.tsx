@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
 };
 
-// TODO Suspense fallback ui
 export default function HomePage() {
   return (
     <>
