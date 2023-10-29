@@ -12,6 +12,7 @@ const lora = Lora({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
   description: 'An open source web dev portfolio',
+  metadataBase: new URL('https://digital-garden-steez.vercel.app/'),
   openGraph: {
     title: "Jesse's Digital Garden",
     description: 'An open source web dev portfolio',
