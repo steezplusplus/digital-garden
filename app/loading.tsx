@@ -7,7 +7,6 @@ import { ContactCard } from './_components/cards/contact-card/contact-card';
 import { MusicCard } from './_components/cards/music-card/music-card';
 import { ThemeCard } from './_components/cards/theme-card/theme-card';
 
-// TODO Less CLS issues
 export default function Loading() {
   return (
     <>
