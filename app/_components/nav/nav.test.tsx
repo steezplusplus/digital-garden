@@ -11,6 +11,7 @@ describe('<Nav />', () => {
     render(<Nav />);
     const heading = screen.getByRole('heading', {
       level: 1,
+      name: "Jesse's Digital Garden",
     });
     expect(heading).toBeInTheDocument();
   });
