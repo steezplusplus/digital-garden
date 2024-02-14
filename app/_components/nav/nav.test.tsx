@@ -2,10 +2,10 @@ import { render, screen } from '@testing-library/react';
 import { Nav } from './nav';
 
 describe('<Nav />', () => {
-  it('Should render an anchor', () => {
+  it('Should render the logo anchor', () => {
     render(<Nav />);
-    const anchor = screen.getByRole('link');
-    expect(anchor).toBeInTheDocument();
+    const logoAnchor = screen.getByRole('link', { name: "Jesse's Digital Garden" });
+    expect(logoAnchor).toBeInTheDocument();
   });
   it('Should render a heading', () => {
     render(<Nav />);
