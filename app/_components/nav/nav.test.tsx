@@ -15,4 +15,9 @@ describe('<Nav />', () => {
     });
     expect(heading).toBeInTheDocument();
   });
+  it('Should render actions in nav', () => {
+    render(<Nav />);
+    const projectsButton = screen.getByRole('button', { name: 'Projects' });
+    expect(projectsButton).toBeInTheDocument();
+  });
 });
