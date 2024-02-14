@@ -16,9 +16,9 @@ export function NavActions() {
 
   return (
     <li className="ml-auto">
-      <a className="cursor-pointer hover:underline" onClick={() => smoothScroll('#project-id')}>
+      <button className="hover:underline" onClick={() => smoothScroll('#project-id')}>
         Projects
-      </a>
+      </button>
     </li>
   );
 }
