@@ -12,6 +12,7 @@ type RepoCardProps = {
   numForks: number;
   numSubscribers: number | undefined;
   githubUrl: string;
+  updatedAt: string | null;
 };
 
 // TODO Finish view
@@ -27,6 +28,7 @@ export function RepoCard(props: RepoCardProps) {
     numForks,
     numSubscribers,
     githubUrl,
+    updatedAt,
   } = props;
 
   return (
