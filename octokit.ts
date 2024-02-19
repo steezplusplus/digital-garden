@@ -21,8 +21,6 @@ export async function getRepos() {
       page: 0,
     });
 
-    console.log('===>', response);
-
     const filteredData = response.data.map((repo) => {
       return {
         id: repo.id,
@@ -38,9 +36,6 @@ export async function getRepos() {
         pushedAt: repo.pushed_at,
       };
     });
-
-    // Clean me up
-    // console.log('===>', filteredData);
 
     return filteredData;
   } catch (error) {
