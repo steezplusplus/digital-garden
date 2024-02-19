@@ -5,7 +5,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 
 dayjs.extend(relativeTime);
 
-type RepoCardProps = {
+export type RepoCardProps = {
   id: number;
   name: string;
   description: string | null;
