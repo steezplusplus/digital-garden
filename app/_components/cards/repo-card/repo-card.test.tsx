@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import { RepoCard, RepoCardSkeleton } from './repo-card';
+import { RepoCard, RepoCardSkeleton, RepoCardProps } from './repo-card';
 
-const props = {
+const props: RepoCardProps = {
   id: 0,
   name: 'name',
   description: 'description',
@@ -12,6 +12,7 @@ const props = {
   numForks: 0,
   numSubscribers: 0,
   githubUrl: 'https://www.not-real.com',
+  pushedAt: '2020-07-11T17:57:05Z',
 };
 
 describe('<RepoCard />', () => {
