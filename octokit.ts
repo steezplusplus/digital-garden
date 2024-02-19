@@ -21,7 +21,7 @@ export async function getRepos() {
       page: 0,
     });
 
-    // console.log('===>', response);
+    console.log('===>', response);
 
     const filteredData = response.data.map((repo) => {
       return {
@@ -35,11 +35,12 @@ export async function getRepos() {
         numForks: repo.forks_count,
         numSubscribers: repo.subscribers_count,
         githubUrl: repo.html_url,
-        updatedAt: repo.updated_at,
+        pushedAt: repo.pushed_at,
       };
     });
 
-    console.log('===>', filteredData);
+    // Clean me up
+    // console.log('===>', filteredData);
 
     return filteredData;
   } catch (error) {

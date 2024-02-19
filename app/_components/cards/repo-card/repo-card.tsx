@@ -1,5 +1,9 @@
 import { GitFork, Star } from 'lucide-react';
 import Link from 'next/link';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
+dayjs.extend(relativeTime);
 
 type RepoCardProps = {
   id: number;
@@ -12,7 +16,7 @@ type RepoCardProps = {
   numForks: number;
   numSubscribers: number | undefined;
   githubUrl: string;
-  updatedAt: string | null;
+  pushedAt: string | null;
 };
 
 // TODO Finish view
@@ -28,7 +32,7 @@ export function RepoCard(props: RepoCardProps) {
     numForks,
     numSubscribers,
     githubUrl,
-    updatedAt,
+    pushedAt,
   } = props;
 
   return (
@@ -66,6 +70,7 @@ export function RepoCard(props: RepoCardProps) {
         >
           View source code
         </Link>
+        <p className="text-sm font-thin">Last updated {dayjs(pushedAt).fromNow()}</p>
       </div>
     </article>
   );
