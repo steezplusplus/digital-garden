@@ -5,7 +5,7 @@ export const revalidate = 0;
 
 export async function ReposFeed() {
   const repos = await getRepos();
-  // TODO When would this be undefined?
+
   if (repos === undefined) {
     return (
       <div className="aspect-auto rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">

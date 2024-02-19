@@ -33,6 +33,7 @@ export async function getRepos() {
         numForks: repo.forks_count,
         numSubscribers: repo.subscribers_count,
         githubUrl: repo.html_url,
+        pushedAt: repo.pushed_at,
       };
     });
 
