@@ -2,15 +2,15 @@ import { Suspense } from 'react';
 import { Metadata } from 'next';
 
 import * as schema from './_schema/schema';
-import { ProfileCard } from './_components/cards/profile-card/profile-card';
-import { MusicCard } from './_components/cards/music-card/music-card';
-import { ThemeCard } from './_components/cards/theme-card/theme-card';
-import { TwitterCard } from './_components/cards/twitter-card/twitter-card';
-import { GithubCard } from './_components/cards/github-card/github-card';
-import { LinkedinCard } from './_components/cards/linkedin-card/linkedin-card';
-import { ContactCard } from './_components/cards/contact-card/contact-card';
-import { ReposFeed, ReposFeedSkeleton } from './_components/repos-feed/repos-feed';
-import { SupportCard } from './_components/cards/support-card/support-card';
+import { ProfileCard } from '../components/cards/profile-card/profile-card';
+import { MusicCard } from '../components/cards/music-card/music-card';
+import { ThemeCard } from '../components/cards/theme-card/theme-card';
+import { TwitterCard } from '../components/cards/twitter-card/twitter-card';
+import { GithubCard } from '../components/cards/github-card/github-card';
+import { LinkedinCard } from '../components/cards/linkedin-card/linkedin-card';
+import { ContactCard } from '../components/cards/contact-card/contact-card';
+import { ReposFeed, ReposFeedSkeleton } from '../components/repos-feed/repos-feed';
+import { SupportCard } from '../components/cards/support-card/support-card';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
