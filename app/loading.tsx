@@ -1,11 +1,11 @@
-import * as schema from './_schema/schema';
-import { ProfileCard } from './_components/cards/profile-card/profile-card';
-import { TwitterCard } from './_components/cards/twitter-card/twitter-card';
-import { GithubCard } from './_components/cards/github-card/github-card';
-import { LinkedinCard } from './_components/cards/linkedin-card/linkedin-card';
-import { ContactCard } from './_components/cards/contact-card/contact-card';
-import { MusicCard } from './_components/cards/music-card/music-card';
-import { ThemeCard } from './_components/cards/theme-card/theme-card';
+import * as schema from '../schema/schema';
+import { ProfileCard } from '../components/cards/profile-card/profile-card';
+import { TwitterCard } from '../components/cards/twitter-card/twitter-card';
+import { GithubCard } from '../components/cards/github-card/github-card';
+import { LinkedinCard } from '../components/cards/linkedin-card/linkedin-card';
+import { ContactCard } from '../components/cards/contact-card/contact-card';
+import { MusicCard } from '../components/cards/music-card/music-card';
+import { ThemeCard } from '../components/cards/theme-card/theme-card';
 
 export default function Loading() {
   return (

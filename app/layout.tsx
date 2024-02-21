@@ -3,9 +3,9 @@ import { Lora } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
-import { Nav } from './_components/nav/nav';
-import { Footer } from './_components/footer/footer';
-import { Providers } from './_components/providers/providers';
+import { Nav } from '../components/nav/nav';
+import { Footer } from '../components/footer/footer';
+import { Providers } from '../components/providers/providers';
 
 const lora = Lora({ subsets: ['latin'] });
 
