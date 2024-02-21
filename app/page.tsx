@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 
-import * as schema from './_schema/schema';
+import * as schema from '../schema/schema';
 import { ProfileCard } from '../components/cards/profile-card/profile-card';
 import { MusicCard } from '../components/cards/music-card/music-card';
 import { ThemeCard } from '../components/cards/theme-card/theme-card';

@@ -1,4 +1,4 @@
-import * as schema from './_schema/schema';
+import * as schema from '../schema/schema';
 import { ProfileCard } from '../components/cards/profile-card/profile-card';
 import { TwitterCard } from '../components/cards/twitter-card/twitter-card';
 import { GithubCard } from '../components/cards/github-card/github-card';
