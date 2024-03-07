@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
 };
 
+export const revalidate = 3600; // revalidate at most every hour
+
 export default function HomePage() {
   return (
     <>
