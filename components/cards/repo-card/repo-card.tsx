@@ -14,7 +14,6 @@ export type RepoCardProps = {
   numStargazers: number;
   numWatchers: number;
   numForks: number;
-  numSubscribers: number | undefined;
   githubUrl: string;
   pushedAt: string | null;
 };
@@ -30,7 +29,6 @@ export function RepoCard(props: RepoCardProps) {
     numStargazers,
     numWatchers,
     numForks,
-    numSubscribers,
     githubUrl,
     pushedAt,
   } = props;

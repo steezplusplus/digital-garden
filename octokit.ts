@@ -31,7 +31,6 @@ export async function getRepos() {
         numStargazers: repo.stargazers_count,
         numWatchers: repo.watchers_count,
         numForks: repo.forks_count,
-        numSubscribers: repo.subscribers_count,
         githubUrl: repo.html_url,
         pushedAt: repo.pushed_at,
       };
