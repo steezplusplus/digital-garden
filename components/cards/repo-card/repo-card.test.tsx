@@ -10,7 +10,6 @@ const props: RepoCardProps = {
   numStargazers: 0,
   numWatchers: 0,
   numForks: 0,
-  numSubscribers: 0,
   githubUrl: 'https://www.not-real.com',
   pushedAt: '2020-07-11T17:57:05Z',
 };
