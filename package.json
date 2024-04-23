@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@octokit/rest": "^20.1.0",
-    "@octokit/types": "^12.5.0",
+    "@octokit/types": "^13.4.1",
     "@types/node": "20.12.3",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.25",
