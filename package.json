@@ -15,7 +15,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@octokit/rest": "^20.1.0",
+    "@octokit/rest": "^20.1.1",
     "@octokit/types": "^13.5.0",
     "@types/node": "20.12.12",
     "@types/react": "18.3.2",
