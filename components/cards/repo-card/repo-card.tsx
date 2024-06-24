@@ -36,12 +36,7 @@ export function RepoCard(props: RepoCardProps) {
   return (
     <article
       key={id}
-      className="
-        relative flex aspect-auto flex-col 
-        rounded-xl border 
-        border-stone-400 bg-white/50 px-6
-        py-2 dark:bg-indigo-100/5
-      "
+      className="relative flex aspect-auto flex-col rounded-xl border border-stone-400 bg-white/50 px-6 py-2 dark:bg-indigo-100/5"
     >
       <h3 className="mb-3 text-lg">{name}</h3>
 
@@ -58,11 +53,7 @@ export function RepoCard(props: RepoCardProps) {
 
       <div className="flex flex-col items-center">
         <Link
-          className="
-            mt-6 text-blue-700
-            underline hover:text-blue-900
-          dark:text-purple-400 dark:hover:text-purple-600
-          "
+          className="mt-6 text-blue-700 underline hover:text-blue-900 dark:text-purple-400 dark:hover:text-purple-600"
           href={githubUrl}
           target="_blank"
         >
@@ -76,13 +67,7 @@ export function RepoCard(props: RepoCardProps) {
 
 export function RepoCardSkeleton() {
   return (
-    <article
-      className="
-            flex aspect-auto flex-col 
-            rounded-xl border border-stone-400 
-            bg-white/50 px-6 py-2
-          "
-    >
+    <article className="flex aspect-auto flex-col rounded-xl border border-stone-400 bg-white/50 px-6 py-2">
       <div className="mb-4 h-7 rounded bg-stone-200" />
       <div className="mb-2 h-10 rounded bg-stone-200" />
       <div className="my-auto mb-1 flex justify-evenly">
