@@ -13,11 +13,7 @@ export function ContactCard(props: ContactCardProps) {
     <Link
       href={href}
       target="_blank"
-      className="
-        group flex aspect-square flex-col
-        rounded-xl border border-stone-400
-        bg-white/50 p-4 dark:bg-indigo-100/5
-      "
+      className="group flex aspect-square flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5"
     >
       <div className="mb-auto self-start">{icon}</div>
       <h2 className="mb-1 self-end text-lg group-hover:underline">{label}</h2>

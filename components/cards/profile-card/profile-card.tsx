@@ -34,14 +34,7 @@ export function ProfileCard() {
   });
 
   return (
-    <div
-      className="
-        bottom-0 aspect-auto self-start
-        rounded-xl border border-stone-400 bg-white/50 p-4
-        dark:bg-indigo-100/5 sm:sticky sm:top-10
-        sm:aspect-square
-      "
-    >
+    <div className="bottom-0 aspect-auto self-start rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5 sm:sticky sm:top-10 sm:aspect-square">
       <div className="flex h-full flex-col items-center justify-center">
         <Image
           priority
