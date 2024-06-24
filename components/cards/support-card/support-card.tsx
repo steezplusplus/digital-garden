@@ -13,11 +13,7 @@ export function SupportCard(props: SupportCardProps) {
     <Link
       href={href}
       target="_blank"
-      className="
-        group col-span-2 flex aspect-auto flex-col
-        rounded-xl border border-stone-400
-        bg-white/50 p-4 dark:bg-indigo-100/5
-      "
+      className="group col-span-2 flex aspect-auto flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5"
     >
       <h2 className="mb-1 text-lg group-hover:underline">{label}</h2>
       <div className="mt-2 self-center">{icon}</div>
