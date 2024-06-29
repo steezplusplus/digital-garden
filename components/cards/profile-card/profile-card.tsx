@@ -3,9 +3,11 @@
 import Image from 'next/image';
 import gsap from 'gsap/dist/gsap'; // import from /dist to avoid ESM compiler issues
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'; // import from /dist to avoid ESM compiler issues
+import { TextPlugin } from 'gsap/dist/TextPlugin'; // import from /dist to avoid ESM compiler issues
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
 
 export function ProfileCard() {
   useGSAP(() => {
@@ -17,6 +19,13 @@ export function ProfileCard() {
         scrub: true,
       },
       rotation: 360,
+    });
+
+    gsap.to('.figcaption-container', {
+      duration: 3,
+      text: {
+        value: 'Welcome to the garden.',
+      },
     });
   });
 
@@ -31,7 +40,7 @@ export function ProfileCard() {
           height="128"
           className="rotate-img aspect-auto h-32 w-32 rounded-full"
         />
-        <figcaption className="mt-2 text-center text-sm">Welcome to the garden.</figcaption>
+        <figcaption className="figcaption-container text-b mt-2 text-center text-sm"></figcaption>
       </div>
     </div>
   );
