@@ -1,5 +1,7 @@
 import { ThemeSelect } from './theme-select/theme-select';
 
+import type { JSX } from "react";
+
 type ThemeCardProps = {
   label: string;
   icon: JSX.Element;
