@@ -6,6 +6,7 @@ import { LinkedinCard } from '../components/cards/linkedin-card/linkedin-card';
 import { ContactCard } from '../components/cards/contact-card/contact-card';
 import { MusicCard } from '../components/cards/music-card/music-card';
 import { ThemeCard } from '../components/cards/theme-card/theme-card';
+import { SupportCard } from '@/components/cards/support-card/support-card';
 
 export default function Loading() {
   return (
@@ -20,6 +21,7 @@ export default function Loading() {
           <ThemeCard {...schema.themeSchema}>
             <div className="h-12 w-9 rounded-md border border-slate-400" />
           </ThemeCard>
+          <SupportCard {...schema.supportCard} />
           <MusicCard {...schema.musicSchema} />
         </div>
       </div>
