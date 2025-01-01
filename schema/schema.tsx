@@ -1,24 +1,24 @@
-import { GithubIcon, Twitter, Linkedin, Mail, Coffee, SunMoon } from 'lucide-react';
+import { GitBranch, Bird, User, Mail, Coffee, SunMoon } from 'lucide-react';
 
 export const githubSchema = {
   href: 'https://github.com/steezplusplus',
   label: 'Github',
   subLabel: 'SteezPlusPlus',
-  icon: <GithubIcon />,
+  icon: <GitBranch />,
 };
 
 export const twitterSchema = {
   href: 'https://twitter.com/CodingSteez',
   label: 'Twitter',
   subLabel: 'CodingSteez',
-  icon: <Twitter />,
+  icon: <Bird />,
 };
 
 export const linkedinSchema = {
   href: 'https://www.linkedin.com/in/jesse-bp/',
   label: 'LinkedIn',
   subLabel: 'in/jesse-bp',
-  icon: <Linkedin />,
+  icon: <User />,
 };
 
 export const contactSchema = {
