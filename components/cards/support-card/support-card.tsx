@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
 type SupportCardProps = {
   label: string;
