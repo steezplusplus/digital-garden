@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import type { JSX } from 'react';
+
 type GithubCardProps = {
   href: string;
   label: string;
