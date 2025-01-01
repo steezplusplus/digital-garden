@@ -11,7 +11,7 @@ type MusicPlayerProps = {
 // TODO When song ends, should reset to initial state - i.e. button goes to pause and can play again.
 export function MusicPlayer(props: MusicPlayerProps) {
   const { songPath } = props;
-  const audioRef: React.RefObject<HTMLAudioElement> = useRef(null);
+  const audioRef: React.RefObject<HTMLAudioElement | null> = useRef(null);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(60);
