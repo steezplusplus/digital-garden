@@ -15,7 +15,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@gsap/react": "2.1.1",
+    "@gsap/react": "2.1.2",
     "@octokit/rest": "21.0.0",
     "@octokit/types": "13.5.0",
     "@types/node": "22.10.5",
