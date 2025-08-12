@@ -40,7 +40,7 @@ export function MusicPlayer(props: MusicPlayerProps) {
       <audio ref={audioRef} src={songPath}>
         Your browser does not support the <code>audio</code> element.
       </audio>
-      <div className="flex rounded border border-slate-400 px-2 py-1">
+      <div className="flex rounded-sm border border-slate-400 px-2 py-1">
         <button
           className="h-full border-r px-2"
           onClick={togglePlayPause}
