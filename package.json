@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@gsap/react": "2.1.2",
-    "@octokit/rest": "21.0.0",
+    "@octokit/rest": "22.0.0",
     "@octokit/types": "13.5.0",
     "@tailwindcss/postcss": "4.1.11",
     "@types/node": "24.2.1",
