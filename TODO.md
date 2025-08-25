@@ -10,3 +10,4 @@
 
 - `next lint` is deprecated and will be removed in Next.js 16.
 - Double check deps and devdeps are properly organized.
+- Remove lucide-react
