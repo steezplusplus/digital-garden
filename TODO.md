@@ -7,3 +7,6 @@
 - Move codesteez blog posts here
 - RepoCard styling
 - Validator functions with ZOD
+
+- `next lint` is deprecated and will be removed in Next.js 16.
+- Double check deps and devdeps are properly organized.
