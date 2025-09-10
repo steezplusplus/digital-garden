@@ -1,6 +1,7 @@
 # TODO
 
 ## Undated/Old
+
 - Dependabot
 - Observation Observer, animations
 - Unit test MusicPlayer and ThemeSelect component
@@ -10,6 +11,7 @@
 - Validator functions with ZOD
 
 ## 08/25/2025
+
 - `next lint` is deprecated and will be removed in Next.js 16.
 - Double check deps and devdeps are properly organized.
 - Remove lucide-react
