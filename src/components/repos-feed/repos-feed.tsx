@@ -1,5 +1,5 @@
-import { getRepos } from '@/octokit';
-import { RepoCard, RepoCardSkeleton } from '../cards/repo-card/repo-card';
+import { getRepos } from '@/api/octokit';
+import { RepoCard, RepoCardSkeleton } from '@/components/cards/repo-card/repo-card';
 
 export const revalidate = 0;
 
