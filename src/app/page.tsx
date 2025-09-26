@@ -21,7 +21,7 @@ export const revalidate = 3600; // revalidate at most every hour
 export default function HomePage() {
   return (
     <>
-      <div className="rotate-container grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <ProfileCard />
         <div className="grid grid-cols-2 gap-4">
           <GithubCard {...schema.githubSchema} />
