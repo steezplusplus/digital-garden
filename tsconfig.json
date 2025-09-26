@@ -19,8 +19,11 @@
     "noEmit": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "plugins": [{ "name": "next" }],
+    "baseUrl": "src/",
     "paths": {
-      "@/*": ["./*"]
+      "@/components/*": ["components/*"],
+      "@/schema/*": ["schema/*"],
+      "@/api/*": ["api/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
