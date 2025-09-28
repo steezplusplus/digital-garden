@@ -13,6 +13,34 @@
 
 npm - nextjs - typescript - tailwind
 
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/steezplusplus/digital-garden.git
+cd digital-garden
+```
+
+### 2. Set up environment variables
+
+Copy the example environment file to `.env.local` (which is git-ignored):
+
+```bash
+cp .env .env.local
+```
+
+Edit `.env.local` following the documentation provided inside the file.
+
+### 3. Install dependencies and run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Your app should now be running at [http://localhost:3000](http://localhost:3000).
+
 ## Available commands
 
 | command         | description                              |
