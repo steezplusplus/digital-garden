@@ -9,10 +9,10 @@ export default function NewGridPage() {
           <Grid className='grid-cols-1'>
             <Grid.Item>Theme</Grid.Item>
             <Grid className='grid-cols-2'>
-              <Grid.Item className='aspect-square'>1</Grid.Item>
-              <Grid.Item className='aspect-square'>2</Grid.Item>
-              <Grid.Item className='aspect-square'>3</Grid.Item>
-              <Grid.Item className='aspect-square'>4</Grid.Item>
+              <Grid.Item className='aspect-square'>Github</Grid.Item>
+              <Grid.Item className='aspect-square'>Twitter</Grid.Item>
+              <Grid.Item className='aspect-square'>CodePen</Grid.Item>
+              <Grid.Item className='aspect-square'>Stack Overflow</Grid.Item>
             </Grid>
             <Grid.Item>Support Me</Grid.Item>
           </Grid>
@@ -21,7 +21,7 @@ export default function NewGridPage() {
 
       <section aria-labelledby='Projects'>
         <h2 className="mb-4 text-3xl">
-          Most recently updated projects
+          What I've been working on
         </h2>
         <Grid className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           <Grid.Item className='aspect-square'>1</Grid.Item>
@@ -32,12 +32,15 @@ export default function NewGridPage() {
 
       <section aria-labelledby='About'>
         <h2 className="mb-4 text-3xl">
-          Profiles
+          What else I'm up to
         </h2>
         <Grid className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           <Grid.Item className='aspect-square'>Leetcode</Grid.Item>
           <Grid.Item className='aspect-square'>Typeracer</Grid.Item>
           <Grid.Item className='aspect-square'>Spotify</Grid.Item>
+          <Grid.Item className='aspect-square'>Steam achievements, games with most hours</Grid.Item>
+          <Grid.Item className='aspect-square'>Wise Old Man OSRS</Grid.Item>
+          <Grid.Item className='aspect-square'>Blizzard</Grid.Item>
         </Grid>
       </section>
     </>
