@@ -1,4 +1,4 @@
-import { CardFour, CardOne, CardThree, CardTwo } from '@/components/cards/static-cards';
+import { CardFour, CardOne, CardThree, CardTwo, FeaturedCard } from '@/components/cards/static-cards';
 import Grid from '@/components/grid';
 
 export default function NewGridPage() {
@@ -6,15 +6,15 @@ export default function NewGridPage() {
     <>
       <section aria-labelledby='Contact Information'>
         <Grid className='grid-cols-1 sm:grid-cols-2'>
-          <Grid.Item className='sm:sticky sm:top-10 self-start aspect-square'>Featured</Grid.Item>
+          <FeaturedCard />
           <Grid className='grid-cols-1'>
-            <Grid.Item>Theme</Grid.Item>
             <Grid className='grid-cols-2'>
               <CardOne />
               <CardTwo />
               <CardThree />
               <CardFour />
             </Grid>
+            <Grid.Item>Theme</Grid.Item>
             <Grid.Item>Support Me</Grid.Item>
           </Grid>
         </Grid>
