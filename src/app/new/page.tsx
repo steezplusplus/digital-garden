@@ -1,3 +1,4 @@
+import { CardFour, CardOne, CardThree, CardTwo } from '@/components/cards/static-cards';
 import Grid from '@/components/grid';
 
 export default function NewGridPage() {
@@ -9,10 +10,10 @@ export default function NewGridPage() {
           <Grid className='grid-cols-1'>
             <Grid.Item>Theme</Grid.Item>
             <Grid className='grid-cols-2'>
-              <Grid.Item className='aspect-square'>Github</Grid.Item>
-              <Grid.Item className='aspect-square'>Twitter</Grid.Item>
-              <Grid.Item className='aspect-square'>CodePen</Grid.Item>
-              <Grid.Item className='aspect-square'>Stack Overflow</Grid.Item>
+              <CardOne />
+              <CardTwo />
+              <CardThree />
+              <CardFour />
             </Grid>
             <Grid.Item>Support Me</Grid.Item>
           </Grid>
