@@ -1,4 +1,3 @@
-import { CardFour, CardOne, CardThree, CardTwo, FeaturedCard } from './_components/static-cards';
 import Grid from './_components/grid';
 import GallerySection from './_components/gallery-section';
 
