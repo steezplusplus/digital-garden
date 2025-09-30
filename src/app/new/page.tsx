@@ -1,24 +1,11 @@
 import { CardFour, CardOne, CardThree, CardTwo, FeaturedCard } from './_components/static-cards';
 import Grid from './_components/grid';
+import GallerySection from './_components/gallery-section';
 
 export default function NewGridPage() {
   return (
     <>
-      <section aria-labelledby='Contact Information'>
-        <Grid className='grid-cols-1 sm:grid-cols-2'>
-          <FeaturedCard />
-          <Grid className='grid-cols-1'>
-            <Grid className='grid-cols-2'>
-              <CardOne />
-              <CardTwo />
-              <CardThree />
-              <CardFour />
-            </Grid>
-            <Grid.Item>Theme</Grid.Item>
-            <Grid.Item>Support Me</Grid.Item>
-          </Grid>
-        </Grid>
-      </section>
+      <GallerySection />
 
       <section aria-labelledby='Projects'>
         <h2 className="mb-4 text-3xl">
