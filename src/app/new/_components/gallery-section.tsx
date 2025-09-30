@@ -6,7 +6,7 @@ import GridItemLink from "app/new/_components/grid/grid-item-link";
 
 export default function GallerySection() {
   return (
-    <section aria-labelledby='Gallery of things'>
+    <section aria-label='Gallery of things'>
       <Grid className='grid-cols-1 sm:grid-cols-2'>
         <FeaturedCard />
         <Grid className='grid-cols-1'>
@@ -36,7 +36,7 @@ function FeaturedCard() {
           height="128"
           className="aspect-auto h-32 w-32 rounded-full"
         />
-        <figcaption className="text-b mt-2 text-center text-sm">Welcome to the garden.</figcaption>
+        <p className="text-b mt-2 text-center text-sm">Welcome to the garden.</p>
       </div>
     </Grid.Item>
   );
@@ -94,11 +94,7 @@ function ThemeCard() {
     <div className="flex flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">
       <h2 className="mb-1 self-end text-lg">Theme</h2>
       <div className="my-auto flex justify-center">
-        <select className="rounded-md border border-slate-400 p-2 text-xs">
-          <option>System</option>
-          <option>Light</option>
-          <option>Dark</option>
-        </select>
+        x
       </div>
       <div className="self-start text-sm italic">x</div>
     </div>

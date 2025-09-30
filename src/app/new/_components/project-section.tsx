@@ -2,8 +2,8 @@ import Grid from "./grid";
 
 export default function ProjectSection() {
   return (
-      <section aria-labelledby='Projects'>
-        <h2 className="mb-4 text-3xl">
+      <section aria-labelledby='project-section-heading'>
+        <h2 id="project-section-heading" className="mb-4 text-3xl">
           What I've been working on
         </h2>
         <Grid className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
@@ -26,7 +26,7 @@ function ProjectCard() {
         <span className="ml-auto">x</span>
       </div>
 
-      <h4 className="text-sm leading-relaxed line-clamp-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+      <p className="text-sm leading-relaxed line-clamp-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
       <p className="text-xs">Updated x days ago</p>
 
