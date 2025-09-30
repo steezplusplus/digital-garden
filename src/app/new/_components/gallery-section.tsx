@@ -44,11 +44,10 @@ export function FeaturedCard() {
 
 function TopLeftCard() {
   return (
-    <GridItemLink
-      href="#"
+    <GridItemLink href="https://github.com/steezplusplus"
     >
-      <h2 className="mb-1 text-lg group-hover:underline">label</h2>
-      <h3 className="text-sm italic">sublabel</h3>
+      <h2 className="mb-1 text-lg group-hover:underline">GitHub</h2>
+      <h3 className="text-sm italic">SteezPlusPlus</h3>
       <div className="mt-auto self-end">x</div>
     </GridItemLink>
   );
@@ -57,10 +56,10 @@ function TopLeftCard() {
 function TopRightCard() {
   return (
     <GridItemLink
-      href="#"
+      href="https://twitter.com/CodingSteez"
     >
-      <h2 className="mb-1 self-end text-lg group-hover:underline">label</h2>
-      <h3 className="self-end text-sm italic">sub label</h3>
+      <h2 className="mb-1 self-end text-lg group-hover:underline">Twitter</h2>
+      <h3 className="self-end text-sm italic">CodingSteez</h3>
       <div className="mt-auto self-start">x</div>
     </GridItemLink>
   );
@@ -69,11 +68,11 @@ function TopRightCard() {
 function BottomLeftCard() {
   return (
     <GridItemLink
-      href="#"
+      href="https://www.linkedin.com/in/jesse-bp/"
     >
       <div className="mb-auto self-end">x</div>
-      <h2 className="mb-1 text-lg group-hover:underline">label</h2>
-      <h3 className="text-sm italic">sublabel</h3>
+      <h2 className="mb-1 text-lg group-hover:underline">LinkedIn</h2>
+      <h3 className="text-sm italic">in/jesse-bp</h3>
     </GridItemLink>
   );
 }
@@ -81,11 +80,11 @@ function BottomLeftCard() {
 function BottomRightCard() {
   return (
     <GridItemLink
-      href="#"
+      href="https://leetcode.com/u/Steezplusplus/"
     >
       <div className="mb-auto self-start">x</div>
-      <h2 className="mb-1 self-end text-lg group-hover:underline">label</h2>
-      <h3 className="self-end text-sm italic">sublabel</h3>
+      <h2 className="mb-1 self-end text-lg group-hover:underline">LeetCode</h2>
+      <h3 className="self-end text-sm italic">Steezplusplus</h3>
     </GridItemLink>
   );
 }
