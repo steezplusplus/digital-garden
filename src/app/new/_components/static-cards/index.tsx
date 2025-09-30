@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import Grid from "@/components/grid";
-import GridItemLink from "@/components/grid/grid-item-link";
+import Grid from "app/new/_components/grid";
+import GridItemLink from "app/new/_components/grid/grid-item-link";
 
 export function FeaturedCard() {
   return (

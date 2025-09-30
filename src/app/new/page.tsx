@@ -1,5 +1,5 @@
-import { CardFour, CardOne, CardThree, CardTwo, FeaturedCard } from '@/components/cards/static-cards';
-import Grid from '@/components/grid';
+import { CardFour, CardOne, CardThree, CardTwo, FeaturedCard } from './_components/static-cards';
+import Grid from './_components/grid';
 
 export default function NewGridPage() {
   return (
