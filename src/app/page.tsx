@@ -16,9 +16,10 @@ export default function HomePage() {
   return (
     <>
       <GallerySection />
-      <ProjectSection />
+      <Suspense fallback={<>TODO FALLBACK</>}>
+        <ProjectSection />
+      </Suspense>
       <AboutSection />
-      <OldProjectSection />
     </>
   );
 }
