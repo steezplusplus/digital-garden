@@ -1,8 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Grid from "app/new/_components/grid";
 import GridItemLink from "app/new/_components/grid/grid-item-link";
-
 
 export default function GallerySection() {
   return (
@@ -16,15 +16,15 @@ export default function GallerySection() {
             <BottomLeftCard />
             <BottomRightCard />
           </Grid>
-          <Grid.Item>Theme</Grid.Item>
-          <Grid.Item>Support Me</Grid.Item>
+          <ThemeCard />
+          <SupportCard />
         </Grid>
       </Grid>
     </section>
   );
 }
 
-export function FeaturedCard() {
+function FeaturedCard() {
   return (
     <Grid.Item className='sm:sticky sm:top-10 self-start aspect-square'>
       <div className="flex h-full flex-col items-center justify-center">
@@ -86,5 +86,37 @@ function BottomRightCard() {
       <h2 className="mb-1 self-end text-lg group-hover:underline">LeetCode</h2>
       <h3 className="self-end text-sm italic">Steezplusplus</h3>
     </GridItemLink>
+  );
+}
+
+function ThemeCard() {
+  return (
+    <div className="flex flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">
+      <h2 className="mb-1 self-end text-lg">Theme</h2>
+      <div className="my-auto flex justify-center">
+        <select className="rounded-md border border-slate-400 p-2 text-xs">
+          <option>System</option>
+          <option>Light</option>
+          <option>Dark</option>
+        </select>
+      </div>
+      <div className="self-start text-sm italic">x</div>
+    </div>
+  );
+}
+
+function SupportCard() {
+  return (
+    <Grid.Item>
+      <Link
+        href="https://ko-fi.com/W7W5PB4J9"
+        target="_blank"
+        className="group flex flex-col"
+      >
+        <h2 className="mb-1 text-lg group-hover:underline">Support me!</h2>
+        <div className="mt-2 self-center">x</div>
+        <h3 className="self-end text-sm italic">Buy me a coffee</h3>
+      </Link>
+    </Grid.Item>
   );
 }
