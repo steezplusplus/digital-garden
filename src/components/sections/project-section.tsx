@@ -1,11 +1,11 @@
 import Grid from "@/components/grid";
-import ProjectCard from "@/components/cards/project-card/project-card";
+import ProjectCard, { ProjectCardSkeleton } from "@/components/cards/project-card/project-card";
 import { getRepos } from "@/api/octokit";
 
 export default async function ProjectSection() {
   const repos = await getRepos();
 
-  if (repos === undefined) {
+  if (!repos) {
     return (
       <section aria-labelledby='project-section-heading'>
         <h2 id="project-section-heading" className="mb-4 text-3xl">
@@ -30,4 +30,19 @@ export default async function ProjectSection() {
       </Grid>
     </section>
   );
+}
+
+export function ProjectSectionSkeleton() {
+  return (
+    <section aria-labelledby='project-section-heading'>
+      <h2 id="project-section-heading" className="mb-4 text-3xl">
+        What I've been working on
+      </h2>
+      <Grid className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <ProjectCardSkeleton />
+        <ProjectCardSkeleton />
+        <ProjectCardSkeleton />
+      </Grid>
+    </section>
+  )
 }

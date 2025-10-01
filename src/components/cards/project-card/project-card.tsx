@@ -13,7 +13,7 @@ type ProjectCardProps = {
   pushedAt: string | null;
 };
 
-
+// TODO: Improve UI, remove unused props. First update octokit.ts to only fetch needed props.
 export default function ProjectCard(props: ProjectCardProps) {
   const {
     name,
@@ -47,4 +47,9 @@ export default function ProjectCard(props: ProjectCardProps) {
       </div>
     </Grid.Item>
   );
+}
+
+// TODO: Improve skeleton UI
+export function ProjectCardSkeleton() {
+  return <Grid.Item></Grid.Item>
 }
