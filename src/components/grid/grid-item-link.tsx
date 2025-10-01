@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import Grid from ".";
+import Grid from '.';
 
 interface GridItemLinkProps {
   href: string;

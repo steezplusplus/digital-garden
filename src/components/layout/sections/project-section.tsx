@@ -1,13 +1,13 @@
-import Grid from "@/components/grid";
-import ProjectCard, { ProjectCardSkeleton } from "@/components/cards/project-card/project-card";
-import { getRepos } from "@/api/octokit";
+import Grid from '@/components/grid';
+import ProjectCard, { ProjectCardSkeleton } from '@/components/cards/project-card/project-card';
+import { getRepos } from '@/api/octokit';
 
 export default async function ProjectSection() {
   const repos = await getRepos();
 
   if (!repos) {
     return (
-      <section aria-labelledby='project-section-heading'>
+      <section aria-labelledby="project-section-heading">
         <h2 id="project-section-heading" className="mb-4 text-3xl">
           What I&apos;ve been working on
         </h2>
@@ -19,7 +19,7 @@ export default async function ProjectSection() {
   }
 
   return (
-    <section aria-labelledby='project-section-heading'>
+    <section aria-labelledby="project-section-heading">
       <h2 id="project-section-heading" className="mb-4 text-3xl">
         What I&apos;ve been working on
       </h2>
@@ -34,7 +34,7 @@ export default async function ProjectSection() {
 
 export function ProjectSectionSkeleton() {
   return (
-    <section aria-labelledby='project-section-heading'>
+    <section aria-labelledby="project-section-heading">
       <h2 id="project-section-heading" className="mb-4 text-3xl">
         What I&apos;ve been working on
       </h2>
@@ -44,5 +44,5 @@ export function ProjectSectionSkeleton() {
         <ProjectCardSkeleton />
       </Grid>
     </section>
-  )
+  );
 }

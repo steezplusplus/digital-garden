@@ -1,7 +1,3 @@
 export default function Loading() {
-  return (
-    <>
-      ROOT SUSPENSE
-    </>
-  );
+  return <>ROOT SUSPENSE</>;
 }

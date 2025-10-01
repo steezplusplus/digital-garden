@@ -1,8 +1,7 @@
-import Link from "next/link";
-import { Eye, GitFork, Star } from "lucide-react";
+import Link from 'next/link';
+import { Eye, GitFork, Star } from 'lucide-react';
 
-import Grid from "@/components/grid";
-
+import Grid from '@/components/grid';
 
 type ProjectCardProps = {
   id: number;
@@ -16,36 +15,30 @@ type ProjectCardProps = {
 };
 
 export default function ProjectCard(props: ProjectCardProps) {
-  const {
-    name,
-    description,
-    stars,
-    watchers,
-    forks,
-    githubUrl,
-    pushedAt,
-  } = props;
+  const { name, description, stars, watchers, forks, githubUrl, pushedAt } = props;
 
   return (
     <Grid.Item className="flex flex-col gap-4">
       <div className="flex items-center">
-        <Link
-          href={githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-            <h3 className="text-lg hover:underline">{name}</h3>
+        <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
+          <h3 className="text-lg hover:underline">{name}</h3>
         </Link>
       </div>
 
-      <p className="text-sm leading-relaxed line-clamp-2">{description}</p>
+      <p className="line-clamp-2 text-sm leading-relaxed">{description}</p>
       <p className="text-xs">Last updated {new Date(pushedAt as string).toLocaleDateString()}</p>
       <hr />
 
       <div className="flex items-center gap-6 text-xs">
-        <span className="flex items-center justify-center gap-2"><Star size={14}/> {stars}</span>
-        <span className="flex items-center justify-center gap-2"><GitFork size={14}/> {forks}</span>
-        <span className="flex items-center justify-center gap-2"><Eye size={14}/> {watchers}</span>
+        <span className="flex items-center justify-center gap-2">
+          <Star size={14} /> {stars}
+        </span>
+        <span className="flex items-center justify-center gap-2">
+          <GitFork size={14} /> {forks}
+        </span>
+        <span className="flex items-center justify-center gap-2">
+          <Eye size={14} /> {watchers}
+        </span>
       </div>
     </Grid.Item>
   );
@@ -53,5 +46,5 @@ export default function ProjectCard(props: ProjectCardProps) {
 
 // TODO: Improve skeleton UI
 export function ProjectCardSkeleton() {
-  return <Grid.Item></Grid.Item>
+  return <Grid.Item></Grid.Item>;
 }
