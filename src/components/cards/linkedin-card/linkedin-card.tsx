@@ -1,17 +1,16 @@
+import Link from 'next/link';
 import { User } from 'lucide-react';
-
-import GridItemLink from '@/components/grid/grid-item-link';
 
 export const LINKEDIN_HREF = 'https://www.linkedin.com/in/jesse-bp/';
 
 export default function LinkedInCard() {
   return (
-    <GridItemLink href={LINKEDIN_HREF}>
+    <Link href={LINKEDIN_HREF} target="_blank" rel="noopener noreferrer" className="group flex aspect-square flex-col p-4 rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5">
       <div className="mb-auto self-end">
         <User />
       </div>
       <h2 className="mb-1 text-lg group-hover:underline">LinkedIn</h2>
       <h3 className="text-sm italic">in/jesse-bp</h3>
-    </GridItemLink>
+    </Link>
   );
 }
