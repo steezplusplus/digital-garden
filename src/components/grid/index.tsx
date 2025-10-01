@@ -13,7 +13,7 @@ function GridItem(props: React.ComponentProps<'li'>) {
     <li
       {...props}
       className={clsx(
-        'rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5',
+        'rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5',
         props.className
       )}
     >

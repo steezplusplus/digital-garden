@@ -18,10 +18,10 @@ export default function ProjectCard(props: ProjectCardProps) {
   const { name, description, stars, watchers, forks, githubUrl, pushedAt } = props;
 
   return (
-    <Grid.Item className="flex flex-col gap-4">
+    <Grid.Item className="flex flex-col gap-4 p-4">
       <div className="flex items-center">
         <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
-          <h3 className="text-lg hover:underline truncate">{name}</h3>
+          <h3 className="line-clamp-1 text-lg hover:underline">{name}</h3>
         </Link>
       </div>
 

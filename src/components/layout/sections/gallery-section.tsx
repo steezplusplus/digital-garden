@@ -77,7 +77,7 @@ function BottomRightCard() {
 function SupportCard() {
   return (
     <Grid.Item>
-      <Link href="https://ko-fi.com/W7W5PB4J9" target="_blank" className="group flex flex-col">
+      <Link href="https://ko-fi.com/W7W5PB4J9" target="_blank" className="group flex flex-col p-4">
         <h2 className="mb-1 text-lg group-hover:underline">Support me!</h2>
         <div className="mt-2 self-center">
           <Coffee />

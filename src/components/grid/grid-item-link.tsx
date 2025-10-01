@@ -15,7 +15,7 @@ export default function GridItemLink(props: GridItemLinkProps) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex aspect-square flex-col"
+        className="group flex aspect-square flex-col p-4"
       >
         {children}
       </Link>
