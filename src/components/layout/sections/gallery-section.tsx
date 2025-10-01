@@ -1,8 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import Grid from "@/components/grid";
 import GridItemLink from "@/components/grid/grid-item-link";
+import FeaturedCard from "@/components/cards/featured-card/featured-card";
+import ThemeCard from "@/components/cards/theme-card/theme-card";
 
 export default function GallerySection() {
   return (
@@ -16,29 +17,11 @@ export default function GallerySection() {
             <BottomLeftCard />
             <BottomRightCard />
           </Grid>
-          <ThemeCard />
+          <ThemeCard/>
           <SupportCard />
         </Grid>
       </Grid>
     </section>
-  );
-}
-
-function FeaturedCard() {
-  return (
-    <Grid.Item className='sm:sticky sm:top-10 self-start aspect-square'>
-      <div className="flex h-full flex-col items-center justify-center">
-        <Image
-          priority
-          src="/primary.jpg"
-          alt="A profile picture"
-          width="128"
-          height="128"
-          className="aspect-auto h-32 w-32 rounded-full"
-        />
-        <p className="text-b mt-2 text-center text-sm">Welcome to the garden.</p>
-      </div>
-    </Grid.Item>
   );
 }
 
@@ -86,18 +69,6 @@ function BottomRightCard() {
       <h2 className="mb-1 self-end text-lg group-hover:underline">LeetCode</h2>
       <h3 className="self-end text-sm italic">Steezplusplus</h3>
     </GridItemLink>
-  );
-}
-
-function ThemeCard() {
-  return (
-    <div className="flex flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">
-      <h2 className="mb-1 self-end text-lg">Theme</h2>
-      <div className="my-auto flex justify-center">
-        x
-      </div>
-      <div className="self-start text-sm italic">x</div>
-    </div>
   );
 }
 
