@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { Eye, GitFork, Star } from 'lucide-react';
 
-import Grid from '@/components/grid';
-
 type ProjectCardProps = {
   id: number;
   name: string;
@@ -18,7 +16,7 @@ export default function ProjectCard(props: ProjectCardProps) {
   const { name, description, stars, watchers, forks, githubUrl, pushedAt } = props;
 
   return (
-    <Grid.Item className="flex flex-col gap-4 p-4">
+    <li className="rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5 flex flex-col gap-4 p-4">
       <div className="flex items-center">
         <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
           <h3 className="line-clamp-1 text-lg hover:underline">{name}</h3>
@@ -40,11 +38,11 @@ export default function ProjectCard(props: ProjectCardProps) {
           <Eye size={14} /> {watchers}
         </span>
       </div>
-    </Grid.Item>
+    </li>
   );
 }
 
 // TODO: Improve skeleton UI
 export function ProjectCardSkeleton() {
-  return <Grid.Item></Grid.Item>;
+  return <li className='rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5'></li>;
 }
