@@ -4,7 +4,7 @@ export default function AboutSection() {
     return (
         <section aria-labelledby='about-section-heading'>
         <h2 id="about-section-heading" className="mb-4 text-3xl">
-          What else I'm up to
+          What else I&apos;m up to
         </h2>
         <Grid className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           <Grid.Item className='aspect-square'>Leetcode</Grid.Item>
