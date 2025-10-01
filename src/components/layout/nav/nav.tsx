@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { NavActions } from './nav-actions';
 
 export function Nav() {
   return (
@@ -9,7 +8,6 @@ export function Nav() {
           <h1 className="text-2xl">Jesse&apos;s Digital Garden</h1>
         </Link>
       </li>
-      <NavActions />
     </ul>
   );
 }
