@@ -26,11 +26,9 @@ export async function getRepos() {
         id: repo.id,
         name: repo.name,
         description: repo.description,
-        language: repo.language,
-        topics: repo.topics,
-        numStargazers: repo.stargazers_count,
-        numWatchers: repo.watchers_count,
-        numForks: repo.forks_count,
+        stars: repo.stargazers_count,
+        watchers: repo.watchers_count,
+        forks: repo.forks_count,
         githubUrl: repo.html_url,
         pushedAt: repo.pushed_at,
       };
@@ -39,5 +37,6 @@ export async function getRepos() {
     return filteredData;
   } catch (error) {
     console.error('[GET_REPOS]:', error);
+    return [];
   }
 }
