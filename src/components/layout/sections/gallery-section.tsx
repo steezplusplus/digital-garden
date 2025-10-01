@@ -6,9 +6,11 @@ import GridItemLink from '@/components/grid/grid-item-link';
 import FeaturedCard from '@/components/cards/featured-card/featured-card';
 import ThemeCard from '@/components/cards/theme-card/theme-card';
 
+// TODO: Issue: Grid inside Grid is ul inside ul.
 export default function GallerySection() {
   return (
-    <section aria-label="Gallery of things">
+    <section aria-labelledby="gallery-section-heading">
+      <h2 id="gallery-section-heading" className="sr-only">Gallery</h2>
       <Grid className="grid-cols-1 sm:grid-cols-2">
         <FeaturedCard />
         <Grid className="grid-cols-1">
