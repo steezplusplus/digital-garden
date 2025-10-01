@@ -2,9 +2,11 @@ import { CodeXml } from 'lucide-react';
 
 import GridItemLink from '@/components/grid/grid-item-link';
 
+export const LEETCODE_HREF = 'https://leetcode.com/u/Steezplusplus/';
+
 export default function LeetCodeCard() {
   return (
-    <GridItemLink href="https://leetcode.com/u/Steezplusplus/">
+    <GridItemLink href={LEETCODE_HREF}>
       <div className="mb-auto self-start">
         <CodeXml />
       </div>
