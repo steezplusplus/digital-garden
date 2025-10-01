@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { Bird, CodeXml, Coffee, GitBranch, User } from "lucide-react";
 
 import Grid from "@/components/grid";
 import GridItemLink from "@/components/grid/grid-item-link";
 import FeaturedCard from "@/components/cards/featured-card/featured-card";
 import ThemeCard from "@/components/cards/theme-card/theme-card";
+
 
 export default function GallerySection() {
   return (
@@ -31,7 +33,9 @@ function TopLeftCard() {
     >
       <h2 className="mb-1 text-lg group-hover:underline">GitHub</h2>
       <h3 className="text-sm italic">SteezPlusPlus</h3>
-      <div className="mt-auto self-end">x</div>
+      <div className="mt-auto self-end">
+        <GitBranch />
+      </div>
     </GridItemLink>
   );
 }
@@ -43,7 +47,9 @@ function TopRightCard() {
     >
       <h2 className="mb-1 self-end text-lg group-hover:underline">Twitter</h2>
       <h3 className="self-end text-sm italic">CodingSteez</h3>
-      <div className="mt-auto self-start">x</div>
+      <div className="mt-auto self-start">
+        <Bird />
+      </div>
     </GridItemLink>
   );
 }
@@ -53,7 +59,9 @@ function BottomLeftCard() {
     <GridItemLink
       href="https://www.linkedin.com/in/jesse-bp/"
     >
-      <div className="mb-auto self-end">x</div>
+      <div className="mb-auto self-end">
+        <User />
+      </div>
       <h2 className="mb-1 text-lg group-hover:underline">LinkedIn</h2>
       <h3 className="text-sm italic">in/jesse-bp</h3>
     </GridItemLink>
@@ -65,7 +73,9 @@ function BottomRightCard() {
     <GridItemLink
       href="https://leetcode.com/u/Steezplusplus/"
     >
-      <div className="mb-auto self-start">x</div>
+      <div className="mb-auto self-start">
+        <CodeXml />
+      </div>
       <h2 className="mb-1 self-end text-lg group-hover:underline">LeetCode</h2>
       <h3 className="self-end text-sm italic">Steezplusplus</h3>
     </GridItemLink>
@@ -81,7 +91,9 @@ function SupportCard() {
         className="group flex flex-col"
       >
         <h2 className="mb-1 text-lg group-hover:underline">Support me!</h2>
-        <div className="mt-2 self-center">x</div>
+        <div className="mt-2 self-center">
+          <Coffee />
+        </div>
         <h3 className="self-end text-sm italic">Buy me a coffee</h3>
       </Link>
     </Grid.Item>
