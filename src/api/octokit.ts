@@ -1,6 +1,5 @@
-
 import { Octokit as Core } from '@octokit/core';
-import { restEndpointMethods } from "@octokit/plugin-rest-endpoint-methods";
+import { restEndpointMethods } from '@octokit/plugin-rest-endpoint-methods';
 
 const Octokit = Core.plugin(restEndpointMethods);
 
@@ -40,7 +39,10 @@ octokit.hook.after('request', (response: any, options: any) => {
   if (!isDev) {
     return;
   }
-  console.info('[octokit] response', { status: response && response.status, route: options && (options.route || options.url) });
+  console.info('[octokit] response', {
+    status: response && response.status,
+    route: options && (options.route || options.url),
+  });
 });
 
 type RepoDTO = {
