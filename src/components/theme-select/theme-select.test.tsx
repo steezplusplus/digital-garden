@@ -17,7 +17,7 @@ describe('<ThemeSelect />', () => {
     render(<ThemeSelect />);
 
     // Wwait for the component to mount
-    await waitFor(() => expect(screen.getByRole('combobox')).toBeInTheDocument());
+    await screen.findByRole('combobox');
 
     const select = screen.getByRole('combobox') as HTMLSelectElement;
     expect(select.value).toBe('system');

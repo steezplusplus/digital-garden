@@ -3,7 +3,6 @@ import { Providers } from './providers';
 
 describe('<Providers />', () => {
   beforeEach(() => {
-
     Object.defineProperty(window, 'matchMedia', {
       writable: true,
       value: jest.fn().mockImplementation((query) => ({
