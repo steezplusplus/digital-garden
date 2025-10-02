@@ -5,7 +5,12 @@ export const LINKEDIN_HREF = 'https://www.linkedin.com/in/jesse-bp/';
 
 export default function LinkedInCard() {
   return (
-    <Link href={LINKEDIN_HREF} target="_blank" rel="noopener noreferrer" className="group flex aspect-square flex-col p-4 rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5">
+    <Link
+      href={LINKEDIN_HREF}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex aspect-square flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5"
+    >
       <div className="mb-auto self-end">
         <User aria-hidden="true" />
       </div>

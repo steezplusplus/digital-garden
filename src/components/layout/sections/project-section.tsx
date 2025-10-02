@@ -1,7 +1,6 @@
 import ProjectCard, { ProjectCardSkeleton } from '@/components/cards/project-card/project-card';
 import { getRepos } from '@/api/octokit';
 
-
 export default async function ProjectSection() {
   const sectionId = 'projects-section-heading';
   const repos = await getRepos();

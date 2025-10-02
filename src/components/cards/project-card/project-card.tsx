@@ -16,7 +16,7 @@ export default function ProjectCard(props: ProjectCardProps) {
   const { name, description, stars, watchers, forks, githubUrl, pushedAt } = props;
 
   return (
-    <li className="rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5 flex flex-col gap-4 p-4">
+    <li className="flex flex-col gap-4 rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">
       <div className="flex items-center">
         <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
           <h3 className="line-clamp-1 text-lg hover:underline">{name}</h3>
@@ -44,5 +44,5 @@ export default function ProjectCard(props: ProjectCardProps) {
 
 // TODO: Improve skeleton UI
 export function ProjectCardSkeleton() {
-  return <li className='rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5'></li>;
+  return <li className="rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5"></li>;
 }

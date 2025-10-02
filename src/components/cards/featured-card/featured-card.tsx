@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function FeaturedCard() {
   return (
-    <div className="rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5 aspect-square self-start sm:sticky sm:top-10">
+    <div className="aspect-square self-start rounded-xl border border-stone-400 bg-white/50 sm:sticky sm:top-10 dark:bg-indigo-100/5">
       <div className="flex h-full flex-col items-center justify-center">
         <Image
           priority
