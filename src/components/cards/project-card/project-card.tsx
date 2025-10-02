@@ -29,13 +29,19 @@ export default function ProjectCard(props: ProjectCardProps) {
 
       <div className="flex items-center gap-6 text-xs">
         <span className="flex items-center justify-center gap-2">
-          <Star size={14} /> {stars}
+          <Star size={14} aria-hidden="true" />
+          <span className="sr-only">Number of stars</span>
+          <span aria-hidden="false">{stars}</span>
         </span>
         <span className="flex items-center justify-center gap-2">
-          <GitFork size={14} /> {forks}
+          <GitFork size={14} aria-hidden="true" />
+          <span className="sr-only">Number of forks</span>
+          <span aria-hidden="false">{forks}</span>
         </span>
         <span className="flex items-center justify-center gap-2">
-          <Eye size={14} /> {watchers}
+          <Eye size={14} aria-hidden="true" />
+          <span className="sr-only">Number of watchers</span>
+          <span aria-hidden="false">{watchers}</span>
         </span>
       </div>
     </li>
@@ -47,24 +53,23 @@ export function ProjectCardSkeleton() {
   return (
     <li className="flex flex-col gap-4 rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5 min-h-[12rem]">
       <div className="flex items-center">
-        <div className="h-5 w-3/4 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
+        <div className="h-5 w-3/4 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" />
       </div>
 
-      <div className="space-y-2">
-        <div className="h-3 w-full rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
-        <div className="h-3 w-5/6 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
+      <div className="flex flex-col gap-2">
+        <div className="h-3 w-full rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" />
+        <div className="h-3 w-5/6 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" />
       </div>
 
-      <div className="text-xs">
-        <div className="h-3 w-1/3 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
-      </div>
+
+      <div className="h-3 w-1/3 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" />
 
       <hr />
 
-      <div className="flex items-center gap-6 text-xs">
-        <span className="h-6 w-12 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
-        <span className="h-6 w-12 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
-        <span className="h-6 w-12 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
+      <div className="flex items-center gap-6">
+        <span className="h-6 w-12 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" />
+        <span className="h-6 w-12 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" />
+        <span className="h-6 w-12 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" />
       </div>
     </li>
   );
