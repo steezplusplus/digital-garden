@@ -18,7 +18,7 @@
     "@octokit/core": "7.0.5",
     "@octokit/plugin-rest-endpoint-methods": "16.1.0",
     "@vercel/analytics": "1.5.0",
-    "clsx": "^2.1.1",
+    "clsx": "2.1.1",
     "lucide-react": "0.541.0",
     "next": "15.5.0",
     "next-themes": "0.4.6",
