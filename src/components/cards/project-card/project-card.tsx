@@ -42,7 +42,30 @@ export default function ProjectCard(props: ProjectCardProps) {
   );
 }
 
-// TODO: Improve skeleton UI
+// TODO: Improve skeleton UI. Accent colors for pulse animation are somewhat arbitrary.
 export function ProjectCardSkeleton() {
-  return <li className="rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5"></li>;
+  return (
+    <li className="flex flex-col gap-4 rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5 min-h-[12rem]">
+      <div className="flex items-center">
+        <div className="h-5 w-3/4 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
+      </div>
+
+      <div className="space-y-2">
+        <div className="h-3 w-full rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
+        <div className="h-3 w-5/6 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
+      </div>
+
+      <div className="text-xs">
+        <div className="h-3 w-1/3 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
+      </div>
+
+      <hr />
+
+      <div className="flex items-center gap-6 text-xs">
+        <span className="h-6 w-12 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
+        <span className="h-6 w-12 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
+        <span className="h-6 w-12 rounded bg-stone-300/60 dark:bg-stone-700 animate-pulse" aria-hidden />
+      </div>
+    </li>
+  );
 }
