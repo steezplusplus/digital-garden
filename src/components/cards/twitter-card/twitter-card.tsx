@@ -9,7 +9,7 @@ export default function TwitterCard() {
       <h2 className="mb-1 self-end text-lg group-hover:underline">Twitter</h2>
       <h3 className="self-end text-sm italic">CodingSteez</h3>
       <div className="mt-auto self-start">
-        <Bird />
+        <Bird aria-hidden="true" />
       </div>
     </Link>
   );

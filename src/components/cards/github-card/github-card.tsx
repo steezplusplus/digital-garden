@@ -9,7 +9,7 @@ export default function GitHubCard() {
       <h2 className="mb-1 text-lg group-hover:underline">GitHub</h2>
       <h3 className="text-sm italic">SteezPlusPlus</h3>
       <div className="mt-auto self-end">
-        <GitBranch />
+        <GitBranch aria-hidden="true"/>
       </div>
     </Link>
   );
