@@ -1,3 +1,5 @@
 export default function Loading() {
-  return <>ROOT SUSPENSE</>;
+  return (
+    <div aria-hidden="true" className="fixed inset-0 backdrop-blur-xs" />
+  );
 }
