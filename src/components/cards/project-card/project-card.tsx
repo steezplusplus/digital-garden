@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Eye, GitFork, Star } from 'lucide-react';
 
-type ProjectCardProps = {
+export type ProjectCardProps = {
   id: number;
   name: string;
   description: string | null;
