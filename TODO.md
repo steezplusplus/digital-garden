@@ -7,3 +7,5 @@
 ## 10/2/2025
 
 - add an about section
+- Preinstall hook with zod to validate dotenv file
+- Migrate from @octokit/rest to octokit?
