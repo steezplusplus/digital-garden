@@ -36,7 +36,7 @@
     "@types/react-dom": "19.1.7",
     "cssnano": "7.1.1",
     "eslint": "9.34.0",
-    "eslint-config-next": "15.5.0",
+    "eslint-config-next": "15.5.4",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-jest-dom": "5.5.0",
     "eslint-plugin-testing-library": "7.6.6",
