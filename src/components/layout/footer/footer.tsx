@@ -13,6 +13,7 @@ export function Footer() {
           className="mt-6 text-blue-700 underline hover:text-blue-900 dark:text-purple-400 dark:hover:text-purple-600"
           href={githubRepoUrl}
           target="_blank"
+          rel="noopener noreferrer"
         >
           View source code
         </Link>

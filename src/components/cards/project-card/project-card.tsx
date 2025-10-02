@@ -31,17 +31,17 @@ export default function ProjectCard(props: ProjectCardProps) {
         <span className="flex items-center justify-center gap-2">
           <Star size={14} aria-hidden="true" />
           <span className="sr-only">Number of stars</span>
-          <span aria-hidden="false">{stars}</span>
+          <span>{stars}</span>
         </span>
         <span className="flex items-center justify-center gap-2">
           <GitFork size={14} aria-hidden="true" />
           <span className="sr-only">Number of forks</span>
-          <span aria-hidden="false">{forks}</span>
+          <span>{forks}</span>
         </span>
         <span className="flex items-center justify-center gap-2">
           <Eye size={14} aria-hidden="true" />
           <span className="sr-only">Number of watchers</span>
-          <span aria-hidden="false">{watchers}</span>
+          <span>{watchers}</span>
         </span>
       </div>
     </li>
