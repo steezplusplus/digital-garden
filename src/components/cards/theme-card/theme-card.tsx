@@ -10,7 +10,7 @@ export default function ThemeCard() {
         <ThemeSelect />
       </div>
       <div className="self-start text-sm italic">
-        <SunDim />
+        <SunDim aria-hidden="true" />
       </div>
     </div>
   );
