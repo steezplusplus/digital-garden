@@ -1,25 +1,21 @@
 import Link from 'next/link';
+import { Bird } from 'lucide-react';
 
-import type { JSX } from 'react';
+export const TWITTER_HREF = 'https://twitter.com/CodingSteez';
 
-type TwitterCardProps = {
-  href: string;
-  label: string;
-  subLabel: string;
-  icon: JSX.Element;
-};
-
-export function TwitterCard(props: TwitterCardProps) {
-  const { href, label, subLabel, icon } = props;
+export default function TwitterCard() {
   return (
     <Link
-      href={href}
+      href={TWITTER_HREF}
       target="_blank"
+      rel="noopener noreferrer"
       className="group flex aspect-square flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5"
     >
-      <h2 className="mb-1 self-end text-lg group-hover:underline">{label}</h2>
-      <h3 className="self-end text-sm italic">{subLabel}</h3>
-      <div className="mt-auto self-start">{icon}</div>
+      <h2 className="mb-1 self-end text-lg group-hover:underline">Twitter</h2>
+      <h3 className="self-end text-sm italic">CodingSteez</h3>
+      <div className="mt-auto self-start">
+        <Bird aria-hidden="true" />
+      </div>
     </Link>
   );
 }

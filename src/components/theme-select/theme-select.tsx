@@ -12,7 +12,15 @@ export function ThemeSelect() {
   }, [theme]);
 
   if (!mounted) {
-    return null;
+    return (
+      <div className="my-auto flex justify-center">
+        <select className="rounded-md border border-slate-400 p-2 text-xs">
+          <option value="system">System</option>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </div>
+    );
   }
 
   return (

@@ -1,43 +1,78 @@
-import { Octokit } from '@octokit/rest';
-import { GetResponseTypeFromEndpointMethod } from '@octokit/types';
+import { Octokit as Core } from '@octokit/core';
+import { restEndpointMethods } from '@octokit/plugin-rest-endpoint-methods';
 
-const octokitClient = new Octokit({
-  userAgent: 'steezplusplus',
+const Octokit = Core.plugin(restEndpointMethods);
+
+const isDev = process.env.NODE_ENV === 'development';
+
+const logger = {
+  debug: (...args: unknown[]) => {
+    if (isDev) console.debug('[octokit][debug]', ...args);
+  },
+  info: (...args: unknown[]) => {
+    if (isDev) console.info('[octokit][info]', ...args);
+  },
+  warn: (...args: unknown[]) => {
+    if (isDev) console.warn('[octokit][warn]', ...args);
+  },
+  error: (...args: unknown[]) => {
+    console.error('[octokit][error]', ...args);
+  },
+};
+
+const octokit = new Octokit({
+  userAgent: 'digital-garden',
   auth: process.env.GIT_PAT,
-  log: process.env.NODE_ENV === 'development' ? console : undefined,
+  log: logger,
 });
 
-type GetReposResponseType = GetResponseTypeFromEndpointMethod<
-  typeof octokitClient.repos.listForAuthenticatedUser
->;
-
-export async function getRepos() {
-  try {
-    const response: GetReposResponseType = await octokitClient.rest.repos.listForAuthenticatedUser({
-      visibility: 'public',
-      affiliation: 'owner',
-      sort: 'updated',
-      per_page: 9,
-      page: 0,
-    });
-
-    const filteredData = response.data.map((repo) => {
-      return {
-        id: repo.id,
-        name: repo.name,
-        description: repo.description,
-        language: repo.language,
-        topics: repo.topics,
-        numStargazers: repo.stargazers_count,
-        numWatchers: repo.watchers_count,
-        numForks: repo.forks_count,
-        githubUrl: repo.html_url,
-        pushedAt: repo.pushed_at,
-      };
-    });
-
-    return filteredData;
-  } catch (error) {
-    console.error('[GET_REPOS]:', error);
+octokit.hook.before('request', (options: any) => {
+  if (!isDev) {
+    return;
   }
+
+  const route = (options && (options.route || options.url)) ?? 'unknown';
+  console.info('[octokit] request', { method: options.method, route });
+});
+
+octokit.hook.after('request', (response: any, options: any) => {
+  if (!isDev) {
+    return;
+  }
+  console.info('[octokit] response', {
+    status: response && response.status,
+    route: options && (options.route || options.url),
+  });
+});
+
+type RepoDTO = {
+  id: number;
+  name: string;
+  description: string | null;
+  stars: number;
+  watchers: number;
+  forks: number;
+  githubUrl: string;
+  pushedAt: string | null;
+};
+
+export async function getRepos(): Promise<RepoDTO[]> {
+  const response = await octokit.rest.repos.listForAuthenticatedUser({
+    visibility: 'public',
+    affiliation: 'owner',
+    sort: 'updated',
+    per_page: 9,
+    page: 1,
+  });
+
+  return response.data.map((repo) => ({
+    id: repo.id,
+    name: repo.name,
+    description: repo.description ?? null,
+    stars: repo.stargazers_count,
+    watchers: repo.watchers_count,
+    forks: repo.forks_count,
+    githubUrl: repo.html_url,
+    pushedAt: repo.pushed_at ?? null,
+  }));
 }

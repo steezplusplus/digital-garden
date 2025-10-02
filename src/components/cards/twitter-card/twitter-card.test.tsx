@@ -1,23 +1,21 @@
 import { render, screen } from '@testing-library/react';
-import { TwitterCard } from './twitter-card';
-
-const props = {
-  href: 'https://www.not-real.com',
-  label: 'label',
-  subLabel: 'subLabel',
-  icon: <svg data-testid="icon" />,
-};
+import TwitterCard, { TWITTER_HREF } from './twitter-card';
 
 describe('<TwitterCard />', () => {
-  it('Should render with no errors', () => {
-    render(<TwitterCard {...props} />);
+  it('renders a link to my Twitter profile', () => {
+    render(<TwitterCard />);
+
     const anchor = screen.getByRole('link');
-    const heading2 = screen.getByRole('heading', { level: 2 });
-    const heading3 = screen.getByRole('heading', { level: 3 });
-    const icon = screen.getByTestId('icon');
-    expect(anchor).toHaveAttribute('href', props.href);
-    expect(heading2).toHaveTextContent(props.label);
-    expect(heading3).toHaveTextContent(props.subLabel);
-    expect(icon).toBeInTheDocument();
+    expect(anchor).toBeInTheDocument();
+    expect(anchor).toHaveAttribute('href', TWITTER_HREF);
+  });
+  it('renders the headings', () => {
+    render(<TwitterCard />);
+
+    const title = screen.getByRole('heading', { name: 'Twitter', level: 2 });
+    expect(title).toBeInTheDocument();
+
+    const subtitle = screen.getByRole('heading', { name: 'CodingSteez', level: 3 });
+    expect(subtitle).toBeInTheDocument();
   });
 });

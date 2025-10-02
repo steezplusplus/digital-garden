@@ -1,25 +1,21 @@
 import Link from 'next/link';
+import { User } from 'lucide-react';
 
-import type { JSX } from 'react';
+export const LINKEDIN_HREF = 'https://www.linkedin.com/in/jesse-bp/';
 
-type LinkedinCardProps = {
-  href: string;
-  label: string;
-  subLabel: string;
-  icon: JSX.Element;
-};
-
-export function LinkedinCard(props: LinkedinCardProps) {
-  const { href, label, subLabel, icon } = props;
+export default function LinkedInCard() {
   return (
     <Link
-      href={href}
+      href={LINKEDIN_HREF}
       target="_blank"
+      rel="noopener noreferrer"
       className="group flex aspect-square flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5"
     >
-      <div className="mb-auto self-end">{icon}</div>
-      <h2 className="mb-1 text-lg group-hover:underline">{label}</h2>
-      <h3 className="text-sm italic">{subLabel}</h3>
+      <div className="mb-auto self-end">
+        <User aria-hidden="true" />
+      </div>
+      <h2 className="mb-1 text-lg group-hover:underline">LinkedIn</h2>
+      <h3 className="text-sm italic">in/jesse-bp</h3>
     </Link>
   );
 }
