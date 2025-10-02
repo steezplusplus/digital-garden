@@ -22,7 +22,6 @@
     "baseUrl": "src/",
     "paths": {
       "@/components/*": ["components/*"],
-      "@/schema/*": ["schema/*"],
       "@/api/*": ["api/*"]
     }
   },
