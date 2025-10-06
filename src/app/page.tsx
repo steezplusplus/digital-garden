@@ -5,6 +5,7 @@ import GallerySection from '@/components/layout/sections/gallery-section';
 import ProjectSection, {
   ProjectSectionSkeleton,
 } from '@/components/layout/sections/project-section';
+import AboutSection, { AboutSectionSkeleton } from '@/components/layout/sections/about-section';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
@@ -16,6 +17,9 @@ export default function HomePage() {
       <GallerySection />
       <Suspense fallback={<ProjectSectionSkeleton />}>
         <ProjectSection />
+      </Suspense>
+      <Suspense fallback={<AboutSectionSkeleton />}>
+        <AboutSection />
       </Suspense>
     </>
   );
