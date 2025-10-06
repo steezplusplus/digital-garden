@@ -5,25 +5,9 @@ const Octokit = Core.plugin(restEndpointMethods);
 
 const isDev = process.env.NODE_ENV === 'development';
 
-const logger = {
-  debug: (...args: unknown[]) => {
-    if (isDev) console.debug('[octokit][debug]', ...args);
-  },
-  info: (...args: unknown[]) => {
-    if (isDev) console.info('[octokit][info]', ...args);
-  },
-  warn: (...args: unknown[]) => {
-    if (isDev) console.warn('[octokit][warn]', ...args);
-  },
-  error: (...args: unknown[]) => {
-    console.error('[octokit][error]', ...args);
-  },
-};
-
 const octokit = new Octokit({
   userAgent: 'digital-garden',
   auth: process.env.GIT_PAT,
-  log: logger,
 });
 
 octokit.hook.before('request', (options: any) => {
