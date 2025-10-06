@@ -3,11 +3,14 @@ import { restEndpointMethods } from '@octokit/plugin-rest-endpoint-methods';
 
 const Octokit = Core.plugin(restEndpointMethods);
 
-const isDev = process.env.NODE_ENV === 'development';
+const NODE_ENV = process.env.NODE_ENV;
+const GIT_PAT = process.env.GIT_PAT;
+
+const isDev = NODE_ENV === 'development';
 
 const octokit = new Octokit({
   userAgent: 'digital-garden',
-  auth: process.env.GIT_PAT,
+  auth: GIT_PAT,
 });
 
 octokit.hook.before('request', (options: any) => {
