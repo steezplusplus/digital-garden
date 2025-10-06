@@ -23,18 +23,18 @@ type SteamOwnedGamesResponse = {
   };
 };
 
-type SteamStatistics = {
+type SteamStatisticsDTO = {
   totalGames: number;
   totalPlayedGames: number;
   totalPlaytime: number; // in hours
 };
 
 // https://developer.valvesoftware.com/wiki/Steam_Web_API#GetOwnedGames_(v0001)
-export async function getSteamStatistics(): Promise<SteamStatistics> {
+export async function getSteamStatistics(): Promise<SteamStatisticsDTO> {
   const url = `${BASE_URL}/IPlayerService/GetOwnedGames/v0001/?key=${STEAM_WEB_API_KEY}&steamid=${STEAM_ID}&format=json&include_played_free_games=1`;
 
   if (isDev) {
-    console.info('[steam] request', { method: 'GET', route: '/IPlayerService/GetOwnedGames', url });
+    console.info('[steam] request', { method: 'GET', route: '/IPlayerService/GetOwnedGames' });
   }
 
   try {
@@ -60,5 +60,34 @@ export async function getSteamStatistics(): Promise<SteamStatistics> {
   } catch (err) {
     console.error('[steam] error fetching stats', err);
     return { totalGames: 0, totalPlayedGames: 0, totalPlaytime: 0 };
+  }
+}
+
+export async function getSteamProfileAge(): Promise<number> {
+  const url = `${BASE_URL}/ISteamUser/GetPlayerSummaries/v0002/?key=${STEAM_WEB_API_KEY}&steamids=${STEAM_ID}`;
+
+  if (isDev) {
+    console.info('[steam] request', { method: 'GET', route: '/ISteamUser/GetPlayerSummaries/' });
+  }
+
+  try {
+    const response = await fetch(url);
+
+    if (isDev) {
+      console.info('[steam] response', { status: response.status, route: '/ISteamUser/GetPlayerSummaries/' });
+    }
+
+    if (!response.ok) {
+      console.error('[steam] error', { status: response.status, statusText: response.statusText });
+      return 0;
+    }
+
+    const data = await response.json();
+    const profileAge = data.response.players[0].timecreated;
+    
+    return profileAge;
+  } catch (err) {
+    console.error('[steam] error fetching stats', err);
+    return 0;
   }
 }
