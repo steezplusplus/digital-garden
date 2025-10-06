@@ -3,14 +3,16 @@ import { Gamepad } from 'lucide-react';
 import { getSteamStatistics } from '@/api/steam';
 
 export default async function AboutSection() {
-  const data = await getSteamStatistics();
+  const { totalGames, totalPlayedGames, totalPlaytime } = await getSteamStatistics();
 
   return (
-    <div className='rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5'>
-      <pre>{JSON.stringify(data, null, 4)}</pre>
-      <p>Owns {data.totalGames} on steam with {Math.floor(data.totalPlaytime / 60)} hours played.</p>
-      <Gamepad />
-    </div>
+    <section>
+      <h2 className="mb-4 text-3xl">Fun facts</h2>
+      <div className='flex items-center gap-2 rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5'>
+        <Gamepad aria-hidden />
+        <p>Owns {totalGames} on Steam, and has played {totalPlayedGames} of them totalling {totalPlaytime} hours played.</p>
+      </div>
+    </section>
   );
 }
 
