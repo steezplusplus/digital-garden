@@ -1,3 +1,4 @@
+// TODO: Replace with https://www.npmjs.com/package/steam-web or https://www.npmjs.com/package/steamapi
 // Steam Web API client
 const NODE_ENV = process.env.NODE_ENV;
 const STEAM_WEB_API_KEY = process.env.STEAM_WEB_API_KEY;
