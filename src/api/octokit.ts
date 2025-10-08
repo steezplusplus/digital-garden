@@ -44,7 +44,7 @@ type RepoDTO = {
 };
 
 export async function getRepos(): Promise<RepoDTO[]> {
-  const response = await octokit.rest.repos.listForAuthenticatedUser({
+  const repos = await octokit.rest.repos.listForAuthenticatedUser({
     visibility: 'public',
     affiliation: 'owner',
     sort: 'updated',
@@ -52,7 +52,7 @@ export async function getRepos(): Promise<RepoDTO[]> {
     page: 1,
   });
 
-  return response.data.map((repo) => ({
+  return repos.data.map((repo) => ({
     id: repo.id,
     name: repo.name,
     description: repo.description ?? null,
@@ -63,3 +63,30 @@ export async function getRepos(): Promise<RepoDTO[]> {
     pushedAt: repo.pushed_at ?? null,
   }));
 }
+
+export async function getGitProfileStats() {
+  const user = await octokit.rest.users.getAuthenticated();
+  const username = user.data.login;
+  const createdAt = user.data.created_at;
+
+  const createdAtQuery = new Date(createdAt).toISOString().split('T')[0];
+
+  let totalCommits = 0;
+  try {
+    const response = await octokit.rest.search.commits({
+      q: `author:${username} committer-date:>=${createdAtQuery}`,
+      per_page: 1,
+    });
+    totalCommits = response.data.total_count;
+  } catch (error) {
+    console.error('Error fetching commits for this year:', error);
+  }
+
+  return {
+    createdAt,
+    totalCommits,
+  };
+}
+
+
+

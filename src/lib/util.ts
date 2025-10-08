@@ -9,3 +9,15 @@ export const sleep = (ms: number): Promise<void> => {
   }
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
+
+export function formatDate(dateString: string): string {
+  return new Date(dateString).toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+}
+
+export function formatNumber(num: number): string {
+  return new Intl.NumberFormat('en-US').format(num);
+}
