@@ -74,7 +74,7 @@ export async function getRepos(): Promise<RepoDTO[]> {
   }
 }
 
-export async function getGitProfileStats(): Promise<GitProfileStatsDTO> {
+export async function getGitStats(): Promise<GitProfileStatsDTO> {
   try {
     const user = await octokit.rest.users.getAuthenticated();
     const username = user.data.login;

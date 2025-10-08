@@ -9,85 +9,61 @@ const BASE_URL = 'https://api.steampowered.com';
 type SteamGame = {
   appid: number;
   playtime_forever: number;
-  playtime_windows_forever?: number;
-  playtime_mac_forever?: number;
-  playtime_linux_forever?: number;
-  playtime_deck_forever?: number;
-  rtime_last_played?: number;
 };
 
 type SteamOwnedGamesResponse = {
   response?: {
-    game_count?: number;
     games?: SteamGame[];
   };
 };
 
-type SteamStatisticsDTO = {
-  totalGames: number;
-  totalPlayedGames: number;
-  totalPlaytime: number; // in hours
+type SteamPlayerSummaryResponse = {
+  response?: {
+    players?: Array<{
+      timecreated: number;
+    }>;
+  };
 };
 
-// https://developer.valvesoftware.com/wiki/Steam_Web_API#GetOwnedGames_(v0001)
-export async function getSteamStatistics(): Promise<SteamStatisticsDTO> {
-  const url = `${BASE_URL}/IPlayerService/GetOwnedGames/v0001/?key=${STEAM_WEB_API_KEY}&steamid=${STEAM_ID}&format=json&include_played_free_games=1`;
+type SteamStatsDTO = {
+  createdAt: number; // Unix timestamp
+  totalHoursPlayed: number;
+};
 
-  if (isDev) {
-    console.info('[steam] request', { method: 'GET', route: '/IPlayerService/GetOwnedGames' });
-  }
-
+export async function getSteamStats(): Promise<SteamStatsDTO> {
   try {
-    const response = await fetch(url);
+    if (isDev) {
+      console.info('[steam] request', { method: 'GET', routes: ['/IPlayerService/GetOwnedGames', '/ISteamUser/GetPlayerSummaries'] });
+    }
+
+    const [gamesResponse, profileResponse] = await Promise.all([
+      fetch(`${BASE_URL}/IPlayerService/GetOwnedGames/v0001/?key=${STEAM_WEB_API_KEY}&steamid=${STEAM_ID}&format=json&include_played_free_games=1`),
+      fetch(`${BASE_URL}/ISteamUser/GetPlayerSummaries/v0002/?key=${STEAM_WEB_API_KEY}&steamids=${STEAM_ID}`)
+    ]);
 
     if (isDev) {
-      console.info('[steam] response', { status: response.status, route: '/IPlayerService/GetOwnedGames' });
+      console.info('[steam] response', { 
+        gamesStatus: gamesResponse.status, 
+        profileStatus: profileResponse.status 
+      });
     }
 
-    if (!response.ok) {
-      console.error('[steam] error', { status: response.status, statusText: response.statusText });
-      return { totalGames: 0, totalPlayedGames: 0, totalPlaytime: 0 };
+    if (!gamesResponse.ok || !profileResponse.ok) {
+      // TODO: Do nothing with the error for now.
+      return { createdAt: 0, totalHoursPlayed: 0 };
     }
 
-    const data = (await response.json()) as SteamOwnedGamesResponse;
+    const gamesData = (await gamesResponse.json()) as SteamOwnedGamesResponse;
+    const profileData = (await profileResponse.json()) as SteamPlayerSummaryResponse;
 
-    const games = data?.response?.games ?? [];
-    const totalGames = data?.response?.game_count ?? games.length ?? 0;
-    const totalPlayedGames = games.reduce((acc, game) => game.playtime_forever > 0 ? acc + 1 : acc, 0);
-    const totalPlaytime = Math.floor(games.reduce((acc, game) => acc + (game.playtime_forever ?? 0), 0) / 60);
+    const games = gamesData?.response?.games ?? [];
+    const totalMinutes = games.reduce((acc, game) => acc + (game.playtime_forever ?? 0), 0);
+    const totalHoursPlayed = Math.floor(totalMinutes / 60);
+    const createdAt = profileData?.response?.players?.[0]?.timecreated ?? 0;
 
-    return { totalGames, totalPlayedGames, totalPlaytime };
-  } catch (err) {
-    console.error('[steam] error fetching stats', err);
-    return { totalGames: 0, totalPlayedGames: 0, totalPlaytime: 0 };
-  }
-}
-
-export async function getSteamProfileAge(): Promise<number> {
-  const url = `${BASE_URL}/ISteamUser/GetPlayerSummaries/v0002/?key=${STEAM_WEB_API_KEY}&steamids=${STEAM_ID}`;
-
-  if (isDev) {
-    console.info('[steam] request', { method: 'GET', route: '/ISteamUser/GetPlayerSummaries/' });
-  }
-
-  try {
-    const response = await fetch(url);
-
-    if (isDev) {
-      console.info('[steam] response', { status: response.status, route: '/ISteamUser/GetPlayerSummaries/' });
-    }
-
-    if (!response.ok) {
-      console.error('[steam] error', { status: response.status, statusText: response.statusText });
-      return 0;
-    }
-
-    const data = await response.json();
-    const profileAge = data.response.players[0].timecreated;
-    
-    return profileAge;
-  } catch (err) {
-    console.error('[steam] error fetching stats', err);
-    return 0;
+    return { createdAt, totalHoursPlayed };
+  } catch (error) {
+    // TODO: Do nothing with the error for now.
+    return { createdAt: 0, totalHoursPlayed: 0 };
   }
 }

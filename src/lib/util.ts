@@ -10,8 +10,8 @@ export const sleep = (ms: number): Promise<void> => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-export function formatDate(dateString: string): string {
-  return new Date(dateString).toLocaleDateString('en-US', { 
+export function formatDate(date: string | number): string {
+  return new Date(date).toLocaleDateString('en-US', { 
     year: 'numeric', 
     month: 'long', 
     day: 'numeric' 
