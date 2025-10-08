@@ -36,6 +36,7 @@ export default async function AboutSection() {
   );
 }
 
+// TODO: Update loading state
 export function AboutSectionSkeleton() {
-  return <div>Loading Steam data...</div>;
+  return <div>Loading data...</div>;
 }
