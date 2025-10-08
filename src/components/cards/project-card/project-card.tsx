@@ -9,11 +9,11 @@ export type ProjectCardProps = {
   watchers: number;
   forks: number;
   githubUrl: string;
-  pushedAt: string | null;
+  updatedAt: string | null;
 };
 
 export default function ProjectCard(props: ProjectCardProps) {
-  const { name, description, stars, watchers, forks, githubUrl, pushedAt } = props;
+  const { name, description, stars, watchers, forks, githubUrl, updatedAt } = props;
 
   return (
     <li className="flex flex-col gap-4 rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">
@@ -24,7 +24,8 @@ export default function ProjectCard(props: ProjectCardProps) {
       </div>
 
       <p className="line-clamp-2 text-sm leading-relaxed">{description}</p>
-      <p className="text-xs">Last updated {new Date(pushedAt as string).toLocaleDateString()}</p>
+      {updatedAt}
+      <p className="text-xs">Last updated {new Date(updatedAt as string).toLocaleDateString()}</p>
       <hr />
 
       <div className="flex items-center gap-6 text-xs">

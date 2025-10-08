@@ -40,7 +40,7 @@ type RepoDTO = {
   watchers: number;
   forks: number;
   githubUrl: string;
-  pushedAt: string | null;
+  updatedAt: string | null;
 };
 
 type GitProfileStatsDTO = {
@@ -66,7 +66,7 @@ export async function getRepos(): Promise<RepoDTO[]> {
       watchers: repo.watchers_count,
       forks: repo.forks_count,
       githubUrl: repo.html_url,
-      pushedAt: repo.pushed_at ?? null,
+      updatedAt: repo.updated_at ?? null,
     }));
   } catch (err) {
     // TODO: Do nothing with the error for now.
