@@ -72,16 +72,14 @@ export async function getGitProfileStats() {
   const createdAtQuery = new Date(createdAt).toISOString().split('T')[0];
 
   let totalCommits = 0;
-  try {
-    const response = await octokit.rest.search.commits({
-      q: `author:${username} committer-date:>=${createdAtQuery}`,
-      per_page: 1,
-    });
-    totalCommits = response.data.total_count;
-  } catch (error) {
-    console.error('Error fetching commits for this year:', error);
-  }
+  
+  const response = await octokit.rest.search.commits({
+    q: `author:${username} committer-date:>=${createdAtQuery}`,
+    per_page: 1,
+  });
 
+  totalCommits = response.data.total_count;
+  
   return {
     createdAt,
     totalCommits,
