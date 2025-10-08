@@ -43,48 +43,59 @@ type RepoDTO = {
   pushedAt: string | null;
 };
 
+type GitProfileStatsDTO = {
+  createdAt: string;
+  totalCommits: number;
+};
+
 export async function getRepos(): Promise<RepoDTO[]> {
-  const repos = await octokit.rest.repos.listForAuthenticatedUser({
-    visibility: 'public',
-    affiliation: 'owner',
-    sort: 'updated',
-    per_page: 9,
-    page: 1,
-  });
+  try {
+    const repos = await octokit.rest.repos.listForAuthenticatedUser({
+      visibility: 'public',
+      affiliation: 'owner',
+      sort: 'updated',
+      per_page: 9,
+      page: 1,
+    });
 
-  return repos.data.map((repo) => ({
-    id: repo.id,
-    name: repo.name,
-    description: repo.description ?? null,
-    stars: repo.stargazers_count,
-    watchers: repo.watchers_count,
-    forks: repo.forks_count,
-    githubUrl: repo.html_url,
-    pushedAt: repo.pushed_at ?? null,
-  }));
+    return repos.data.map((repo) => ({
+      id: repo.id,
+      name: repo.name,
+      description: repo.description ?? null,
+      stars: repo.stargazers_count,
+      watchers: repo.watchers_count,
+      forks: repo.forks_count,
+      githubUrl: repo.html_url,
+      pushedAt: repo.pushed_at ?? null,
+    }));
+  } catch (err) {
+    // TODO: Do nothing with the error for now.
+    return [];
+  }
 }
 
-export async function getGitProfileStats() {
-  const user = await octokit.rest.users.getAuthenticated();
-  const username = user.data.login;
-  const createdAt = user.data.created_at;
+export async function getGitProfileStats(): Promise<GitProfileStatsDTO> {
+  try {
+    const user = await octokit.rest.users.getAuthenticated();
+    const username = user.data.login;
+    const createdAt = user.data.created_at;
 
-  const createdAtQuery = new Date(createdAt).toISOString().split('T')[0];
+    const createdAtQuery = new Date(createdAt).toISOString().split('T')[0];
 
-  let totalCommits = 0;
-  
-  const response = await octokit.rest.search.commits({
-    q: `author:${username} committer-date:>=${createdAtQuery}`,
-    per_page: 1,
-  });
+    const response = await octokit.rest.search.commits({
+      q: `author:${username} committer-date:>=${createdAtQuery}`,
+      per_page: 1,
+    });
 
-  totalCommits = response.data.total_count;
-  
-  return {
-    createdAt,
-    totalCommits,
-  };
+    return {
+      createdAt,
+      totalCommits: response.data.total_count,
+    };
+  } catch (error) {
+    // TODO: DO nothing with the error for now.
+    return {
+      createdAt: '',
+      totalCommits: 0,
+    };
+  }
 }
-
-
-
