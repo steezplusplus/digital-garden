@@ -20,9 +20,9 @@ type SteamOwnedGamesResponse = {
 
 type SteamPlayerSummaryResponse = {
   response?: {
-    players?: Array<{
+    players?: {
       timecreated: number;
-    }>;
+    }[];
   };
 };
 
