@@ -24,7 +24,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       </div>
 
       <p className="line-clamp-2 text-sm leading-relaxed">{description}</p>
-      {updatedAt}
+      
       <p className="text-xs">Last updated {new Date(updatedAt as string).toLocaleDateString()}</p>
       <hr />
 
