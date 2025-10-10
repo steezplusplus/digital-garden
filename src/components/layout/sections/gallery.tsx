@@ -6,7 +6,7 @@ import LeetCodeCard from '@/components/cards/leetcode-card/leetcode-card';
 import ThemeCard from '@/components/cards/theme-card/theme-card';
 import SupportCard from '@/components/cards/support-card/support-card';
 
-export default function GallerySection() {
+export default function Gallery() {
   return (
     <section className="grid grid-cols-1 gap-4 sm:grid-cols-2" aria-label="Gallery">
       <FeaturedCard />

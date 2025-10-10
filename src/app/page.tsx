@@ -1,11 +1,9 @@
-import { Suspense } from 'react';
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 
-import GallerySection from '@/components/layout/sections/gallery-section';
-import ProjectSection, {
-  ProjectSectionSkeleton,
-} from '@/components/layout/sections/project-section';
-import AboutSection, { AboutSectionSkeleton } from '@/components/layout/sections/about-section';
+import Gallery from '@/components/layout/sections/gallery';
+import Projects, { ProjectsSkeleton } from '@/components/layout/sections/projects';
+import About, { AboutSkeleton } from '@/components/layout/sections/about';
 
 export const metadata: Metadata = {
   title: "Jesse's Digital Garden",
@@ -14,12 +12,12 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <GallerySection />
-      <Suspense fallback={<ProjectSectionSkeleton />}>
-        <ProjectSection />
+      <Gallery />
+      <Suspense fallback={<ProjectsSkeleton />}>
+        <Projects />
       </Suspense>
-      <Suspense fallback={<AboutSectionSkeleton />}>
-        <AboutSection />
+      <Suspense fallback={<AboutSkeleton />}>
+        <About />
       </Suspense>
     </>
   );

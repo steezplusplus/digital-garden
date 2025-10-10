@@ -1,18 +1,19 @@
 import ProjectCard, { ProjectCardSkeleton } from '@/components/cards/project-card/project-card';
 import { getRepos } from '@/api/octokit';
 
-export default async function ProjectSection() {
-  const sectionId = 'projects-section-heading';
+const sectionId = 'projects-section-heading';
+
+export default async function Projects() {
   const repos = await getRepos();
 
-  if (!repos) {
+  if (repos.length === 0) {
     return (
       <section aria-labelledby={sectionId}>
         <h2 id={sectionId} className="mb-4 text-3xl">
           What I&apos;ve been working on
         </h2>
         <div className="aspect-auto rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">
-          <p>Uh-oh! Something went wrong.</p>
+          <p>Uh-oh! Something went wrong. Try reloading the page.</p>
         </div>
       </section>
     );
@@ -32,8 +33,7 @@ export default async function ProjectSection() {
   );
 }
 
-export function ProjectSectionSkeleton() {
-  const sectionId = 'projects-section-heading';
+export function ProjectsSkeleton() {
   return (
     <section aria-labelledby={sectionId}>
       <h2 id={sectionId} className="mb-4 text-3xl">
