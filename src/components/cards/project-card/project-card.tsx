@@ -6,7 +6,7 @@ import { formatDate, formatNumber } from '@/lib/util';
 export type ProjectCardProps = {
   id: number;
   name: string;
-  description: string | null;
+  description: string;
   stars: number;
   watchers: number;
   forks: number;

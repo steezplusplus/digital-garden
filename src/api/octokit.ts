@@ -35,7 +35,7 @@ octokit.hook.after('request', (response: any, options: any) => {
 type RepoDTO = {
   id: number;
   name: string;
-  description: string | null;
+  description: string;
   stars: number;
   watchers: number;
   forks: number;
@@ -61,7 +61,7 @@ export async function getRepos(): Promise<RepoDTO[]> {
     return repos.data.map((repo) => ({
       id: repo.id,
       name: repo.name,
-      description: repo.description ?? null,
+      description: repo.description ?? 'No description provided.',
       stars: repo.stargazers_count,
       watchers: repo.watchers_count,
       forks: repo.forks_count,
