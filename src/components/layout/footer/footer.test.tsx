@@ -11,7 +11,7 @@ describe('<Footer />', () => {
   it('should render Unlicense link with correct attributes', () => {
     render(<Footer />);
     const unlicenseLink = screen.getByRole('link', { name: /unlicense/i });
-    
+
     expect(unlicenseLink).toBeInTheDocument();
     expect(unlicenseLink).toHaveAttribute('href', unlicenseUrl);
     expect(unlicenseLink).toHaveAttribute('target', '_blank');
@@ -21,7 +21,7 @@ describe('<Footer />', () => {
   it('should render Source link with correct attributes', () => {
     render(<Footer />);
     const sourceLink = screen.getByRole('link', { name: /source/i });
-    
+
     expect(sourceLink).toBeInTheDocument();
     expect(sourceLink).toHaveAttribute('href', githubRepoUrl);
     expect(sourceLink).toHaveAttribute('target', '_blank');
