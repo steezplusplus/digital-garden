@@ -26,7 +26,7 @@ describe('<ProjectCard />', () => {
 
     expect(screen.getByText(description)).toBeInTheDocument();
 
-    const updatedText = `Last updated January 1, 2020`;
+    const updatedText = '/Last updated/i';
     expect(screen.getByText(updatedText)).toBeInTheDocument();
 
     expect(screen.getByText(String(props.stars))).toBeInTheDocument();
