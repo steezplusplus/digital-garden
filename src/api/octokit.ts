@@ -3,27 +3,14 @@ import { restEndpointMethods } from '@octokit/plugin-rest-endpoint-methods';
 
 const Octokit = Core.plugin(restEndpointMethods);
 
-const isDev = process.env.NODE_ENV === 'development';
+const NODE_ENV = process.env.NODE_ENV;
+const GIT_PAT = process.env.GIT_PAT;
 
-const logger = {
-  debug: (...args: unknown[]) => {
-    if (isDev) console.debug('[octokit][debug]', ...args);
-  },
-  info: (...args: unknown[]) => {
-    if (isDev) console.info('[octokit][info]', ...args);
-  },
-  warn: (...args: unknown[]) => {
-    if (isDev) console.warn('[octokit][warn]', ...args);
-  },
-  error: (...args: unknown[]) => {
-    console.error('[octokit][error]', ...args);
-  },
-};
+const isDev = NODE_ENV === 'development';
 
 const octokit = new Octokit({
   userAgent: 'digital-garden',
-  auth: process.env.GIT_PAT,
-  log: logger,
+  auth: GIT_PAT,
 });
 
 octokit.hook.before('request', (options: any) => {
@@ -48,31 +35,67 @@ octokit.hook.after('request', (response: any, options: any) => {
 type RepoDTO = {
   id: number;
   name: string;
-  description: string | null;
+  description: string;
   stars: number;
   watchers: number;
   forks: number;
   githubUrl: string;
-  pushedAt: string | null;
+  updatedAt: string | null;
+};
+
+type GitProfileStatsDTO = {
+  createdAt: string;
+  totalCommits: number;
 };
 
 export async function getRepos(): Promise<RepoDTO[]> {
-  const response = await octokit.rest.repos.listForAuthenticatedUser({
-    visibility: 'public',
-    affiliation: 'owner',
-    sort: 'updated',
-    per_page: 9,
-    page: 1,
-  });
+  try {
+    const repos = await octokit.rest.repos.listForAuthenticatedUser({
+      visibility: 'public',
+      affiliation: 'owner',
+      sort: 'updated',
+      per_page: 9,
+      page: 1,
+    });
 
-  return response.data.map((repo) => ({
-    id: repo.id,
-    name: repo.name,
-    description: repo.description ?? null,
-    stars: repo.stargazers_count,
-    watchers: repo.watchers_count,
-    forks: repo.forks_count,
-    githubUrl: repo.html_url,
-    pushedAt: repo.pushed_at ?? null,
-  }));
+    return repos.data.map((repo) => ({
+      id: repo.id,
+      name: repo.name,
+      description: repo.description ?? 'No description provided.',
+      stars: repo.stargazers_count,
+      watchers: repo.watchers_count,
+      forks: repo.forks_count,
+      githubUrl: repo.html_url,
+      updatedAt: repo.updated_at ?? null,
+    }));
+  } catch (err) {
+    // TODO: Do nothing with the error for now.
+    return [];
+  }
+}
+
+export async function getGitStats(): Promise<GitProfileStatsDTO> {
+  try {
+    const user = await octokit.rest.users.getAuthenticated();
+    const username = user.data.login;
+    const createdAt = user.data.created_at;
+
+    const createdAtQuery = new Date(createdAt).toISOString().split('T')[0];
+
+    const response = await octokit.rest.search.commits({
+      q: `author:${username} committer-date:>=${createdAtQuery}`,
+      per_page: 1,
+    });
+
+    return {
+      createdAt,
+      totalCommits: response.data.total_count,
+    };
+  } catch (error) {
+    // TODO: DO nothing with the error for now.
+    return {
+      createdAt: '',
+      totalCommits: 0,
+    };
+  }
 }

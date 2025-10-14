@@ -2,11 +2,11 @@ import FeaturedCard from '@/components/cards/featured-card/featured-card';
 import GitHubCard from '@/components/cards/github-card/github-card';
 import TwitterCard from '@/components/cards/twitter-card/twitter-card';
 import LinkedInCard from '@/components/cards/linkedin-card/linkedin-card';
-import LeetCodeCard from '@/components/cards/leetcode-card/leetcode-card';
+import ContactCard from '@/components/cards/contact-card/contact-card';
 import ThemeCard from '@/components/cards/theme-card/theme-card';
 import SupportCard from '@/components/cards/support-card/support-card';
 
-export default function GallerySection() {
+export default function Gallery() {
   return (
     <section className="grid grid-cols-1 gap-4 sm:grid-cols-2" aria-label="Gallery">
       <FeaturedCard />
@@ -14,7 +14,7 @@ export default function GallerySection() {
         <GitHubCard />
         <TwitterCard />
         <LinkedInCard />
-        <LeetCodeCard />
+        <ContactCard />
         <ThemeCard />
         <SupportCard />
       </div>

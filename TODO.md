@@ -8,3 +8,7 @@
 
 - add an about section
 - Preinstall hook with zod to validate dotenv file
+
+## 10/10/2025
+
+- Reuse codesteez.com domain?

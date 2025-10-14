@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { User } from 'lucide-react';
 
 export const LINKEDIN_HREF = 'https://www.linkedin.com/in/jesse-bp/';
