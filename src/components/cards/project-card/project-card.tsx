@@ -23,7 +23,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         </Link>
       </div>
 
-      <p className="line-clamp-2 text-sm leading-relaxed">{description}</p>
+      <p className="line-clamp-2 text-sm leading-relaxed min-h-[2.75rem]">{description}</p>
       
       <p className="text-xs">Last updated {new Date(updatedAt as string).toLocaleDateString()}</p>
       <hr />
