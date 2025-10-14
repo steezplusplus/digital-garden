@@ -25,7 +25,7 @@ describe('<ProjectCard />', () => {
     expect(anchor).toHaveAttribute('href', props.githubUrl);
 
     expect(screen.getByText(description)).toBeInTheDocument();
-    
+
     expect(screen.getByText(/Last updated/i)).toBeInTheDocument();
 
     expect(screen.getByText(String(props.stars))).toBeInTheDocument();
