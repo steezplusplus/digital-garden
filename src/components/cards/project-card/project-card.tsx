@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { Eye, GitFork, Star } from 'lucide-react';
 
+import { formatDate, formatNumber } from '@/lib/util';
+
 export type ProjectCardProps = {
   id: number;
   name: string;
@@ -15,6 +17,11 @@ export type ProjectCardProps = {
 export default function ProjectCard(props: ProjectCardProps) {
   const { name, description, stars, watchers, forks, githubUrl, updatedAt } = props;
 
+  const formattedUpdatedAt = updatedAt ? formatDate(updatedAt) : 'N/A';
+  const formattedStars = formatNumber(stars);
+  const formattedForks = formatNumber(forks);
+  const formattedWatchers = formatNumber(watchers);
+
   return (
     <li className="flex flex-col gap-4 rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">
       <div className="flex items-center">
@@ -25,24 +32,24 @@ export default function ProjectCard(props: ProjectCardProps) {
 
       <p className="line-clamp-2 text-sm leading-relaxed min-h-[2.75rem]">{description}</p>
       
-      <p className="text-xs">Last updated {new Date(updatedAt as string).toLocaleDateString()}</p>
+      <p className="text-xs">Last updated {formattedUpdatedAt}</p>
       <hr />
 
       <div className="flex items-center gap-6 text-xs">
         <span className="flex items-center justify-center gap-2">
           <Star size={14} aria-hidden="true" />
           <span className="sr-only">Number of stars</span>
-          <span>{stars}</span>
+          <span>{formattedStars}</span>
         </span>
         <span className="flex items-center justify-center gap-2">
           <GitFork size={14} aria-hidden="true" />
           <span className="sr-only">Number of forks</span>
-          <span>{forks}</span>
+          <span>{formattedForks}</span>
         </span>
         <span className="flex items-center justify-center gap-2">
           <Eye size={14} aria-hidden="true" />
           <span className="sr-only">Number of watchers</span>
-          <span>{watchers}</span>
+          <span>{formattedWatchers}</span>
         </span>
       </div>
     </li>
