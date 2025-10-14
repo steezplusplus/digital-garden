@@ -34,18 +34,25 @@ type SteamStatsDTO = {
 export async function getSteamStats(): Promise<SteamStatsDTO> {
   try {
     if (isDev) {
-      console.info('[steam] request', { method: 'GET', routes: ['/IPlayerService/GetOwnedGames', '/ISteamUser/GetPlayerSummaries'] });
+      console.info('[steam] request', {
+        method: 'GET',
+        routes: ['/IPlayerService/GetOwnedGames', '/ISteamUser/GetPlayerSummaries'],
+      });
     }
 
     const [gamesResponse, profileResponse] = await Promise.all([
-      fetch(`${BASE_URL}/IPlayerService/GetOwnedGames/v0001/?key=${STEAM_WEB_API_KEY}&steamid=${STEAM_ID}&format=json&include_played_free_games=1`),
-      fetch(`${BASE_URL}/ISteamUser/GetPlayerSummaries/v0002/?key=${STEAM_WEB_API_KEY}&steamids=${STEAM_ID}`)
+      fetch(
+        `${BASE_URL}/IPlayerService/GetOwnedGames/v0001/?key=${STEAM_WEB_API_KEY}&steamid=${STEAM_ID}&format=json&include_played_free_games=1`
+      ),
+      fetch(
+        `${BASE_URL}/ISteamUser/GetPlayerSummaries/v0002/?key=${STEAM_WEB_API_KEY}&steamids=${STEAM_ID}`
+      ),
     ]);
 
     if (isDev) {
-      console.info('[steam] response', { 
-        gamesStatus: gamesResponse.status, 
-        profileStatus: profileResponse.status 
+      console.info('[steam] response', {
+        gamesStatus: gamesResponse.status,
+        profileStatus: profileResponse.status,
       });
     }
 
