@@ -11,7 +11,6 @@ export default async function About() {
   const formattedGitCreatedAt = formatDate(gitCreatedAt);
   const formattedCommitsThisYear = formatNumber(totalCommits);
 
-
   return (
     <section aria-labelledby={sectionId}>
       <h2 id={sectionId} className="mb-4 text-3xl">
@@ -42,7 +41,7 @@ export function AboutSkeleton() {
       <h2 id={sectionId} className="mb-4 text-3xl">
         About
       </h2>
-      <div className="rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5 animate-pulse h-14" />
+      <div className="h-14 animate-pulse rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5" />
     </section>
   );
 }
