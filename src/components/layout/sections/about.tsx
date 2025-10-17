@@ -1,8 +1,7 @@
-import { Code, Gamepad, GitBranch, Keyboard, Music, User } from 'lucide-react';
+import { GitBranch } from 'lucide-react';
 
 import { getGitStats } from '@/api/octokit';
 import { formatDate, formatNumber } from '@/lib/util';
-import { getSteamStats } from '@/api/steam';
 
 const sectionId = 'about-section-heading';
 
@@ -37,7 +36,13 @@ function AboutItem({ text, icon }: { text: string; icon: React.ReactNode }) {
   );
 }
 
-// TODO: Update loading state
 export function AboutSkeleton() {
-  return <div>Loading data...</div>;
+  return (
+    <section aria-labelledby={sectionId}>
+      <h2 id={sectionId} className="mb-4 text-3xl">
+        About
+      </h2>
+      <div className="rounded-xl border border-stone-400 bg-white/50 dark:bg-indigo-100/5 animate-pulse h-14" />
+    </section>
+  );
 }
