@@ -19,8 +19,16 @@ describe('<Nav />', () => {
   });
   it('Nav actions cause no errors', async () => {
     render(<Nav />);
-    const projectsButton = screen.getByRole('button', { name: 'Projects' });
-    expect(projectsButton).toBeInTheDocument();
-    await userEvent.click(screen.getByRole('button'));
+    const buttons = screen.getAllByRole('button');
+    expect(buttons.length).toBe(2);
+
+    const projectButton = buttons[0];
+    const aboutButton = buttons[1];
+
+    expect(projectButton).toBeInTheDocument();
+    expect(aboutButton).toBeInTheDocument();
+
+    await userEvent.click(projectButton as HTMLButtonElement);
+    await userEvent.click(aboutButton as HTMLButtonElement);
   });
 });
