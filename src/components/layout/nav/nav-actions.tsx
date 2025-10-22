@@ -16,10 +16,16 @@ function smoothScroll(target: string) {
 export function NavActions() {
   return (
     <li className="ml-auto flex items-center gap-4">
-      <button className="hover:underline cursor-pointer" onClick={() => smoothScroll('#projects-section-heading')}>
+      <button
+        className="cursor-pointer hover:underline"
+        onClick={() => smoothScroll('#projects-section-heading')}
+      >
         Projects
       </button>
-      <button className="hover:underline cursor-pointer" onClick={() => smoothScroll('#about-section-heading')}>
+      <button
+        className="cursor-pointer hover:underline"
+        onClick={() => smoothScroll('#about-section-heading')}
+      >
         About
       </button>
     </li>
