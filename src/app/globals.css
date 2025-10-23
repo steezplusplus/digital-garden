@@ -23,6 +23,7 @@
 @layer base {
   :root {
     @apply text-base;
+    @apply scroll-smooth;
   }
 
   body {
