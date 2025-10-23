@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import ProjectCard from './project-card';
+
+import ProjectCard, { ProjectCardSkeleton } from './project-card';
 import type { ProjectCardProps } from './project-card';
 
 describe('<ProjectCard />', () => {
@@ -31,5 +32,36 @@ describe('<ProjectCard />', () => {
     expect(screen.getByText(String(props.stars))).toBeInTheDocument();
     expect(screen.getByText(String(props.forks))).toBeInTheDocument();
     expect(screen.getByText(String(props.watchers))).toBeInTheDocument();
+  });
+  it('displays "N/A" when updatedAt is null', () => {
+    const propsWithoutDate: ProjectCardProps = {
+      ...props,
+      updatedAt: null,
+    };
+
+    render(<ProjectCard {...propsWithoutDate} />);
+
+    expect(screen.getByText(/Last updated N\/A/i)).toBeInTheDocument();
+  });
+  it('opens link in new tab with security attributes', () => {
+    render(<ProjectCard {...props} />);
+
+    const anchor = screen.getByRole('link', { name: /my-repo/i });
+    expect(anchor).toHaveAttribute('target', '_blank');
+    expect(anchor).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+  it('opens link in new tab with security attributes', () => {
+    render(<ProjectCard {...props} />);
+
+    const anchor = screen.getByRole('link', { name: /my-repo/i });
+    expect(anchor).toHaveAttribute('target', '_blank');
+    expect(anchor).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+});
+
+describe('<ProjectCardSkeleton />', () => {
+  it('renders without crashing', () => {
+    const { container } = render(<ProjectCardSkeleton />);
+    expect(container.firstChild).toBeInTheDocument();
   });
 });
