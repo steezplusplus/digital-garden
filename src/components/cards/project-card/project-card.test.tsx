@@ -50,13 +50,6 @@ describe('<ProjectCard />', () => {
     expect(anchor).toHaveAttribute('target', '_blank');
     expect(anchor).toHaveAttribute('rel', 'noopener noreferrer');
   });
-  it('opens link in new tab with security attributes', () => {
-    render(<ProjectCard {...props} />);
-
-    const anchor = screen.getByRole('link', { name: /my-repo/i });
-    expect(anchor).toHaveAttribute('target', '_blank');
-    expect(anchor).toHaveAttribute('rel', 'noopener noreferrer');
-  });
 });
 
 describe('<ProjectCardSkeleton />', () => {
