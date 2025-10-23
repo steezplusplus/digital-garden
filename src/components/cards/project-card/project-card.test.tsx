@@ -33,6 +33,7 @@ describe('<ProjectCard />', () => {
     expect(screen.getByText(String(props.forks))).toBeInTheDocument();
     expect(screen.getByText(String(props.watchers))).toBeInTheDocument();
   });
+
   it('displays "N/A" when updatedAt is null', () => {
     const propsWithoutDate: ProjectCardProps = {
       ...props,
@@ -43,6 +44,18 @@ describe('<ProjectCard />', () => {
 
     expect(screen.getByText(/Last updated N\/A/i)).toBeInTheDocument();
   });
+
+  it('displays "No description available" when description is empty', () => {
+    const propsWithoutDate: ProjectCardProps = {
+      ...props,
+      description: '',
+    };
+
+    render(<ProjectCard {...propsWithoutDate} />);
+
+    expect(screen.getByText(/No description available/i)).toBeInTheDocument();
+  });
+
   it('opens link in new tab with security attributes', () => {
     render(<ProjectCard {...props} />);
 

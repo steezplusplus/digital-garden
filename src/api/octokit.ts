@@ -35,7 +35,7 @@ octokit.hook.after('request', (response: any, options: any) => {
 type RepoDTO = {
   id: number;
   name: string;
-  description: string;
+  description: string | null;
   stars: number;
   watchers: number;
   forks: number;
@@ -61,7 +61,7 @@ export async function getRepos(): Promise<RepoDTO[]> {
     return repos.data.map((repo) => ({
       id: repo.id,
       name: repo.name,
-      description: repo.description ?? 'No description provided.',
+      description: repo.description ?? null,
       stars: repo.stargazers_count,
       watchers: repo.watchers_count,
       forks: repo.forks_count,
@@ -69,7 +69,7 @@ export async function getRepos(): Promise<RepoDTO[]> {
       updatedAt: repo.updated_at ?? null,
     }));
   } catch (err) {
-    // TODO: Do nothing with the error for now.
+    // Do nothing with the error for now.
     return [];
   }
 }
@@ -92,7 +92,7 @@ export async function getGitStats(): Promise<GitProfileStatsDTO> {
       totalCommits: response.data.total_count,
     };
   } catch (error) {
-    // TODO: DO nothing with the error for now.
+    // DO nothing with the error for now.
     return {
       createdAt: '',
       totalCommits: 0,
