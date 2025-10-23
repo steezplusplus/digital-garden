@@ -1,4 +1,4 @@
-import { formatDate, formatNumber, sleep } from "./util";
+import { formatDate, formatNumber, sleep } from './util';
 
 // These are just minimal smoke tests. No reason to go in depth for these functions.
 
