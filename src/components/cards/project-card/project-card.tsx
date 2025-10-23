@@ -18,11 +18,10 @@ export default function ProjectCard(props: ProjectCardProps) {
   const { name, description, stars, watchers, forks, githubUrl, updatedAt } = props;
 
   const formattedUpdatedAt = updatedAt ? formatDate(updatedAt) : 'N/A';
-  const formattedDescription = description ? description : 'No description available'
+  const formattedDescription = description ? description : 'No description available';
   const formattedStars = formatNumber(stars);
   const formattedForks = formatNumber(forks);
   const formattedWatchers = formatNumber(watchers);
-  
 
   return (
     <li className="flex flex-col gap-4 rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5">
