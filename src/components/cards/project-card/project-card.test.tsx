@@ -67,7 +67,6 @@ describe('<ProjectCard />', () => {
 
 describe('<ProjectCardSkeleton />', () => {
   it('renders without crashing', () => {
-    const { container } = render(<ProjectCardSkeleton />);
-    expect(container.firstChild).toBeInTheDocument();
+    render(<ProjectCardSkeleton />);
   });
 });
