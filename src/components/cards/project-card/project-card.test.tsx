@@ -46,12 +46,12 @@ describe('<ProjectCard />', () => {
   });
 
   it('displays "No description available" when description is empty', () => {
-    const propsWithoutDate: ProjectCardProps = {
+    const propsWithoutDescription: ProjectCardProps = {
       ...props,
       description: '',
     };
 
-    render(<ProjectCard {...propsWithoutDate} />);
+    render(<ProjectCard {...propsWithoutDescription} />);
 
     expect(screen.getByText(/No description available/i)).toBeInTheDocument();
   });
