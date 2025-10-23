@@ -6,7 +6,7 @@ import { formatDate, formatNumber } from '@/lib/util';
 export type ProjectCardProps = {
   id: number;
   name: string;
-  description: string;
+  description: string | null;
   stars: number;
   watchers: number;
   forks: number;
@@ -18,6 +18,7 @@ export default function ProjectCard(props: ProjectCardProps) {
   const { name, description, stars, watchers, forks, githubUrl, updatedAt } = props;
 
   const formattedUpdatedAt = updatedAt ? formatDate(updatedAt) : 'N/A';
+  const formattedDescription = description ? description : 'No description available';
   const formattedStars = formatNumber(stars);
   const formattedForks = formatNumber(forks);
   const formattedWatchers = formatNumber(watchers);
@@ -30,7 +31,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         </Link>
       </div>
 
-      <p className="line-clamp-2 min-h-[2.75rem] text-sm leading-relaxed">{description}</p>
+      <p className="line-clamp-2 min-h-[2.75rem] text-sm leading-relaxed">{formattedDescription}</p>
 
       <p className="text-xs">Last updated {formattedUpdatedAt}</p>
       <hr />
