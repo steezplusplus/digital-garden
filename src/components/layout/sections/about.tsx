@@ -3,7 +3,7 @@ import { GitBranch } from 'lucide-react';
 import { getGitStats } from '@/api/octokit';
 import { formatDate, formatNumber } from '@/lib/util';
 
-const sectionId = 'about-section-heading';
+const sectionId = 'about';
 
 export default async function About() {
   const { createdAt: gitCreatedAt, totalCommits } = await getGitStats();
