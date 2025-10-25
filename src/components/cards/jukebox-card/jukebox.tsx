@@ -1,13 +1,10 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-
 import { Volume1, Play, Pause } from 'lucide-react';
 
-// TODO Unit test
-// TODO When song ends, should reset to initial state - i.e. button goes to pause and can play again.
 export function Jukebox() {
-  const audioRef: React.RefObject<HTMLAudioElement | null> = useRef(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(60);
@@ -16,20 +13,41 @@ export function Jukebox() {
     setIsPlaying((prev) => !prev);
   };
 
+  // Update volume when it changes
   useEffect(() => {
-    if (audioRef && audioRef.current) {
+    if (audioRef.current) {
       audioRef.current.volume = volume / 100;
     }
-  }, [volume, audioRef]);
+  }, [volume]);
 
+  // Handle play/pause
   useEffect(() => {
-    if (audioRef && audioRef.current && isPlaying) {
-      audioRef.current.play();
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.play();
+      } else {
+        audioRef.current.pause();
+      }
     }
-    if (audioRef && audioRef.current && !isPlaying) {
-      audioRef.current.pause();
+  }, [isPlaying]);
+
+  // Reset to initial state when song ends
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) {
+        return;
     }
-  }, [isPlaying, audioRef]);
+
+    const handleEnded = () => {
+      setIsPlaying(false);
+    };
+
+    audio.addEventListener('ended', handleEnded);
+
+    return () => {
+      audio.removeEventListener('ended', handleEnded);
+    };
+  }, []);
 
   return (
     <div className="my-auto flex justify-center">
@@ -40,7 +58,7 @@ export function Jukebox() {
         <button
           className="h-full border-r px-2"
           onClick={togglePlayPause}
-          aria-label={`${isPlaying ? 'Pause' : 'Play'} the audio`}
+          aria-label={isPlaying ? 'Pause the audio' : 'Play the audio'}
         >
           {isPlaying ? <Pause size={16} /> : <Play size={16} />}
         </button>
