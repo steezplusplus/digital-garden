@@ -1,4 +1,4 @@
-import { Jukebox } from "./jukebox";
+import { Jukebox } from './jukebox';
 
 export default function JukeboxCard() {
   return (
