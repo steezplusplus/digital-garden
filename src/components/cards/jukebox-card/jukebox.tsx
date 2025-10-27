@@ -35,7 +35,7 @@ export function Jukebox() {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) {
-        return;
+      return;
     }
 
     const handleEnded = () => {
