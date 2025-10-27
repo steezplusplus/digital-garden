@@ -51,7 +51,7 @@ export function Jukebox() {
 
   return (
     <div className="my-auto flex justify-center">
-      <audio ref={audioRef} src="./song.mp3">
+      <audio ref={audioRef} src="/song.mp3">
         Your browser does not support the <code>audio</code> element.
       </audio>
       <div className="flex rounded-sm border border-slate-400 px-2 py-1">
