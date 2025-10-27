@@ -3,6 +3,7 @@ import GitHubCard from '@/components/cards/github-card/github-card';
 import TwitterCard from '@/components/cards/twitter-card/twitter-card';
 import LinkedInCard from '@/components/cards/linkedin-card/linkedin-card';
 import ContactCard from '@/components/cards/contact-card/contact-card';
+import JukeboxCard from '@/components/cards/jukebox-card/jukebox-card';
 import ThemeCard from '@/components/cards/theme-card/theme-card';
 import SupportCard from '@/components/cards/support-card/support-card';
 
@@ -15,6 +16,7 @@ export default function Gallery() {
         <TwitterCard />
         <LinkedInCard />
         <ContactCard />
+        <JukeboxCard />
         <ThemeCard />
         <SupportCard />
       </div>
