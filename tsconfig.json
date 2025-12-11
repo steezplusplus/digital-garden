@@ -9,7 +9,7 @@
     "resolveJsonModule": true,
     "incremental": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     /* Strictness */
     "strict": true,
     "noUncheckedIndexedAccess": true,
@@ -17,15 +17,37 @@
     "moduleResolution": "bundler",
     "module": "esnext",
     "noEmit": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "plugins": [{ "name": "next" }],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": "src/",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/api/*": ["api/*"],
-      "@/lib/*": ["lib/*"]
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/api/*": [
+        "api/*"
+      ],
+      "@/lib/*": [
+        "lib/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
