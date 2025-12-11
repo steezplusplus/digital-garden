@@ -20,4 +20,6 @@ export default defineConfig([{
         ...compat.extends("plugin:jest-dom/recommended"),
         ...compat.extends("prettier")
     ],   
-}]);
+}, {
+    ignores: ["coverage/**"],
+    }]);
