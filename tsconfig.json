@@ -9,7 +9,7 @@
     "resolveJsonModule": true,
     "incremental": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     /* Strictness */
     "strict": true,
     "noUncheckedIndexedAccess": true,
@@ -18,7 +18,11 @@
     "module": "esnext",
     "noEmit": true,
     "lib": ["dom", "dom.iterable", "esnext"],
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": "src/",
     "paths": {
       "@/components/*": ["components/*"],
@@ -26,6 +30,12 @@
       "@/lib/*": ["lib/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
