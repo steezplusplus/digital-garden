@@ -17,11 +17,7 @@
     "moduleResolution": "bundler",
     "module": "esnext",
     "noEmit": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "plugins": [
       {
         "name": "next"
@@ -29,15 +25,9 @@
     ],
     "baseUrl": "src/",
     "paths": {
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/api/*": [
-        "api/*"
-      ],
-      "@/lib/*": [
-        "lib/*"
-      ]
+      "@/components/*": ["components/*"],
+      "@/api/*": ["api/*"],
+      "@/lib/*": ["lib/*"]
     }
   },
   "include": [
@@ -47,7 +37,5 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
