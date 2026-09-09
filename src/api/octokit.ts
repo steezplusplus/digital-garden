@@ -59,7 +59,7 @@ export async function getRepos(): Promise<RepoDTO[]> {
     });
 
     return repos.data.map((repo) => ({
-      id: repo.id,
+      id: Number(repo.id),
       name: repo.name,
       description: repo.description ?? null,
       stars: repo.stargazers_count,
