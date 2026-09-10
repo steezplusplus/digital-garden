@@ -1,6 +1,6 @@
 # Jesse's Digital Garden
 
-[> > Visit my garden < <](https://digital-garden-steez.vercel.app/)
+[> > Visit my garden < <](https://digital-hypnospace-garden.vercel.app/)
 
 [![codecov](https://codecov.io/gh/steezplusplus/digital-garden/graph/badge.svg?token=IVWNLISFWI)](https://codecov.io/gh/steezplusplus/digital-garden)
 [![stars](https://custom-icon-badges.demolab.com/github/stars/steezplusplus/digital-garden?logo=star)](https://github.com/steezplusplus/digital-garden/stargazers)
