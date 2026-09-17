@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Lora } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
 import { Nav } from '@/components/layout/nav/nav';
