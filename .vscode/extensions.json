@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "vivaxy.vscode-conventional-commits",
+    "monokai.theme-monokai-pro-vscode",
+    "eamodio.gitlens",
+  ]
+}
