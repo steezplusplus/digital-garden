@@ -4,5 +4,8 @@
     "vivaxy.vscode-conventional-commits",
     "monokai.theme-monokai-pro-vscode",
     "eamodio.gitlens",
+    "csstools.postcss",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
   ]
 }
