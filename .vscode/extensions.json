@@ -1,11 +1,12 @@
 {
   "recommendations": [
     "bradlc.vscode-tailwindcss",
-    "vivaxy.vscode-conventional-commits",
-    "monokai.theme-monokai-pro-vscode",
-    "eamodio.gitlens",
     "csstools.postcss",
-    "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "github.vscode-github-actions",
+    "monokai.theme-monokai-pro-vscode",
+    "vivaxy.vscode-conventional-commits"
   ]
 }
