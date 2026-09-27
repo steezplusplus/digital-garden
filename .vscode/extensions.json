@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "csstools.postcss",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "github.vscode-github-actions",
+    "monokai.theme-monokai-pro-vscode",
+    "vivaxy.vscode-conventional-commits"
+  ]
+}
