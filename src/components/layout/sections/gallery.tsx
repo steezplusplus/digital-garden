@@ -6,6 +6,7 @@ import ContactCard from '@/components/cards/contact-card/contact-card';
 import JukeboxCard from '@/components/cards/jukebox-card/jukebox-card';
 import ThemeCard from '@/components/cards/theme-card/theme-card';
 import SupportCard from '@/components/cards/support-card/support-card';
+import LeetCodeCard from '@/components/cards/leetcode-card/leetcode-card';
 
 export default function Gallery() {
   return (
@@ -18,6 +19,7 @@ export default function Gallery() {
         <ContactCard />
         <JukeboxCard />
         <ThemeCard />
+        <LeetCodeCard />
         <SupportCard />
       </div>
     </section>
