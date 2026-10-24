@@ -12,7 +12,7 @@ export default function FeaturedCard() {
           height="128"
           className="aspect-auto h-32 w-32 rounded-full"
         />
-        <p className="text-b mt-2 text-center text-sm">Welcome to the garden.</p>
+        <p className="mt-2 text-center text-sm">Welcome to the garden.</p>
       </div>
     </div>
   );
