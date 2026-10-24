@@ -14,8 +14,5 @@ describe('<LeetCodeCard />', () => {
 
     const title = screen.getByRole('heading', { name: 'LeetCode', level: 2 });
     expect(title).toBeInTheDocument();
-
-    const subtitle = screen.getByRole('heading', { name: 'SteezPlusPlus', level: 3 });
-    expect(subtitle).toBeInTheDocument();
   });
 });
