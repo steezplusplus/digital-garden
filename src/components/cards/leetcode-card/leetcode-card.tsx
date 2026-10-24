@@ -12,7 +12,7 @@ export default function LeetCodeCard() {
       className="group col-span-2 flex aspect-auto flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5"
     >
       <h2 className="mb-2 self-start text-lg group-hover:underline">LeetCode</h2>
-      <div className="self-center text-sm italic">Over 200 problems solved</div>
+      <h3 className="self-center text-sm italic">Over 200 problems solved</h3>
       <div className="mt-1 self-end">
         <CodeXml aria-hidden="true" />
       </div>
