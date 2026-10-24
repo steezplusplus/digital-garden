@@ -9,13 +9,13 @@ export default function LeetCodeCard() {
       href={LEETCODE_HREF}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex aspect-square flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5"
+      className="group col-span-2 flex aspect-auto flex-col rounded-xl border border-stone-400 bg-white/50 p-4 dark:bg-indigo-100/5"
     >
-      <div className="mb-auto self-start">
+      <h2 className="mb-2 self-start text-lg group-hover:underline">LeetCode</h2>
+      <h3 className="self-center text-sm italic">Over 200 problems solved</h3>
+      <div className="mt-1 self-end">
         <CodeXml aria-hidden="true" />
       </div>
-      <h2 className="mb-1 self-end text-lg group-hover:underline">LeetCode</h2>
-      <h3 className="self-end text-sm italic">SteezPlusPlus</h3>
     </Link>
   );
 }
